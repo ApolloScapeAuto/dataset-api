@@ -2,13 +2,13 @@
 This is a repo of toolkit for dataset of [ApolloScape ECCV challenge](apolloscape.auto/ECCV/index.html). It include three tasks, lanemark segmentation, online self-localization, 3D car instance understanding. Some example videos and images are shown below:
 
 ### Lanemark segmentation:
-![](./example/lanemark-segmentation.gif)
+![](./examples/lanemark-segmentation.gif)
 
 ### Online self-localization:
-![](./example/self-localization.gif)
+![](./examples/self-localization.gif)
 
 ### 3D car instance understanding:
-![](./example/3d-car-instance.png)
+![](./examples/3d-car-instance.png)
 
 Run 
 ```bash
