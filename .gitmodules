@@ -1,3 +1,6 @@
 [submodule "lane_segmentation/cityscapesScripts"]
 	path = lane_segmentation/thirdParty/cityscapesScripts
 	url = https://github.com/mcordts/cityscapesScripts.git
+[submodule "lane_segmentation/thirdParty/cityscapesScripts"]
+	path = lane_segmentation/thirdParty/cityscapesScripts
+	url = git@github.com:mcordts/cityscapesScripts.git
