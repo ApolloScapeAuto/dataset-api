@@ -1,0 +1,1 @@
+BUILD_SUBMITTER -x -m baidu/personal-code/eccv_eval_kit -c "cd baidu/personal-code/eccv_eval_kit && mkdir output &&cp BCLOUD ./output/" -u ./

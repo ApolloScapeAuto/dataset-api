@@ -1,0 +1,3 @@
+Cython==0.28.3
+numpy==1.14.3
+Pillow==5.1.0
