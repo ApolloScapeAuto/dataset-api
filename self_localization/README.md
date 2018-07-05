@@ -45,11 +45,61 @@ Later we will also release semantic labels,  and semantic 3d point cloud python 
 There are several scripts included with the dataset in a folder named `scripts`
  - `eval_pose.py`   Code for evalution pose accuracy based the commonly used eval metric of meidian translation and rotation error.
 
+Code for test evaluation: 
 
 ```bash
 #!/bin/bash
 python eval_pose.py --test_dir='./test_eval_data/pose_res' --gt_dir='./test_eval_data/pose_gt' --res_file='./test_eval_data/res.txt'
 ```
+
+### Metric formula
+
+For each image, given the predicted rotation $r_i$ and translation $t_i$ of image $i$, and the ground truth $r^*_i$ and $t^*_i$, the metric for evaluation is defined as: 
+
+$e_{translation} = median(\|t_i - t^*_i\|_2\}_{i\in\{1, N\}})$
+
+$e_{rorotation} = median(\{\arccos(q(r_i) \cdot q(r^*_i)) \}_{i\in\{1, N\}})$
+
+where $q(r_i)$ is the quaternions representation of the Euler angle ```
+is the quaternions representation of the Euler angle ```row, pitch, yall```row, pitch, yall```
+
+
+### Rules of ranking
+
+Result benchmark will be:
+|Method | mean | scene1 | scene2 | scene3 | 
+|---|---|---|---|
+| Deepxxx|xx $m$, xx $^{\circ}$  | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | 
+
+Our ranking will determined by number of winning metrics from all scenes.
+
+
+### Submission of data format
+Please follow the data format under ```test_eval_data/``` for example. 
+
+- Example dir tree of submitted zip file
+```bash
+├── test
+│   ├── scene1
+│   │   ├── sequence1.txt
+│   │   ├── sequence2.txt
+│   │    ...
+│   ├── scene2
+│   │   ├── sequence1.txt
+│   │   ├── sequence2.txt
+...
+```
+
+ - Example format of ```sequence1.txt```
+```bash
+image_name1 roll,pitch,yaw,x,y,z
+image_name2 roll,pitch,yaw,x,y,z
+image_name3 roll,pitch,yaw,x,y,z
+image_name4 roll,pitch,yaw,x,y,z
+image_name5 roll,pitch,yaw,x,y,z
+```
+Here  ```roll,pitch,yaw,x,y,z``` are ```float32``` numbers
+
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
