@@ -65,7 +65,8 @@ Specifically, given an estimated 3d car model in an image <img src="/car_instanc
 
 For 3d shape, we consider reprojection similarity, by putting the model at a fix location and rendering 10 views by rotating the object. We compute the mean IoU between the two masks rendered from each view. Formally, the metric is defined as,
 
-<img src="/car_instance/tex/7fd91dc63d08fe9f22b0ce7cc54973dc.svg?invert_in_darkmode&sanitize=true" align=middle width=278.93147369999997pt height=24.657735299999988pt/>
+<img src="/car_instance/tex/e3216a2d9236918d9b114a51a53fc95a.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6026000499999pt height=27.77565449999998pt/>
+
 where <img src="/car_instance/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> is a set of camera views.
 
 For 3d translation and rotation, we follow the same evaluation metric of self-localization, please check [README.md](../self_localization/README.md) for detailed formula.
@@ -115,7 +116,7 @@ Here ```image1``` is string  of image name
 ...
 ```
 
-Here``` roll,pitch,yaw,x,y,z``` are float32 numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
+Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
 
 
 ## License
