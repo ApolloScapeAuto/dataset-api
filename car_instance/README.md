@@ -57,15 +57,65 @@ You may run the following code to have a evaluation sample.
 python eval_car_instances.py --test_dir='./test_eval_data/det3d_res' --gt_dir='./test_eval_data/det3d_gt' --res_file='./test_eval_data/res.txt'
 ```
 
-## Formula for evalution
+### Metric formula
+
+We adopt the popularly used mean Avergae Precision for object instance evaluation in 3D similar to [coco detection](http://cocodataset.org/#detection-eval). However instead of using 2D mask IoU for similarity criteria between predicted instances and ground truth to judge a true positive, we propose to used following 3D metrics containing the perspective of *shape* (<img src="/car_instance/tex/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width=7.7054801999999905pt height=14.15524440000002pt/>), *3d translation*(<img src="/car_instance/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/>) and *3d rotation*(<img src="/car_instance/tex/89f2e0d2d24bcf44db73aab8fc03252c.svg?invert_in_darkmode&sanitize=true" align=middle width=7.87295519999999pt height=14.15524440000002pt/>) to judge a true positive.
+
+Specifically, given an estimated 3d car model in an image <img src="/car_instance/tex/36b2583e4d8685215773a8f4cc991656.svg?invert_in_darkmode&sanitize=true" align=middle width=107.66574884999997pt height=24.65753399999998pt/> and ground truth model <img src="/car_instance/tex/282ebdd2ff53dca1412d731c08bec6dc.svg?invert_in_darkmode&sanitize=true" align=middle width=117.63534089999999pt height=24.65753399999998pt/>, we evaluate the three estimates repectively as follows:
+
+For 3d shape, we consider reprojection similarity, by putting the model at a fix location and rendering 10 views by rotating the object. We compute the mean IoU between the two masks rendered from each view. Formally, the metric is defined as,
+
+<img src="/car_instance/tex/7fd91dc63d08fe9f22b0ce7cc54973dc.svg?invert_in_darkmode&sanitize=true" align=middle width=278.93147369999997pt height=24.657735299999988pt/>
+where <img src="/car_instance/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> is a set of camera views.
+
+For 3d translation and rotation, we follow the same evaluation metric of self-localization, please check [README.md](../self_localization/README.md) for detailed formula.
+
+Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
+
 ```
-    shapeThrs  - [.5:.05:.95] T=10 shape thresholds for evaluation
-    rotThrs    - [50:  5:  5] T=10 rot thresholds for evaluation
-    transThrs  - [0.1:.3:2.8] T=10 trans thresholds for evaluation
+    shapeThrs  - [.5:.05:.95] shape thresholds for $s$
+    rotThrs    - [50:  5:  5] rotation thresholds for $r$
+    transThrs  - [2.8:.3:0.1] trans thresholds for $t$
+```
+where the most loose metric ```.5, 50, 2.8``` means shape similarity must <img src="/car_instance/tex/82933ae1b048283d7d52c25038a205e8.svg?invert_in_darkmode&sanitize=true" align=middle width=38.35617554999999pt height=21.18721440000001pt/>, rotation distance must <img src="/car_instance/tex/9dbc26e62bdd6a9004a4e2eac91577e3.svg?invert_in_darkmode&sanitize=true" align=middle width=42.00916004999999pt height=21.18721440000001pt/> and tranlation distance must <img src="/car_instance/tex/ca1c10083b32a6b27b4f70128b09b697.svg?invert_in_darkmode&sanitize=true" align=middle width=52.789274999999996pt height=21.18721440000001pt/>, and the strict metric can be interprated correspondingly.
+
+We use ```c0, c1, ..., c9``` to represent those criteria from loose to strict.
+
+
+### Rules of ranking
+
+Result benchmark will be:
+
+| Method | AP | AP<img src="/car_instance/tex/f5606b459052f4b8daf6643aa31f3f2a.svg?invert_in_darkmode&sanitize=true" align=middle width=11.46835139999999pt height=14.15524440000002pt/> |  AP<img src="/car_instance/tex/a208b77cb1de63a4427210b05991d250.svg?invert_in_darkmode&sanitize=true" align=middle width=11.46835139999999pt height=14.15524440000002pt/> |  AP<img src="/car_instance/tex/5c71b8d8389a7db46d6f7ca3fe55d85c.svg?invert_in_darkmode&sanitize=true" align=middle width=33.447178049999984pt height=14.15524440000002pt/> | AP<img src="/car_instance/tex/f61e0ba78ad249b2db8b97e556065558.svg?invert_in_darkmode&sanitize=true" align=middle width=44.652151499999995pt height=14.15524440000002pt/> | AP<img src="/car_instance/tex/dd49cdc20271fef88b013ce6bb79b762.svg?invert_in_darkmode&sanitize=true" align=middle width=30.874481549999988pt height=14.15524440000002pt/> | 
+| ------ |:------:|:------:|:------:|:------:|:------:|:------:|
+| Deepxxx |xx  | xx  | xx | xx |  xx | xx |
+
+Our ranking will determined by the mean AP as usual.
+
+
+### Submission of data format
+
+```bash
+├── test
+│   ├── image1.json
+│   ├── image2.json
+...
+```
+Here ```image1``` is string  of image name
+
+ - Example format of image1.json
+
+``` bash
+[{
+"car_id" : int, 
+"area": int,
+"pose" : [roll,pitch,yaw,x,y,z], 
+"score" : float,
+}]
+...
 ```
 
-We use ```c0, c1, ..., c9``` to represent the criteria from loose to strict
-To be updated
+Here``` roll,pitch,yaw,x,y,z``` are float32 numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
 
 
 ## License
