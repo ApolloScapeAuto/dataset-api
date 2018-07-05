@@ -59,12 +59,12 @@ python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eva
 
 ### Metric formula
 We adopt the widely used mean IoU metric which is presented in [cityscape metric here](https://www.cityscapes-dataset.com/benchmarks/#scene-labeling-task). 
-For each class, given the predicted masks ${M_{ci}}$ and ground truth ${M_{ci}^*$ of image $i$ and class $c$, the metric for evaluation is defined as: 
+For each class, given the predicted masks ${M_{ci}}$ and ground truth ${M_{ci}^*}$ of image $i$ and class $c$, the metric for evaluation is defined as: 
 
 $IoU_{c} = TP / (TP + FP + FN)$
-$TP = \sum_i{\|M_{ci} \cdot \M_{ci}^*\|_0} $
-$FP = \sum_i{\|M_{ci} \cdot (1 - \M_{ci}^*)\|_0} $
-$TP = \sum_i{\|(1 - M_{ci}) \cdot \M_{ci}^*\|_0} $
+$TP = \sum_i{\|M_{ci} \cdot M_{ci}^*\|_0} $
+$FP = \sum_i{\|M_{ci} \cdot (1 - M_{ci}^*)\|_0} $
+$FN = \sum_i{\|(1 - M_{ci}) \cdot M_{ci}^*\|_0} $
 
 
 ### Rules of ranking
