@@ -79,7 +79,7 @@ Then, we define a set of 10 thresholds for a true positive prediction from loose
 ```
 where the most loose metric ```.5, 50, 2.8``` means shape similarity must $> 0.5$, rotation distance must $<50 \circ$ and tranlation distance must $<2.8 m$, and the strict metric can be interprated correspondingly.
 
-We use ```c0, c1, ..., c9``` to represent those criteria from loose to strict.
+We use $c_0, c_1, ..., c_9$ to represent those criteria from loose to strict.
 
 
 ### Rules of ranking
