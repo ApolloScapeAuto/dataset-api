@@ -60,16 +60,16 @@ $e_{translation} = median(\|t_i - t^*_i\|_2\}_{i\in\{1, N\}})$
 
 $e_{rorotation} = median(\{\arccos(q(r_i) \cdot q(r^*_i)) \}_{i\in\{1, N\}})$
 
-where $q(r_i)$ is the quaternions representation of the Euler angle ```
-is the quaternions representation of the Euler angle ```row, pitch, yall```row, pitch, yall```
+where $q(r_i)$ is the quaternions representation of the Euler angle ```row, pitch, yall```
 
 
 ### Rules of ranking
 
 Result benchmark will be:
+
 |Method | mean | scene1 | scene2 | scene3 | 
 |---|---|---|---|
-| Deepxxx|xx $m$, xx $^{\circ}$  | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | 
+| Deepxxx |xx $m$, xx $^{\circ}$  | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | 
 
 Our ranking will determined by number of winning metrics from all scenes.
 
