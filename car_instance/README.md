@@ -79,7 +79,7 @@ Then, we define a set of 10 thresholds for a true positive prediction from loose
 ```
 where the most loose metric ```.5, 50, 2.8``` means shape similarity must <img src="/car_instance/tex/82933ae1b048283d7d52c25038a205e8.svg?invert_in_darkmode&sanitize=true" align=middle width=38.35617554999999pt height=21.18721440000001pt/>, rotation distance must <img src="/car_instance/tex/9dbc26e62bdd6a9004a4e2eac91577e3.svg?invert_in_darkmode&sanitize=true" align=middle width=42.00916004999999pt height=21.18721440000001pt/> and tranlation distance must <img src="/car_instance/tex/ca1c10083b32a6b27b4f70128b09b697.svg?invert_in_darkmode&sanitize=true" align=middle width=52.789274999999996pt height=21.18721440000001pt/>, and the strict metric can be interprated correspondingly.
 
-We use ```c0, c1, ..., c9``` to represent those criteria from loose to strict.
+We use <img src="/car_instance/tex/079669763179631abe6c6725d030fb96.svg?invert_in_darkmode&sanitize=true" align=middle width=78.25920134999998pt height=14.15524440000002pt/> to represent those criteria from loose to strict.
 
 
 ### Rules of ranking
