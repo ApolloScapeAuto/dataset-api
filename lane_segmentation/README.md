@@ -59,12 +59,12 @@ python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eva
 
 ### Metric formula
 We adopt the widely used mean IoU metric which is presented in [cityscape metric here](https://www.cityscapes-dataset.com/benchmarks/#scene-labeling-task). 
-For each class, given the predicted masks <img src="/lane_segmentation/tex/b48f9a7b2f437d3195f6d31d2bc638a8.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.465723500000017pt/> and ground truth <img src="/lane_segmentation/tex/f70d22e4badda024297b4d0b7e90867e.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.63846199999998pt/> of image <img src="/lane_segmentation/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> and class <img src="/lane_segmentation/tex/3e18a4a28fdee1744e5e3f79d13b9ff6.svg?invert_in_darkmode&sanitize=true" align=middle width=7.11380504999999pt height=14.15524440000002pt/>, the metric for evaluation is defined as: 
+For each class, given the predicted masks <img src="/lane_segmentation/tex/b48f9a7b2f437d3195f6d31d2bc638a8.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.465723500000017pt/> and ground truth <img src="/lane_segmentation/tex/61d9d0fc3372eb81de31c6e7eed6e705.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.63846199999998pt/> of image <img src="/lane_segmentation/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> and class <img src="/lane_segmentation/tex/3e18a4a28fdee1744e5e3f79d13b9ff6.svg?invert_in_darkmode&sanitize=true" align=middle width=7.11380504999999pt height=14.15524440000002pt/>, the metric for evaluation is defined as: 
 
 <img src="/lane_segmentation/tex/9e32ad2f1f8d49b96d0edf3297947e76.svg?invert_in_darkmode&sanitize=true" align=middle width=219.59248409999995pt height=24.65753399999998pt/>
-<img src="/lane_segmentation/tex/4f5d8bd520f816a934dafacebed47284.svg?invert_in_darkmode&sanitize=true" align=middle width=145.71317639999998pt height=24.657735299999988pt/>
-<img src="/lane_segmentation/tex/c01538506e170770b209ecd9f507d3d3.svg?invert_in_darkmode&sanitize=true" align=middle width=180.46786394999998pt height=24.657735299999988pt/>
-<img src="/lane_segmentation/tex/049bc6aef85fb7ffa7a5a5a1cb4ee095.svg?invert_in_darkmode&sanitize=true" align=middle width=186.80901029999998pt height=24.657735299999988pt/>
+<img src="/lane_segmentation/tex/d78dc64ea5382b305ce04f342a772153.svg?invert_in_darkmode&sanitize=true" align=middle width=161.6606904pt height=24.657735299999988pt/>
+<img src="/lane_segmentation/tex/9ffe0c7d35f0eea9d3cc2eb25d9d0b09.svg?invert_in_darkmode&sanitize=true" align=middle width=203.72113574999997pt height=24.657735299999988pt/>
+<img src="/lane_segmentation/tex/31f245f0af35e32eb71ab12b6bd844d1.svg?invert_in_darkmode&sanitize=true" align=middle width=205.8843336pt height=24.657735299999988pt/>
 
 
 ### Rules of ranking
