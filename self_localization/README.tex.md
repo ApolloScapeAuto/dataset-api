@@ -56,7 +56,7 @@ python eval_pose.py --test_dir='./test_eval_data/pose_res' --gt_dir='./test_eval
 
 For each image, given the predicted rotation $r_i$ and translation $t_i$ of image $i$, and the ground truth $r^*_i$ and $t^*_i$, the metric for evaluation is defined as: 
 
-$e_{translation} = median(\|t_i - t^*_i\|_2\}_{i\in\{1, N\}})$
+$e_{translation} = median(\{\|t_i - t^*_i\|_2\}_{i\in\{1, N\}})$
 
 $e_{rorotation} = median(\{\arccos(q(r_i) \cdot q(r^*_i)) \}_{i\in\{1, N\}})$
 
