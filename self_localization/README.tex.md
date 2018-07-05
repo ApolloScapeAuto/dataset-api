@@ -67,8 +67,8 @@ where $q(r_i)$ is the quaternions representation of the Euler angle ```row, pitc
 
 Result benchmark will be:
 
-|Method | mean | scene1 | scene2 | scene3 | 
-|---|---|---|---|
+| Method | mean | scene1 | scene2 | scene3 | 
+| ------ |:------:|:------:|:------:|:------:|
 | Deepxxx |xx $m$, xx $^{\circ}$  | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | xx $m$, xx $^{\circ}$ | 
 
 Our ranking will determined by number of winning metrics from all scenes.
