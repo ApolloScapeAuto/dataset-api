@@ -56,7 +56,7 @@ python eval_pose.py --test_dir='./test_eval_data/pose_res' --gt_dir='./test_eval
 
 For each image, given the predicted rotation <img src="/self_localization/tex/3cf87ea38a615ed99e0232f8ed9431fe.svg?invert_in_darkmode&sanitize=true" align=middle width=12.067218899999991pt height=14.15524440000002pt/> and translation <img src="/self_localization/tex/02ab12d0013b89c8edc7f0f2662fa7a9.svg?invert_in_darkmode&sanitize=true" align=middle width=10.58699729999999pt height=20.221802699999984pt/> of image <img src="/self_localization/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/>, and the ground truth <img src="/self_localization/tex/8baf725662988147b566a34101b2f41d.svg?invert_in_darkmode&sanitize=true" align=middle width=14.608149599999992pt height=22.63846199999998pt/> and <img src="/self_localization/tex/794f29f339ded8d1f520558a6fdd129e.svg?invert_in_darkmode&sanitize=true" align=middle width=12.671292149999989pt height=22.63846199999998pt/>, the metric for evaluation is defined as: 
 
-<img src="/self_localization/tex/d971509386ccce477d1a00716f36feb0.svg?invert_in_darkmode&sanitize=true" align=middle width=293.44066125pt height=24.65753399999998pt/>
+<img src="/self_localization/tex/018be30b8309099b896cd42416be3b8e.svg?invert_in_darkmode&sanitize=true" align=middle width=301.6598706pt height=24.65753399999998pt/>
 
 <img src="/self_localization/tex/49eac0005f2f37ca6142906d9eeb396e.svg?invert_in_darkmode&sanitize=true" align=middle width=364.9800231pt height=24.65753399999998pt/>
 
