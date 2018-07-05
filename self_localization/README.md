@@ -60,16 +60,16 @@ For each image, given the predicted rotation <img src="/self_localization/tex/3c
 
 <img src="/self_localization/tex/49eac0005f2f37ca6142906d9eeb396e.svg?invert_in_darkmode&sanitize=true" align=middle width=364.9800231pt height=24.65753399999998pt/>
 
-where <img src="/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&sanitize=true" align=middle width=33.60263774999999pt height=24.65753399999998pt/> is the quaternions representation of the Euler angle ```
-is the quaternions representation of the Euler angle ```row, pitch, yall```row, pitch, yall```
+where <img src="/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&sanitize=true" align=middle width=33.60263774999999pt height=24.65753399999998pt/> is the quaternions representation of the Euler angle ```row, pitch, yall```
 
 
 ### Rules of ranking
 
 Result benchmark will be:
+
 |Method | mean | scene1 | scene2 | scene3 | 
 |---|---|---|---|
-| Deepxxx|xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/>  | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | 
+| Deepxxx |xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/>  | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | 
 
 Our ranking will determined by number of winning metrics from all scenes.
 
