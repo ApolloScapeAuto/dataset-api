@@ -58,7 +58,7 @@ For each image, given the predicted rotation $r_i$ and translation $t_i$ of imag
 
 $e_{translation} = median(\{\|t_i - t^*_i\|_2\}_{i\in\{1, N\}})$
 
-$e_{rorotation} = median(\{\arccos(q(r_i) \cdot q(r^*_i)) \}_{i\in\{1, N\}})$
+$e_{rotation} = median(\{\arccos(q(r_i) \cdot q(r^*_i)) \}_{i\in\{1, N\}})$
 
 where $q(r_i)$ is the quaternions representation of the Euler angle ```row, pitch, yall```
 

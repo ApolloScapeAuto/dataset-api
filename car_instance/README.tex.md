@@ -69,7 +69,11 @@ $c_{shape} = \frac{1}{|V|}\sum_{v\in V}IoU(P(s_i), P(s_i^*))_v$
 
 where $V$ is a set of camera views.
 
-For 3d translation and rotation, we follow the same evaluation metric of self-localization, please check [README.md](../self_localization/README.md) for detailed formula.
+For 3d translation and rotation, we follow the same evaluation metric of self-localization [README.md](../self_localization/README.md).
+
+$c_{trans} = \|t_i - t^*_i\|_2$
+
+$c_{rot} = \arccos(q(r_i) \cdot q(r^*_i))$
 
 Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
 
