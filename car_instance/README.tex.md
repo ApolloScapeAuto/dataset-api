@@ -65,7 +65,8 @@ Specifically, given an estimated 3d car model in an image $C_{i}=\{s_i, t_i, r_i
 
 For 3d shape, we consider reprojection similarity, by putting the model at a fix location and rendering 10 views by rotating the object. We compute the mean IoU between the two masks rendered from each view. Formally, the metric is defined as,
 
-$c_{shape} = \sum_{v\in V}IoU(P(s_i), P(s_i^*))_v/|V|$
+$c_{shape} = \frac{1}{|V|}\sum_{v\in V}IoU(P(s_i), P(s_i^*))_v$
+
 where $V$ is a set of camera views.
 
 For 3d translation and rotation, we follow the same evaluation metric of self-localization, please check [README.md](../self_localization/README.md) for detailed formula.
@@ -115,7 +116,7 @@ Here ```image1``` is string  of image name
 ...
 ```
 
-Here``` roll,pitch,yaw,x,y,z``` are float32 numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
+Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
 
 
 ## License
