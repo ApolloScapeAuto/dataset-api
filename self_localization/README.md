@@ -67,8 +67,8 @@ where <img src="/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?inve
 
 Result benchmark will be:
 
-|Method | mean | scene1 | scene2 | scene3 | 
-|---|---|---|---|
+| Method | mean | scene1 | scene2 | scene3 | 
+| ------ |:------:|:------:|:------:|:------:|
 | Deepxxx |xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/>  | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | xx <img src="/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/>, xx <img src="/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&sanitize=true" align=middle width=6.735194399999992pt height=22.63850490000001pt/> | 
 
 Our ranking will determined by number of winning metrics from all scenes.
