@@ -58,7 +58,7 @@ For each image, given the predicted rotation <img src="/self_localization/tex/3c
 
 <img src="/self_localization/tex/018be30b8309099b896cd42416be3b8e.svg?invert_in_darkmode&sanitize=true" align=middle width=301.6598706pt height=24.65753399999998pt/>
 
-<img src="/self_localization/tex/49eac0005f2f37ca6142906d9eeb396e.svg?invert_in_darkmode&sanitize=true" align=middle width=364.9800231pt height=24.65753399999998pt/>
+<img src="/self_localization/tex/1629da9a7c204376b2258a5a391a9574.svg?invert_in_darkmode&sanitize=true" align=middle width=352.0340406pt height=24.65753399999998pt/>
 
 where <img src="/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&sanitize=true" align=middle width=33.60263774999999pt height=24.65753399999998pt/> is the quaternions representation of the Euler angle ```row, pitch, yall```
 
