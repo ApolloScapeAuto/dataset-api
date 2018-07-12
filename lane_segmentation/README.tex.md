@@ -23,6 +23,11 @@ The meaning of the individual elements is:
  - `ext`       the extension of the file. '.jpg' for RGB images and '.png' for groundtruths.
 
 
+## Download
+We already have two set of data release for training and validation of your algorithm. [Road_02] and [Road_03] please check the website for download.
+
+
+
 ## Scripts
 
 There are several scripts included with the dataset in a folder named `scripts`
@@ -58,6 +63,7 @@ python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eva
 ```
 
 ### Metric formula
+
 We adopt the widely used mean IoU metric which is presented in [cityscape metric here](https://www.cityscapes-dataset.com/benchmarks/#scene-labeling-task). 
 For each class, given the predicted masks ${M_{ci}}$ and ground truth ${M_{ci}^*}$ of image $i$ and class $c$, the metric for evaluation is defined as: 
 
