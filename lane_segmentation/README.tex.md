@@ -1,4 +1,4 @@
-# The Landmark Detection Challenge of Apolloscapes Dataset
+# The Lanemark Detection Challenge of Apolloscapes Dataset
 
 This repository contains the evaluation scripts for the landmark detection challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality pixel-level annotations of 16000+ frames.
 

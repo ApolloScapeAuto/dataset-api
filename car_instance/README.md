@@ -69,7 +69,11 @@ For 3d shape, we consider reprojection similarity, by putting the model at a fix
 
 where <img src="/car_instance/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> is a set of camera views.
 
-For 3d translation and rotation, we follow the same evaluation metric of self-localization, please check [README.md](../self_localization/README.md) for detailed formula.
+For 3d translation and rotation, we follow the same evaluation metric of self-localization [README.md](../self_localization/README.md).
+
+<img src="/car_instance/tex/1a16bf6722735f0218334842c3833b50.svg?invert_in_darkmode&sanitize=true" align=middle width=130.72152555pt height=24.65753399999998pt/>
+
+<img src="/car_instance/tex/63afc63bd0e62ce5f7dc09876aba3197.svg?invert_in_darkmode&sanitize=true" align=middle width=186.14137574999998pt height=24.65753399999998pt/>
 
 Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
 
