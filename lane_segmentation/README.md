@@ -23,6 +23,11 @@ The meaning of the individual elements is:
  - `ext`       the extension of the file. '.jpg' for RGB images and '.png' for groundtruths.
 
 
+## Download
+We already have two set of data release for training and validation of your algorithm. [Road_02] and [Road_03] please check the website for download.
+
+
+
 ## Scripts
 
 There are several scripts included with the dataset in a folder named `scripts`
@@ -58,6 +63,7 @@ python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eva
 ```
 
 ### Metric formula
+
 We adopt the widely used mean IoU metric which is presented in [cityscape metric here](https://www.cityscapes-dataset.com/benchmarks/#scene-labeling-task). 
 For each class, given the predicted masks <img src="/lane_segmentation/tex/b48f9a7b2f437d3195f6d31d2bc638a8.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.465723500000017pt/> and ground truth <img src="/lane_segmentation/tex/61d9d0fc3372eb81de31c6e7eed6e705.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.63846199999998pt/> of image <img src="/lane_segmentation/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> and class <img src="/lane_segmentation/tex/3e18a4a28fdee1744e5e3f79d13b9ff6.svg?invert_in_darkmode&sanitize=true" align=middle width=7.11380504999999pt height=14.15524440000002pt/>, the metric for evaluation is defined as: 
 
