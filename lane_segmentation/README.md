@@ -105,4 +105,4 @@ Our ranking will determined by the mean iou of all lane classes.
 
 Please feel free to contact us with any questions, suggestions or comments:
 
-* www.apollo-scape@baidu.com
+* apollo-scape@baidu.com
