@@ -25,4 +25,4 @@ Please goto each subfolder for detailed information about the data structure, ev
 ## Contact
 
 Please feel free to contact us and raise issues with any questions, suggestions or comments:
-* www.apollo-scape@baidu.com
+* apollo-scape@baidu.com
