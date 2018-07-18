@@ -103,5 +103,5 @@ Here  ```roll,pitch,yaw,x,y,z``` are ```float32``` numbers
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
-* www.apollo-scape@baidu.com
+* apollo-scape@baidu.com
 

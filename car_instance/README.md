@@ -130,4 +130,4 @@ For the source code from the renderer and any part we borrow from cocoapi, we fo
 ## Contact
 
 Please feel free to contact us with any questions, suggestions or comments:
-* www.apollo-scape@baidu.com
+* apollo-scape@baidu.com
