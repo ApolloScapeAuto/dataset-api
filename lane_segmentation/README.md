@@ -1,6 +1,6 @@
 # The Lanemark Detection Challenge of Apolloscapes Dataset
 
-This repository contains the evaluation scripts for the landmark detection challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality pixel-level annotations of 16000+ frames.
+This repository contains the evaluation scripts for the landmark detection challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality pixel-level annotations of 140 000+ frames.
 
 Details and download are available in [ECCV Challenge Page](http://apolloscape.auto/ECCV/challenge.html) correspondingly.
 
@@ -10,7 +10,7 @@ Please also check [LanemarkDiscription.pdf](./LanemarkDiscription.pdf) for more 
 
 The folder structure of the landmark detection challenge is as follows:
 ```
-{root}/{type}{road id}/{record id}/{camera id}/{timestamp}_{camera id}{ext}
+{root}/{type}_{road id}/{type}/{record id}/{camera id}/{timestamp}_{camera id}{ext}
 ```
 
 The meaning of the individual elements is:
@@ -25,8 +25,6 @@ The meaning of the individual elements is:
 
 ## Download
 We already have two set of data release for training and validation of your algorithm. [Road_02] and [Road_03] please check the website for download.
-
-
 
 ## Scripts
 
@@ -58,7 +56,7 @@ For further details regarding the submission process, please consult our website
 Run the following code for a sample evaluation:
 ```
 cur_dir=`pwd`
-export PYTHONPATH=<img src="/lane_segmentation/tex/27a3c5b0259eb4b4eb682b2bc7579295.svg?invert_in_darkmode&sanitize=true" align=middle width=142.10499765pt height=22.465723500000017pt/>cur_dir
+export PYTHONPATH=cur_dir
 python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eval_data/pred_list.csv ./test_eval_data/ ./test_eval_data/gt_list.csv
 ```
 
@@ -99,12 +97,9 @@ Our ranking will determined by the mean iou of all lane classes.
 
 
 - Example format of ```image_name1.png```
-```bash
+
 1: image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
 2: Each pixel is encoded as ```uint8``` format.
-```
-
-
 
 ## Contact
 
