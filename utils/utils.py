@@ -98,6 +98,71 @@ def euler_angles_to_rotation_matrix(angle, is_dir=False):
     return R
 
 
+def rotation_matrix_to_euler_angles(R, check=True):
+    """Convert rotation matrix to euler angles
+    Input:
+        R: 3 x 3 rotation matrix
+        check: whether Check if a matrix is a valid
+            rotation matrix.
+    Output:
+        euler angle [x/roll, y/pitch, z/yaw]
+    """
+
+    def isRotationMatrix(R) :
+        Rt = np.transpose(R)
+        shouldBeIdentity = np.dot(Rt, R)
+        I = np.identity(3, dtype = R.dtype)
+        n = np.linalg.norm(I - shouldBeIdentity)
+        return n < 1e-6
+
+    if check:
+        assert(isRotationMatrix(R))
+
+    sy = math.sqrt(R[0,0] * R[0,0] +  R[1,0] * R[1,0])
+    singular = sy < 1e-6
+
+    if  not singular:
+        x = math.atan2(R[2,1] , R[2,2])
+        y = math.atan2(-R[2,0], sy)
+        z = math.atan2(R[1,0], R[0,0])
+
+    else:
+        x = math.atan2(-R[1,2], R[1,1])
+        y = math.atan2(-R[2,0], sy)
+        z = 0
+
+    return np.array([x, y, z])
+
+
+def convert_pose_mat_to_6dof(pose_file_in, pose_file_out):
+    """Convert a pose file with 4x4 pose mat to 6 dof [xyz, rot]
+    representation.
+    Input:
+        pose_file_in: a pose file with each line a 4x4 pose mat
+        pose_file_out: output file save the converted results
+    """
+
+    poses = [line for line in open(pose_file_in)]
+    output_motion = np.zeros((len(poses), 6))
+    f = open(pose_file_out, 'w')
+    for i, line in enumerate(poses):
+        nums = line.split(' ')
+        mat = [np.float32(num.strip()) for num in nums[:-1]]
+        image_name = nums[-1].strip()
+        mat = np.array(mat).reshape((4, 4))
+
+        xyz = mat[:3, 3]
+        rpy = rotation_matrix_to_euler_angles(mat[:3, :3])
+        output_motion = np.hstack((xyz, rpy)).flatten()
+        out_str = '%s %s\n' % (image_name, np.array2string(output_motion,
+            separator=',',
+            formatter={'float_kind':lambda x: "%.7f" % x})[1:-1])
+        f.write(out_str)
+    f.close()
+
+    return output_motion
+
+
 def trans_vec_to_mat(rot, trans, dim=4):
     """ project vetices based on extrinsic parameters
     """
@@ -136,8 +201,15 @@ def plot_images(images,
                 layout=[2, 2],
                 fig_size=10,
                 save_fig=False,
-                is_close=False,
                 fig_name=None):
+    """Plot a dictionary of images:
+    Input:
+        images: dictionary {'image', image}
+        layout: the subplot layout of output
+        fig_size: size of figure
+        save_fig: bool, whether save the plot images
+        fig_name: if save_fig, then provide a name to save
+    """
 
     plt.figure(figsize=(10, 5))
     pylab.rcParams['figure.figsize'] = fig_size, fig_size / 2
