@@ -27,28 +27,28 @@ The meaning of the individual elements is:
 We already have three set of data release for training and validation of your algorithm. [Road_02], [Road_03] and [Road_05] please check the website for download.
 
 ## Scripts
-
-There are several scripts included with the dataset in a folder named `scripts`
+For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
+ 
  - `helpers`      helper files that are included by other scripts
- - `evaluation`   validate your approach
+ - `evaluation`   evaluate your approach
  - `thirdParty`   containing scripts from external libraries. We borrow some codes from [Cityscapes](https://github.com/mcordts/cityscapesScripts).
 
-Note that all files have a small documentation at the top. Most important files
- - `helpers/laneMarkDetection.py`                    central file defining the IDs of all lane classes and providing mapping between various class properties.
+Note that all files have a short documentation at the top. The common used files are listed as below:  
+ - `helpers/laneMarkDetection.py`                    main file defining the IDs of all lane classes and providing mapping between various class properties.
  - `evaluation/evalPixelLevelSemanticLabeling.py`    script to evaluate pixel-level lane labeling results on the test set.
- - `install.sh`                                      installation script of this library. Only tested for Ubuntu.
+ - `install.sh`                                      installation script of this library. Only tested on Ubuntu environment.
 
 The scripts can be installed by running install.sh in the bash:
 `sudo bash install.sh`
 
-This tool is dependent on the evaluation script from cityScape dataset, which is need to pull recursively
+This tool is dependent on the evaluation script from cityScape dataset, which is needed to pull recursively
 
 
 ## Evaluation
 
 Once you want to test your method on the test set, please run your approach on the provided test images and submit your results at [Apollo Test Server](To be updated):
 
-For semantic labeling, we require the result format to match the format of our label images.
+For lane segmentation, we require the result format to match the format of our labeled images.
 Thus, your code should produce images where each pixel's value corresponds to a class ID as defined in `laneMarkDetection.py`.
 Note that our evaluation scripts are included in the scripts folder and can be used to test your approach.
 For further details regarding the submission process, please consult our website.
