@@ -1,5 +1,6 @@
 *.pyc
-build/*
+*/build/*
 *.jpg
 apolloscape
+*.so
 

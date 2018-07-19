@@ -149,6 +149,7 @@ class CarPoseVisualizer(object):
             car_poses = json.load(f)
         image_file = '%s/%s.jpg' % (self._data_config['image_dir'], image_name)
         image = cv2.imread(image_file, cv2.IMREAD_UNCHANGED)[:, :, ::-1]
+
         intrinsic = self.dataset.get_intrinsic(image_name)
         image, self.intrinsic = self.rescale(image, intrinsic)
 
@@ -175,16 +176,115 @@ class CarPoseVisualizer(object):
         return image, self.mask, self.depth
 
 
+class LabelResaver(object):
+    """ Resave the raw labeled file to the required json format for evaluation
+    """
+    #(TODO Peng) Figure out why running pdb it is correct, but segment fault when
+    # running
+    def __init__(self, args):
+        self.visualizer = CarPoseVisualizer(args, scale=0.5)
+        self.visualizer.load_car_models()
+
+
+    def strs_to_mat(self, strs):
+        """convert str to numpy matrix
+        """
+        assert len(strs) == 4
+        mat = np.zeros((4, 4))
+        for i in range(4):
+            mat[i, :] = np.array([np.float32(str_f) for str_f in strs[i].split(' ')])
+
+        return mat
+
+
+    def read_car_pose(self, file_name):
+        """load the labelled car pose
+        """
+        cars = []
+        lines = [line.strip() for line in open(file_name)]
+        i = 0
+        while i < len(lines):
+            car = OrderedDict([])
+            line = lines[i].strip()
+            if 'Model Name :' in line:
+                car_name = line[len('Model Name : '):]
+                car['car_id'] = car_models.car_name2id[car_name].id
+                pose = self.strs_to_mat(lines[i + 2: i + 6])
+                pose[:3, 3] = pose[:3, 3] / 100.0 # convert cm to meter
+                rot = uts.rotation_matrix_to_euler_angles(
+                        pose[:3, :3], check=False)
+                trans = pose[:3, 3].flatten()
+                pose = np.hstack([rot, trans])
+                car['pose'] = pose
+                i += 6
+                cars.append(car)
+            else:
+                i += 1
+
+        return cars
+
+
+    def convert(self, pose_file_in, pose_file_out):
+        """ Convert the raw labelled file to required json format
+        Input:
+            file_name: str filename
+        """
+        car_poses = self.read_car_pose(pose_file_in)
+        car_num = len(car_poses)
+        MAX_DEPTH = self.visualizer.MAX_DEPTH
+        image_size = self.visualizer.image_size
+        intrinsic = self.visualizer.dataset.get_intrinsic(pose_file_in)
+        self.visualizer.intrinsic = uts.intrinsic_vec_to_mat(intrinsic,
+                image_size)
+        self.depth = MAX_DEPTH * np.ones(image_size)
+        self.mask = np.zeros(self.depth.shape)
+        vis_rate = np.zeros(car_num)
+
+        for i, car_pose in enumerate(car_poses):
+            car_name = car_models.car_id2name[car_pose['car_id']].name
+            depth, mask = self.visualizer.render_car(car_pose['pose'], car_name)
+            self.mask, self.depth = self.visualizer.merge_inst(
+                depth, i + 1, self.mask, self.depth)
+            vis_rate[i] = np.float32(np.sum(mask == (i + 1))) / (
+                    np.float32(np.sum(mask)) + np.spacing(1))
+
+        keep_idx = []
+        for i, car_pose in enumerate(car_poses):
+            area = np.round(np.float32(np.sum(
+                self.mask == (i + 1))) / (self.visualizer.scale ** 2))
+            if area > 1:
+                keep_idx.append(i)
+
+            car_pose['pose'] = car_pose['pose'].tolist()
+            car_pose['area'] = int(area)
+            car_pose['visible_rate'] = float(vis_rate[i])
+            keep_idx.append(i)
+
+        car_poses = [car_poses[idx] for idx in keep_idx]
+        with open(pose_file_out, 'w') as f:
+            json.dump(car_poses, f, sort_keys=True, indent=4,
+                    ensure_ascii=False)
+
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Evaluation self localization.')
+    parser = argparse.ArgumentParser(description='Render car instance and convert car labelled files.')
     parser.add_argument('--image_name', default='180116_053947113_Camera_5',
                         help='the dir of ground truth')
     parser.add_argument('--data_dir', default='../apolloscape/3d_car_instance_sample/',
                         help='the dir of ground truth')
     args = parser.parse_args()
     assert args.image_name
+
+    print('Test converter')
+    pose_file_in = './test_files/%s.poses' % args.image_name
+    pose_file_out = './test_files/%s.json' % args.image_name
+    label_resaver = LabelResaver(args)
+    label_resaver.convert(pose_file_in, pose_file_out)
+
+    print('Test visualizer')
     visualizer = CarPoseVisualizer(args)
     visualizer.load_car_models()
     visualizer.showAnn(args.image_name)
+
 
 
