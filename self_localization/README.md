@@ -7,6 +7,36 @@ Details and download are available at: https://Apolloscape.auto/ECCV/index.html
 
 
 ## Dataset Structure
+
+The dataset has the following structure
+```
+{root}/{scane_names}/{data_type}/{record id}/{camera id}/{image_name}
+```
+
+`scene_names` include a sample scene:
+- `Road_01`: which is road id where the dataset is collected.
+
+`data_type` includes: 
+- `image`: the RGB image from the dataset
+- `pose`: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the 4x4 pose matrix from Apolloscape dataset)
+- `camera_params`: the intrinsic parameter of the camera
+- `split`: the train val split used in the paper
+
+`record id`: each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically.
+
+`camera_id`: each scene we provide images recorede by two camera facing front side, e.g. `Camera_5` and `Camera_6`
+There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger dataset later.
+
+Here ```split``` include the train and val image names for each scene, where val images are recorded at different period with training images.
+
+`image_name`: the name of the file, images will be ```{timestamp}_{camera id}.jpg```
+
+There is only one pose file (i.e., pose.txt) for each camera and each record. This pose file contains all the extrinsic parameters for all the images of the corresponding camera and record. The format of each line in the pose file is as follows:
+
+```image_name row,pitch,yall,x,y,z```
+
+Similar data structure is described in apolloscape.auto/scene.html, while having the pose saved in a 4x4 matrix, a conversion code from 4x4 matrix to 6 DOF is provided in `utils` of this toolkit.
+Later we will also release semantic labels,  and semantic 3d point cloud python toolkit to render 3d point to 2d image for visualizing the semantic points.
 You may download the dataset from [self-localization](http://apolloscape.auto/ECCV/challenge.html). The sample data is used for paper 
 
 ```
@@ -18,27 +48,6 @@ You may download the dataset from [self-localization](http://apolloscape.auto/EC
    year={2018}
  }
 ```
-
-`scene_names` include a sample scene:
-- `Road_01`: which is a small dataset with 2242 train/756 val images recorded in the same scene
-
-`data_type` includes: 
-- `image`: the RGB image from the dataset
-- `pose`: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the 4x4 pose matrix from Apolloscape dataset)
-- `camera_params`: the intrinsic parameter of the camera
-- `split`: the train val split used in the paper
-
-`sequence_id`, each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically.
-
-`camera_id`, each scene we provide images recorede by two camera facing front side. 
-- `zpark`: `Camera_1` and `Camera_2`
-There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger dataset later.
-
-Here ```split``` include the train and val image names for each scene, where val images are recorded at different period with training images.
-
-Similar data structure is described in apolloscape.auto/scene.html, while having the pose saved in a 4x4 matrix, a conversion code from 4x4 matrix to 6 DOF is provided in `utils` of this toolkit.
-
-Later we will also release semantic labels,  and semantic 3d point cloud python toolkit to render 3d point to 2d image for visualizing the semantic points.
 
 
 ## Evaluation
