@@ -19,8 +19,8 @@ The dataset has the following structure
 `data_type` includes: 
 - `image`: the RGB image from the dataset
 - `pose`: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the 4x4 pose matrix from Apolloscape dataset)
-- `camera_params`: the intrinsic parameter of the camera
-- `split`: the train val split used in the paper
+- `camera_params`: the intrinsic parameter of the cameras
+- `split`: train val split
 
 `record id`: each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically.
 
@@ -55,7 +55,6 @@ There are several scripts included with the dataset in a folder named `scripts`
  - `eval_pose.py`   Code for evalution pose accuracy based the commonly used eval metric of meidian translation and rotation error.
 
 Code for test evaluation: 
-
 ```bash
 #!/bin/bash
 python eval_pose.py --test_dir='./test_eval_data/pose_res' --gt_dir='./test_eval_data/pose_gt' --res_file='./test_eval_data/res.txt'
