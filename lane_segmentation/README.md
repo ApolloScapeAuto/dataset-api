@@ -54,7 +54,7 @@ For lane labeling, we require the result format to match the format of our label
 Run the following code for a sample evaluation:
 ```
 cur_dir=`pwd`
-export PYTHONPATH=<img src="/lane_segmentation/tex/27a3c5b0259eb4b4eb682b2bc7579295.svg?invert_in_darkmode&sanitize=true" align=middle width=142.10499765pt height=22.465723500000017pt/>cur_dir
+export PYTHONPATH = PYTHONPATH:cur_dir
 python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eval_data/pred_list.csv ./test_eval_data/ ./test_eval_data/gt_list.csv
 ```
 
@@ -96,8 +96,8 @@ Our ranking will determined by the mean iou of all lane classes.
 
 - Example format of ```image_name1.png```
 ```bash
-1. image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
-2. Each pixel is encoded as ```uint8``` format.
+1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
+2.Each pixel is encoded as ```uint8``` format.
 ```
 
 ## Contact
