@@ -24,7 +24,7 @@ The meaning of the individual elements is:
 
 
 ## Download
-We have three set of data release for training and validation of your algorithm. [Road_02], [Road_03] and [Road_04] please check our website for download.
+We have three set of data release for training and validation of your algorithm. [Road_02], [Road_03] and [Road_04] please check our website for download link.
 
 ## Scripts
 
