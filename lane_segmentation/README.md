@@ -30,7 +30,7 @@ We have three set of data release for training and validation of your algorithm.
 
 For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
 
- - `helpers`      helper files which includes usful information of using our evaluation files
+ - `helpers`      helper files which include usful information of using our evaluation files
  - `evaluation`   the main file for validating your approach
  - `thirdParty`   containing scripts from external libraries. We borrow some codes from [Cityscapes](https://github.com/mcordts/cityscapesScripts).
 
