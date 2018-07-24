@@ -37,8 +37,13 @@ class CarPoseVisualizer(object):
         self.MAX_DEPTH = 1e4
         self.MAX_INST_NUM = 100
         h, w = self._data_config['image_size']
+
+        # must round prop to 4 due to renderer requirements
+        # this will change the original size a bit, we usually need rescale
+        # due to large image size
         self.image_size = np.uint32(uts.round_prop_to(
             np.float32([h * scale, w * scale])))
+
         self.scale = scale
         self.linewidth = linewidth
         self.colors = np.random.random((self.MAX_INST_NUM, 3)) * 255
@@ -122,16 +127,18 @@ class CarPoseVisualizer(object):
 
         return total_mask, total_depth
 
+
     def rescale(self, image, intrinsic):
         """resize the image and intrinsic given a relative scale
         """
 
         intrinsic_out = uts.intrinsic_vec_to_mat(intrinsic,
                                                  self.image_size)
-        if self.scale != 1.0:
-            hs, ws = self.image_size
-            image_out = cv2.resize(image.copy(), (ws, hs))
+        hs, ws = self.image_size
+        image_out = cv2.resize(image.copy(), (ws, hs))
+
         return image_out, intrinsic_out
+
 
     def showAnn(self, image_name):
         """Show the annotation of a pose file in an image
