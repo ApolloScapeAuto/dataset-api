@@ -20,6 +20,9 @@ The meaning of the individual elements is:
  - `images` image set. 
  - `split` training and vlaidation image list. 
 
+Our released official data will have a new folder
+ - `ignore_mask` the mask of unlabeled car regions in order to avoid error false positive, *For testing, please prune the detected car inside the ignore mask using our render tool. Otherwise, it will be counted as false positive*. 
+
 
 ## Scripts
 There are several scripts included with the dataset in a folder named `scripts`
