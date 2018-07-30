@@ -8,8 +8,8 @@ from Cython.Distutils import build_ext
 import subprocess
 import numpy
 
-proc_libs = subprocess.check_output("pkg-config --libs eigen3 egl glew pcl_io-1.8".split())
-proc_incs = subprocess.check_output("pkg-config --cflags eigen3 egl glew pcl_io-1.8".split())
+proc_libs = subprocess.check_output("pkg-config --libs eigen3 egl glew".split())
+proc_incs = subprocess.check_output("pkg-config --cflags eigen3 egl glew".split())
 
 libs = [lib.encode('utf-8') for lib in proc_libs.split()]
 incs= [inc.encode('utf-8') for inc in proc_incs.split()]
