@@ -84,8 +84,8 @@ OffscreenGL::OffscreenGL(int maxHeight, int maxWidth) {
       eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx);
 
       if (glewInit() != GLEW_OK) {
-            fprintf(stderr, "Failed to initialize GLEW\n");
-            getchar();
+         //(TODO) It seems not necessary to initialize GLEW
+         /* fprintf(stderr, "Failed to initialize GLEW\n"); */
       }
 
         glGenFramebuffersEXT(1, &fb);
