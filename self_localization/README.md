@@ -30,7 +30,7 @@ The dataset has the following structure
 
 `camera_id`: each scene we provide images recorede by two camera facing front side, e.g. `Camera_5` and `Camera_6`
 There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger dataset later.
-The `camera parameters` is consistent with that in other datasets released in https://Apolloscape.auto. ([fx, fy, cx, cy] are also available at [data.py](../data.py)
+The `camera parameters` is consistent with that in other datasets released in https://Apolloscape.auto. ([fx, fy, cx, cy] are also available at [data.py](https://github.com/ApolloScapeAuto/dataset-api/blob/master/car_instance/data.py)
 
 Here ```split``` include the train and val image names for each scene, where val images are recorded at different period with training images.
 
