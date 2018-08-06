@@ -14,7 +14,7 @@ The dataset has the following structure
 ```
 
 `scene_names` include a sample scene:
-- `Road_01`: which is road id where the dataset is collected.
+- `Road11`: which is road id where the dataset is collected.
 
 `split` is the split of the dataset:
 - `Train`: include the data for training, including `image, pose, split`.
