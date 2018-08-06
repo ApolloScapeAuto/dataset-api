@@ -10,15 +10,16 @@ Details and download are available at: https://Apolloscape.auto/ECCV/index.html
 
 The dataset has the following structure
 ```
-{root}/{scene_names}/{split}/{data_type}/{record time}/{record id}/{camera id}/{image_name}
+{split}/{scene_names}/{data_type}/{record time}/{record id}/{camera id}/{image_name}
 ```
-
-`scene_names` include a sample scene:
-- `Road11`: which is road id where the dataset is collected.
-
 `split` is the split of the dataset:
 - `Train`: include the data for training, including `image, pose, split`.
 - `Test`: include the image for testing, including `image` without pose ground truth.
+
+`scene_names` include a sample scene:
+- `Road11`: which is road id where the dataset is collected.
+Due to large amount of images, you need to download train and test image sets for each Roadxx separately.
+
 
 `data_type` includes: 
 - `image`: the RGB image from the dataset
@@ -92,25 +93,23 @@ Please follow the data format under ```test_eval_data/``` for example.
 
 The submission structure for test folder is:
 ```
-test/{scene_names}/Test/pose/{record time}/{record id}/{camera id}.txt
+Test/{scene_names}/pose/{record time}/{record id}/{camera id}.txt
 ```
 
 We only ask for the pose of a single camera, i.e. ```Camera_5``` in this case
 
 - Example dir tree of submitted zip file
 ```bash
-├── test
+├── Test
 │   ├── Road11
-│   │   ├── Test
-│   │   │   ├── BJxxxB
-│   │   │   │   ├── Recordxxx
-│   │   │   │   │   ├── Camera_5.txt
+│   │   ├── BJxxxB
+│   │   │   ├── Recordxxx
+│   │   │   │   ├── Camera_5.txt
 │   │    ...
 │   ├── Road12
-│   │   ├── Test
-│   │   │   ├── BJxxxB
-│   │   │   │   ├── Recordxxx
-│   │   │   │   │   ├── Camera_5.txt
+│   │   ├── BJxxxB
+│   │   │   ├── Recordxxx
+│   │   │   │   ├── Camera_5.txt
 ...
 ```
 
