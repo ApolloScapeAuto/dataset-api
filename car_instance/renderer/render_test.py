@@ -5,12 +5,12 @@
 """
 
 import sys
+sys.path.insert(0, '../../')
+
 import numpy as np
 import render_egl
 import pickle as pkl
 import utils.utils as uts
-
-sys.path.insert(0, '../../')
 
 
 def test_render():
