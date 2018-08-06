@@ -10,22 +10,27 @@ Details and download are available at: https://Apolloscape.auto/ECCV/index.html
 
 The dataset has the following structure
 ```
-{root}/{scane_names}/{data_type}/{record id}/{camera id}/{image_name}
+{root}/{scene_names}/{split}/{data_type}/{record time}/{record id}/{camera id}/{image_name}
 ```
 
 `scene_names` include a sample scene:
 - `Road_01`: which is road id where the dataset is collected.
 
+`split` is the split of the dataset:
+- `Train`: include the data for training, including `image, pose, split`.
+- `Test`: include the image for testing, including `image` without pose ground truth.
+
 `data_type` includes: 
 - `image`: the RGB image from the dataset
 - `pose`: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the 4x4 pose matrix from Apolloscape dataset)
-- `camera_params`: the intrinsic parameter of the cameras
 - `split`: train val split
 
+`record time`: the time stamp for recorded videos, i.e. BJxxxB is one set of collections at site BJ
 `record id`: each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically.
 
 `camera_id`: each scene we provide images recorede by two camera facing front side, e.g. `Camera_5` and `Camera_6`
 There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger dataset later.
+The `camera parameters` is consistent with that in other datasets released in https://Apolloscape.auto. ([fx, fy, cx, cy] are also available at (data.py)[../data.py]
 
 Here ```split``` include the train and val image names for each scene, where val images are recorded at different period with training images.
 
@@ -85,20 +90,31 @@ Our ranking will determined by number of winning metrics from all scenes.
 ### Submission of data format
 Please follow the data format under ```test_eval_data/``` for example. 
 
+The submission structure for test folder is:
+```
+test/{scene_names}/Test/pose/{record time}/{record id}/{camera id}.txt
+```
+
+We only ask for the pose of a single camera, i.e. ```Camera_5``` in this case
+
 - Example dir tree of submitted zip file
 ```bash
 ├── test
-│   ├── scene1
-│   │   ├── sequence1.txt
-│   │   ├── sequence2.txt
+│   ├── Road11
+│   │   ├── Test
+│   │   │   ├── BJxxxB
+│   │   │   │   ├── Recordxxx
+│   │   │   │   │   ├── Camera_5.txt
 │   │    ...
-│   ├── scene2
-│   │   ├── sequence1.txt
-│   │   ├── sequence2.txt
+│   ├── Road12
+│   │   ├── Test
+│   │   │   ├── BJxxxB
+│   │   │   │   ├── Recordxxx
+│   │   │   │   │   ├── Camera_5.txt
 ...
 ```
 
- - Example format of ```sequence1.txt```
+ - Example format of ```{camera id}.txt```
 ```bash
 image_name1 roll,pitch,yaw,x,y,z
 image_name2 roll,pitch,yaw,x,y,z
