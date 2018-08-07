@@ -63,7 +63,7 @@ There are several scripts included with the dataset in a folder named `scripts`
 Code for test evaluation: 
 ```bash
 #!/bin/bash
-python eval_pose.py --test_dir='./test_eval_data/pose_res' --gt_dir='./test_eval_data/pose_gt' --res_file='./test_eval_data/res.txt'
+python eval_pose.py --test_dir='./test_eval_data/Test' --gt_dir='./test_eval_data/Test_gt' --res_file='./test_eval_data/res.txt'
 ```
 
 ### Metric formula
