@@ -177,8 +177,8 @@ class CarPoseVisualizer(object):
             image = image + frame * 0.5 * self.colors[i, :]
 
         uts.plot_images({'image_vis': np.uint8(image),
-            'depth': self.depth, 'mask': self.mask},
-                        layout=[1, 3])
+                         'depth': self.depth, 'mask': self.mask},
+                         layout=[1, 3])
 
         return image, self.mask, self.depth
 
@@ -279,15 +279,17 @@ if __name__ == '__main__':
                         help='the dir of ground truth')
     parser.add_argument('--data_dir', default='../apolloscape/3d_car_instance_sample/',
                         help='the dir of ground truth')
-    parser.add_argument('--split', default='train', help='split for visualization')
+    parser.add_argument('--split', default='sample_data', help='split for visualization')
     args = parser.parse_args()
     assert args.image_name
 
-    print('Test converter')
-    pose_file_in = './test_files/%s.poses' % args.image_name
-    pose_file_out = './test_files/%s.json' % args.image_name
-    label_resaver = LabelResaver(args)
-    label_resaver.convert(pose_file_in, pose_file_out)
+    if False:
+        # (TODO) Debugging correct but segment fault when running. Useless for visualization
+        print('Test converter')
+        pose_file_in = './test_files/%s.poses' % args.image_name
+        pose_file_out = './test_files/%s.json' % args.image_name
+        label_resaver = LabelResaver(args)
+        label_resaver.convert(pose_file_in, pose_file_out)
 
     print('Test visualizer')
     visualizer = CarPoseVisualizer(args)
