@@ -18,8 +18,9 @@ class PoseEval(object):
     def __init__(self, args):
         """ Initializer.
         """
-        self._names = ['median_xyz', 'median_theta']
         self.args = args
+        self._names = ['median_xyz', 'median_theta']
+        self._eval_cameras = ['Camera 5']
         self._offset = []
         self._theta = []
         self._rot_idx = [0, 1, 2]
@@ -28,6 +29,19 @@ class PoseEval(object):
     def _checker(self, res_folder, gt_folder):
         """check whether results folder and gt folder has the same dir tree
         """
+
+        def get_scene_files(root_folder, scene_name):
+            seq_list = []
+            scene_dir = root_folder + scene_name
+            tree = [x[0][len(scene_dir):] for x in os.walk(scene_dir)]
+            for line in tree:
+                if 'Record' in line:
+                    for Camera in self._eval_cameras:
+                        seq_list.append('%s/%s/%s/%s.txt' % (root_folder, scene_name, \
+                                line, Camera))
+            return seq_list
+
+
         res_seq_list = OrderedDict({})
         gt_seq_list = OrderedDict({})
 
@@ -38,8 +52,8 @@ class PoseEval(object):
                 'Test result scene numbers are not the same as ground truth')
 
         for scene in scenes_gt:
-            res_seq_list[scene] = sorted(os.listdir(res_folder + scene))
-            gt_seq_list[scene] = sorted(os.listdir(gt_folder + scene))
+            res_seq_list[scene] = sorted(get_scene_files(res_folder, scene))
+            gt_seq_list[scene] = sorted(get_scene_files(gt_folder, scene))
             if not len(res_seq_list[scene]) == len(gt_seq_list[scene]):
                 raise ValueError('Test scene %s seq numbers are not the same as ground truth'
                                  % scene)
@@ -75,6 +89,7 @@ class PoseEval(object):
         gt = np.concatenate(gt)
         return gt, res
 
+
     def eval(self):
         """ evaluate the results folder
         """
@@ -83,17 +98,16 @@ class PoseEval(object):
         res_all = OrderedDict({})
         for scene in res_files.keys():
             self.reset()
-            for res_file in res_files[scene]:
-                res_full_path = '%s/%s/%s' % (args.test_dir, scene, res_file)
-                gt_full_path = '%s/%s/%s' % (args.gt_dir, scene, res_file)
-                poses = self.load_pose_file(res_full_path)
-                poses_gt = self.load_pose_file(gt_full_path)
+            for res_file, gt_file in zip(res_files[scene], gt_files[scene]):
+                poses = self.load_pose_file(res_file)
+                poses_gt = self.load_pose_file(gt_file)
                 if not len(poses.items()) == len(poses_gt.items()):
                     raise ValueError('image num of scene %s, seq %s is not \
                                the same as ground truth' % (scene, res_file))
 
-            poses_gt, poses = self.dict_to_array(poses_gt, poses)
-            self.update(poses_gt, poses)
+                poses_gt, poses = self.dict_to_array(poses_gt, poses)
+                self.update(poses_gt, poses)
+
             _, values = self.get()
             res_all[scene] = values
 
@@ -103,6 +117,7 @@ class PoseEval(object):
             print('%10s: %5.4f %5.4f' % (scene, values[0], values[1]))
             f.write('%s %.4f,%.4f\n' % (scene, values[0], values[1]))
         f.close()
+
 
     def update(self, label, pred):
         """Update metrics.
@@ -119,6 +134,7 @@ class PoseEval(object):
         self._theta.append(2 * np.arccos(diff) * 180 / np.pi)
         self._offset.append(np.ravel(np.linalg.norm(pose_x - pred_x, axis=1)))
 
+
     def get(self):
         """Get current state of metrics.
         """
@@ -134,12 +150,13 @@ class PoseEval(object):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Evaluation self localization.')
-    parser.add_argument('--test_dir', default='./test_eval_data/pose_res/',
+    parser.add_argument('--test_dir', default='./test_eval_data/Test/',
                         help='the dir of results')
-    parser.add_argument('--gt_dir', default='./test_eval_data/pose_gt/',
+    parser.add_argument('--gt_dir', default='./test_eval_data/Test_gt/',
                         help='the dir of ground truth')
     parser.add_argument('--res_file', default='./test_eval_data/res.txt',
                         help='the dir of ground truth')
     args = parser.parse_args()
     pose_metric = PoseEval(args)
     pose_metric.eval()
+
