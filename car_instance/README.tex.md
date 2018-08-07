@@ -10,12 +10,15 @@ You may download the dataset from [apollo 3d car challenges](http://apolloscape.
 
 The folder structure of the 3d car detection challenge is as follows:
 ```
-{root}/{folder}/{image_name}{ext}
+{root}/{folder}/{content}/{image_name}{ext}
 ```
 
-The meaning of the individual elements is:
+The meaning of the individual elements of `folder` is:
  - `camera`   camera intrinsic parameters.
  - `car_models`   the set of car models, re-saved to python friendly pkl.
+ - `{split}` the split of car 3d pose dataset, it could be `sample_data`, `Train`, `Test`
+ 
+Elements of `content` under a `{split}` folder includes:
  - `car_poses`   labelled car pose in the image.
  - `images` image set. 
  - `split` training and vlaidation image list. 
@@ -39,9 +42,10 @@ The scripts can be installed by running install.sh in the bash:
 Please download the sample data from 
 [apollo 3d car challenges](http://apolloscape.auto/ECCV/challenge.html) with sample data button, and put it under ```../apolloscape/``` 
 
+
 Then run the following code to show a rendered results:
 ```bash
-python render_car_instances.py --image_name='./test_example/pose_res' --data_dir='../apolloscape/3d_car_instance_sample'
+python render_car_instances.py --split='sample_data' --image_name='180116_053947113_Camera_5' --data_dir='../apolloscape/3d_car_instance_sample'
 ```
 
 ## Evaluation
