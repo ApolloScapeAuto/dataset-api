@@ -279,6 +279,7 @@ if __name__ == '__main__':
                         help='the dir of ground truth')
     parser.add_argument('--data_dir', default='../apolloscape/3d_car_instance_sample/',
                         help='the dir of ground truth')
+    parser.add_argument('--split', default='train', help='split for visualization')
     args = parser.parse_args()
     assert args.image_name
 

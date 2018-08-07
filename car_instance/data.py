@@ -12,6 +12,7 @@ class ApolloScape(object):
     def __init__(self, args=None):
         self._data_config = {}
         self._data_dir = './apolloscape/'
+        self._split = 'train'
         self._args = args
 
     def get_3d_car_config(self):
@@ -19,11 +20,13 @@ class ApolloScape(object):
         """
         ROOT = self._data_dir + '3d_car_instance/' if self._args is None else \
             self._args.data_dir
+        if hasattr(self._args, 'split'):
+            split = self._args.split
 
-        self._data_config['image_dir'] = ROOT + 'images/'
-        self._data_config['pose_dir'] = ROOT + 'car_poses/'
-        self._data_config['train_list'] = ROOT + 'split/train.txt'
-        self._data_config['val_list'] = ROOT + 'split/val.txt'
+        self._data_config['image_dir'] = ROOT + '%s/images/' % split
+        self._data_config['pose_dir'] = ROOT + '%s/car_poses/' % split
+        self._data_config['train_list'] = ROOT + '%s/split/train.txt'
+        self._data_config['val_list'] = ROOT + '%s/split/val.txt'
         self._data_config['image_size'] = [2710, 3384]
         self._data_config['intrinsic'] = {
             'Camera_5': np.array(
