@@ -28,7 +28,7 @@ We have three set of data release for training and validation of your algorithm.
 
 ## Scripts
 
-For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
+The evaluation scripts are released on github [here](https://github.com/ApolloScapeAuto/dataset-api).  For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
 
  - `helpers`      helper files which include usful information of using our evaluation files
  - `evaluation`   the main file for validating your approach
@@ -95,10 +95,10 @@ Our ranking will determined by the mean iou of all lane classes.
 
 
 - Example format of ```image_name1.png```
-```bash
-1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
-2.Each pixel is encoded as ```uint8``` format.
-```
+
+- 1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
+- 2.Each pixel is encoded as ```uint8``` format.
+
 
 ## Contact
 
