@@ -24,11 +24,11 @@ The meaning of the individual elements is:
 
 
 ## Download
-We have three set of data release for training and validation of your algorithm. [Road_02], [Road_03] and [Road_04] please check our website for download link.
+We have three set of data release for training and validation of your algorithm. Please check our website for download [link](http://apolloscape.auto/lane_segmentation.html).
 
 ## Scripts
 
-The evaluation scripts are released on github [here](https://github.com/ApolloScapeAuto/dataset-api).  For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
+The evaluation scripts are released on github [here](https://github.com/ApolloScapeAuto/dataset-api). For lane segmentation, the codes are under */dataset-api/lane_segmentation/*. The structure of the script is described as below: 
 
  - `helpers`      helper files which include usful information of using our evaluation files
  - `evaluation`   the main file for validating your approach
@@ -44,7 +44,6 @@ The scripts can be installed by running install.sh in the bash:
 
 This tool is dependent on the evaluation script from cityScape dataset, which is will be pulled recursively
 
-
 ## Evaluation
 
 Once you want to test your method on the test set, please run your approach on the provided test images and submit your results at [Apollo Test Server](To be updated):
@@ -54,7 +53,7 @@ For lane labeling, we require the result format to match the format of our label
 Run the following code for a sample evaluation:
 ```
 cur_dir=`pwd`
-export PYTHONPATH = PYTHONPATH:cur_dir
+export PYTHONPATH = \$PYTHONPATH:cur_dir
 python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eval_data/pred_list.csv ./test_eval_data/ ./test_eval_data/gt_list.csv
 ```
 
@@ -67,7 +66,6 @@ For each class, given the predicted masks <img src="/lane_segmentation/tex/b48f9
 <img src="/lane_segmentation/tex/d78dc64ea5382b305ce04f342a772153.svg?invert_in_darkmode&sanitize=true" align=middle width=161.6606904pt height=24.657735299999988pt/>
 <img src="/lane_segmentation/tex/9ffe0c7d35f0eea9d3cc2eb25d9d0b09.svg?invert_in_darkmode&sanitize=true" align=middle width=203.72113574999997pt height=24.657735299999988pt/>
 <img src="/lane_segmentation/tex/31f245f0af35e32eb71ab12b6bd844d1.svg?invert_in_darkmode&sanitize=true" align=middle width=205.8843336pt height=24.657735299999988pt/>
-
 
 ### Rules of ranking
 
@@ -96,9 +94,8 @@ Our ranking will determined by the mean iou of all lane classes.
 
 - Example format of ```image_name1.png```
 
-- 1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
-- 2.Each pixel is encoded as ```uint8``` format.
-
+1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
+2.Each pixel is encoded as ```uint8``` format.
 
 ## Contact
 
