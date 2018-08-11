@@ -6,7 +6,7 @@ A test dataset for each new scene will be withheld for benchmark. (Notice we wil
 [Details and download](http://apolloscape.auto/self_localization.html) of data from different roads are available. Here are some interesting facts: 
 
 _For each road, we record it by driving from start-to-end and then end-to-start at different day times, which means at each site along the road, a scene will be looked at from two opposit directions. 
-We provide the set of record id recorded from start-to-end and the set of record id from end-to-start in training set for each road at [LoopDirection.txt](). One may discover the corresponding images from the camera pose we provided._
+We provide the set of record id recorded from start-to-end and the set of record id from end-to-start in training set for each road at [LoopDirection](https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/LoopDirection.md). One may discover the corresponding images from the camera pose we provided._
 
 _In this challenge, we recard records from forward (start-to-end) and inverse (end-to-start) driving as records from two different roads, which means we will not have forward videos as training while have inverse driving as testing videos. 
 However, it could be interesting to do that in your research as showed in the work of [Semantic Visual Localization](https://arxiv.org/abs/1712.05773)._
