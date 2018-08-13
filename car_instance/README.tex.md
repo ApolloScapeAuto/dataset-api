@@ -80,7 +80,7 @@ For 3d translation and rotation, we follow the same evaluation metric of self-lo
 
 $c_{trans} = \|t_i - t^*_i\|_2$
 
-$c_{rot} = \arccos(q(r_i) \cdot q(r^*_i))$
+$c_{rot} = \arccos(|q(r_i) \cdot q(r^*_i)|)$
 
 Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
 
