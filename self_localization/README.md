@@ -80,7 +80,7 @@ For each image, given the predicted rotation <img src="/self_localization/tex/3c
 
 <img src="/self_localization/tex/018be30b8309099b896cd42416be3b8e.svg?invert_in_darkmode&sanitize=true" align=middle width=301.6598706pt height=24.65753399999998pt/>
 
-<img src="/self_localization/tex/1629da9a7c204376b2258a5a391a9574.svg?invert_in_darkmode&sanitize=true" align=middle width=352.0340406pt height=24.65753399999998pt/>
+<img src="/self_localization/tex/d3c967f93263fe69501af2c06edd0834.svg?invert_in_darkmode&sanitize=true" align=middle width=361.16648864999996pt height=24.65753399999998pt/>
 
 where <img src="/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&sanitize=true" align=middle width=33.60263774999999pt height=24.65753399999998pt/> is the quaternions representation of the Euler angle ```row, pitch, yall```
 
