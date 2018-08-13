@@ -94,8 +94,9 @@ Our ranking will determined by the mean iou of all lane classes.
 
 - Example format of ```image_name1.png```
 
-1.image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
-2.Each pixel is encoded as ```uint8``` format.
+1. image_name1.png is a prediction label image, which should have the same name and same size as the testing image. In this image, each pixel encode the class IDs as defined in our labels description. Note that regular ID is used, not the train ID.
+
+2. Each pixel is encoded as ```uint8``` format.
 
 ## Contact
 
