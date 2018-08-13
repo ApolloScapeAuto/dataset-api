@@ -7,9 +7,6 @@
 import numpy as np
 import math
 
-import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
 
 def euler_angles_to_quaternions(angle):
     """Convert euler angels to quaternions representation.
@@ -210,6 +207,9 @@ def plot_images(images,
         save_fig: bool, whether save the plot images
         fig_name: if save_fig, then provide a name to save
     """
+
+    import matplotlib.pyplot as plt
+    import matplotlib.pylab as pylab
 
     plt.figure(figsize=(10, 5))
     pylab.rcParams['figure.figsize'] = fig_size, fig_size / 2
