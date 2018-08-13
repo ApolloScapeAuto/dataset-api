@@ -53,7 +53,7 @@ For lane labeling, we require the result format to match the format of our label
 Run the following code for a sample evaluation:
 ```
 cur_dir=`pwd`
-export PYTHONPATH = ''$''PYTHONPATH:cur_dir
+export PYTHONPATH = $PYTHONPATH:cur_dir
 
 python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eval_data/pred_list.csv ./test_eval_data/ ./test_eval_data/gt_list.csv
 ```
