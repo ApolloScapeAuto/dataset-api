@@ -80,7 +80,7 @@ For 3d translation and rotation, we follow the same evaluation metric of self-lo
 
 <img src="/car_instance/tex/1a16bf6722735f0218334842c3833b50.svg?invert_in_darkmode&sanitize=true" align=middle width=130.72152555pt height=24.65753399999998pt/>
 
-<img src="/car_instance/tex/63afc63bd0e62ce5f7dc09876aba3197.svg?invert_in_darkmode&sanitize=true" align=middle width=186.14137574999998pt height=24.65753399999998pt/>
+<img src="/car_instance/tex/3b42802dd2e4ed40ae0918b39904ca2d.svg?invert_in_darkmode&sanitize=true" align=middle width=195.27382379999997pt height=24.65753399999998pt/>
 
 Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
 
