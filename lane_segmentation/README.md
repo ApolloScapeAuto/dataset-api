@@ -53,19 +53,7 @@ For lane labeling, we require the result format to match the format of our label
 Run the following code for a sample evaluation:
 ```
 cur_dir=`pwd`
-export PYTHONPATH = \$PYTHONPATH:cur_dir
-python evaluation/evalPixelLevelSemanticLabeling.py ./test_eval_data/ ./test_eval_data/pred_list.csv ./test_eval_data/ ./test_eval_data/gt_list.csv
-```
-
-### Metric formula
-
-We adopt the widely used mean IoU metric which is presented in [cityscape metric here](https://www.cityscapes-dataset.com/benchmarks/#scene-labeling-task). 
-For each class, given the predicted masks <img src="/lane_segmentation/tex/b48f9a7b2f437d3195f6d31d2bc638a8.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.465723500000017pt/> and ground truth <img src="/lane_segmentation/tex/61d9d0fc3372eb81de31c6e7eed6e705.svg?invert_in_darkmode&sanitize=true" align=middle width=26.47306529999999pt height=22.63846199999998pt/> of image <img src="/lane_segmentation/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> and class <img src="/lane_segmentation/tex/3e18a4a28fdee1744e5e3f79d13b9ff6.svg?invert_in_darkmode&sanitize=true" align=middle width=7.11380504999999pt height=14.15524440000002pt/>, the metric for evaluation is defined as: 
-
-<img src="/lane_segmentation/tex/9e32ad2f1f8d49b96d0edf3297947e76.svg?invert_in_darkmode&sanitize=true" align=middle width=219.59248409999995pt height=24.65753399999998pt/>
-<img src="/lane_segmentation/tex/d78dc64ea5382b305ce04f342a772153.svg?invert_in_darkmode&sanitize=true" align=middle width=161.6606904pt height=24.657735299999988pt/>
-<img src="/lane_segmentation/tex/9ffe0c7d35f0eea9d3cc2eb25d9d0b09.svg?invert_in_darkmode&sanitize=true" align=middle width=203.72113574999997pt height=24.657735299999988pt/>
-<img src="/lane_segmentation/tex/31f245f0af35e32eb71ab12b6bd844d1.svg?invert_in_darkmode&sanitize=true" align=middle width=205.8843336pt height=24.657735299999988pt/>
+export PYTHONPATH = ''<img src="/lane_segmentation/tex/7fb39ef9ad0bfa5210c8a04d83a59fc2.svg?invert_in_darkmode&sanitize=true" align=middle width=1011.984402pt height=166.0273956pt/>{M_{ci}}<img src="/lane_segmentation/tex/4778367e7eced373761b799650d6cb61.svg?invert_in_darkmode&sanitize=true" align=middle width=117.84300824999998pt height=22.831056599999986pt/>{M_{ci}^*}<img src="/lane_segmentation/tex/7970d72d5832b057adfe04a8cf19d00e.svg?invert_in_darkmode&sanitize=true" align=middle width=62.655440099999986pt height=22.831056599999986pt/>i<img src="/lane_segmentation/tex/3946c94fcb6109ed676a0a102cdb1270.svg?invert_in_darkmode&sanitize=true" align=middle width=63.55425614999999pt height=22.831056599999986pt/>c<img src="/lane_segmentation/tex/26c370de89a4a6b05c930cd8c1621401.svg?invert_in_darkmode&sanitize=true" align=middle width=279.02551049999994pt height=22.831056599999986pt/>IoU_{c} = TP / (TP + FP + FN)<img src="/lane_segmentation/tex/cbe4745c368cb36ecf6b1c81ef1d330a.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/>TP = \sum_i{\|M_{ci} \cdot M_{ci}^*\|_0} <img src="/lane_segmentation/tex/cbe4745c368cb36ecf6b1c81ef1d330a.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/>FP = \sum_i{\|M_{ci} \cdot (1 - M_{ci}^*)\|_0} <img src="/lane_segmentation/tex/cbe4745c368cb36ecf6b1c81ef1d330a.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/>FN = \sum_i{\|(1 - M_{ci}) \cdot M_{ci}^*\|_0} $
 
 ### Rules of ranking
 
