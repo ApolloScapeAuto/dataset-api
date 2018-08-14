@@ -109,15 +109,17 @@ We only ask for the pose of a single camera, i.e. ```Camera_5``` in this case
 - Example dir tree of submitted zip file
 ```bash
 ├── Test
-│   ├── Road11
-│   │   ├── BJxxxB
-│   │   │   ├── Recordxxx
-│   │   │   │   ├── Camera_5.txt
+│   ├── Road1x
+│   │   ├── pose
+│   │   │   ├── xxxxx
+│   │   │   │   ├── Recordxxx
+│   │   │   │   │   ├── Camera_5.txt
 │   │    ...
-│   ├── Road12
-│   │   ├── BJxxxB
-│   │   │   ├── Recordxxx
-│   │   │   │   ├── Camera_5.txt
+│   ├── Road1x
+│   │   ├── pose
+│   │   │   ├── xxxxx
+│   │   │   │   ├── Recordxxx
+│   │   │   │   │   ├── Camera_5.txt
 ...
 ```
 
