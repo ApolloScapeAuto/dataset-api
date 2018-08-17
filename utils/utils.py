@@ -39,6 +39,13 @@ def euler_angles_to_quaternions(angle):
     return q
 
 
+def intrinsic_mat_to_vec(K):
+    """Convert a 3x3 intrinsic vector to a 4 dim intrinsic
+       matrix
+    """
+    return np.array([K[0, 0], K[1, 1], K[0, 2], K[1, 2]])
+
+
 def intrinsic_vec_to_mat(intrinsic, shape=None):
     """Convert a 4 dim intrinsic vector to a 3x3 intrinsic
        matrix
@@ -161,7 +168,7 @@ def convert_pose_mat_to_6dof(pose_file_in, pose_file_out):
 
 
 def trans_vec_to_mat(rot, trans, dim=4):
-    """ project vetices based on extrinsic parameters
+    """ project vetices based on extrinsic parameters to 3x4 matrix
     """
     mat = euler_angles_to_rotation_matrix(rot)
     mat = np.hstack([mat, trans.reshape((3, 1))])
@@ -192,6 +199,31 @@ def project(pose, scale, vertices):
     points = np.matmul(points, mat.transpose())
 
     return points[:, :3]
+
+
+
+def crop_image(image, crop_in):
+    """crop an image by given image
+    Input:
+        image: h x w or h x w x c image
+        crop_in: a normalized crop
+    """
+    # crop must be a normalized crop
+    crop = crop_in.copy()
+    assert np.max(np.array(crop)) < 1.0
+    h, w = image.shape[:2]
+    crop[[0, 2]] *= h
+    crop[[1, 3]] *= w
+    crop = np.uint32(crop)
+
+    if np.ndim(image) == 2:
+        cropped_img = image[crop[0]:crop[2], crop[1]:crop[3]]
+    elif np.ndim(image) == 3:
+        cropped_img = image[crop[0]:crop[2], crop[1]:crop[3], :]
+    else:
+        raise ValueError('not support image dim > 3')
+
+    return cropped_img
 
 
 def plot_images(images,

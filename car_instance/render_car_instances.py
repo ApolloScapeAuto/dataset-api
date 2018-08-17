@@ -7,14 +7,14 @@
 import argparse
 import cv2
 import car_models
-import data
 import numpy as np
 import json
 import pickle as pkl
 
-import renderer.render_egl as render
+import utils.data as data
 import utils.utils as uts
 import utils.eval_utils as eval_uts
+import renderer.render_egl as render
 import logging
 
 from collections import OrderedDict
