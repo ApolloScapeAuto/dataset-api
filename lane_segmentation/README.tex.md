@@ -1,4 +1,4 @@
-* [The Lanemark Segmentation Challenge of Apolloscapes Dataset](#the-lanemark-segmentation-challenge-of-apolloscapes-dataset)
+ * [The Lanemark Segmentation Challenge of Apolloscapes Dataset](#the-lanemark-segmentation-challenge-of-apolloscapes-dataset)
       * [Dataset Structure](#dataset-structure)
       * [Download](#download)
       * [Scripts](#scripts)
