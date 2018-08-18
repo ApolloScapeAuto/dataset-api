@@ -1,3 +1,14 @@
+* [The Lanemark Segmentation Challenge of Apolloscapes Dataset](#the-lanemark-segmentation-challenge-of-apolloscapes-dataset)
+      * [Dataset Structure](#dataset-structure)
+      * [Download](#download)
+      * [Scripts](#scripts)
+      * [Evaluation](#evaluation)
+         * [Metric formula](#metric-formula)
+         * [Rules of ranking](#rules-of-ranking)
+         * [Submission of data format](#submission-of-data-format)
+      * [Contact](#contact)
+
+
 # The Lanemark Segmentation Challenge of Apolloscapes Dataset
 
 This repository contains the evaluation scripts for the landmark segmentation challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality pixel-level annotations of 110 000+ frames.
