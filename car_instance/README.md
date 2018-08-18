@@ -1,3 +1,15 @@
+
+ * [The 3D Car Instance Understanding Challenge of Apolloscapes Dataset](#the-3d-car-instance-understanding-challenge-of-apolloscapes-dataset)
+   * [Dataset Structure](#dataset-structure)
+   * [Scripts](#scripts)
+   * [Evaluation](#evaluation)
+      * [Metric formula](#metric-formula)
+      * [Rules of ranking](#rules-of-ranking)
+      * [Submission of data format](#submission-of-data-format)
+   * [License](#license)
+   * [Contact](#contact)
+
+
 # The 3D Car Instance Understanding Challenge of Apolloscapes Dataset
 
 This repository contains the evaluation scripts for the 3d car instance understanding challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality annotations of 5000+ frames.
