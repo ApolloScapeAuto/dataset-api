@@ -1,3 +1,11 @@
+* [The Online Self-localization Challenge of Apolloscape](#the-online-self-localization-challenge-of-apolloscape)
+   * [Dataset Structure](#dataset-structure)
+   * [Evaluation](#evaluation)
+      * [Metric formula](#metric-formula)
+      * [Rules of ranking](#rules-of-ranking)
+      * [Submission of data format](#submission-of-data-format)
+   * [Contact](#contact)
+
 # The Online Self-localization Challenge of Apolloscape
 This repository contains the evaluation scripts for the online self-localization challenge of the ApolloScapes dataset,
 Where we extended the dataset with more scenes and 100x large data including recorded videos under different lighting conditions, i.e. morning, noon and night, with stereo pair of images. 
