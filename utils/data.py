@@ -28,6 +28,8 @@ class ApolloScape(object):
         # when need to rescale image due to large data
         self._data_config['image_size'] = [int(2710 * self._scale),
                                            int(3384 * self._scale)]
+
+        # fx, fy, cx, cy
         self._data_config['intrinsic'] = {
             'Camera_5': np.array(
                 [2304.54786556982, 2305.875668062,

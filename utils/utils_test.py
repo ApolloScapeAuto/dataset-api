@@ -13,5 +13,5 @@ def convert_pose_mat_to_6dof_test():
 
 if __name__ == '__main__':
     convert_pose_mat_to_6dof_test()
-    print('test pass')
+    print('test utils pass')
 

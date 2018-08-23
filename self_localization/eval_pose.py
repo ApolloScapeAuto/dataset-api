@@ -47,13 +47,16 @@ class PoseEval(object):
 
         scenes_gt = sorted(os.listdir(gt_folder))
         scenes_res = sorted(os.listdir(res_folder))
-        if not len(scenes_res) == len(scenes_gt):
-            raise ValueError(
-                'Test result scene numbers are not the same as ground truth')
+        if not self.args.allow_missing:
+            if not len(scenes_res) == len(scenes_gt):
+                raise ValueError(
+                    'Test result scene numbers are not the same as ground truth')
 
         for scene in scenes_gt:
-            res_seq_list[scene] = sorted(get_scene_files(res_folder, scene))
             gt_seq_list[scene] = sorted(get_scene_files(gt_folder, scene))
+            if not (scene in scenes_res):
+                continue
+            res_seq_list[scene] = sorted(get_scene_files(res_folder, scene))
             if not len(res_seq_list[scene]) == len(gt_seq_list[scene]):
                 raise ValueError('Test scene %s seq numbers are not the same as ground truth'
                                  % scene)
@@ -113,10 +116,12 @@ class PoseEval(object):
 
         f = open(self.args.res_file, 'w')
         print('%10s: %5s %5s' % ('scene_name', 'xyz', 'rot'))
-        for scene, values in res_all.items():
+        for scene in gt_files.keys():
+            values = res_all[scene] if scene in res_all else -1 * np.ones(2)
             print('%10s: %5.4f %5.4f' % (scene, values[0], values[1]))
             f.write('%s %.4f,%.4f\n' % (scene, values[0], values[1]))
         f.close()
+
 
 
     def update(self, label, pred):
@@ -156,6 +161,9 @@ if __name__ == '__main__':
                         help='the dir of ground truth')
     parser.add_argument('--res_file', default='./test_eval_data/res.txt',
                         help='the dir of ground truth')
+    parser.add_argument('--allow_missing', type=uts.str2bool, default='true',
+                        help='the dir of ground truth')
+
     args = parser.parse_args()
     pose_metric = PoseEval(args)
     pose_metric.eval()

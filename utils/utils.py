@@ -266,5 +266,18 @@ def plot_images(images,
         plt.show()
 
 
+def str2bool(conf_str):
+    """tool for converting str to bool for python argparser
+    Inputs:
+        conf_str: 'str' indicating a boolean value.
+    """
+    if conf_str.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif conf_str.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise ValueError('Boolean value expected.')
+
+
 if __name__ == '__main__':
     pass
