@@ -163,9 +163,14 @@ class ApolloScape(object):
 
         return self._data_config
 
-    def get_intrinsic(self, image_name):
+    def get_intrinsic(self, image_name, camera_name=None):
         assert self._data_config
-        for name in self._data_config['intrinsic'].keys():
-            if name in image_name:
-                return self._data_config['intrinsic'][name]
+        if camera_name:
+            return self._data_config['intrinsic'][camera_name]
+        else:
+            for name in self._data_config['intrinsic'].keys():
+                if name in image_name:
+                    return self._data_config['intrinsic'][name]
         raise ValueError('%s has no provided intrinsic' % image_name)
+
+

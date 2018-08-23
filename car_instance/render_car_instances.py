@@ -157,7 +157,8 @@ class CarPoseVisualizer(object):
         image_file = '%s/%s.jpg' % (self._data_config['image_dir'], image_name)
         image = cv2.imread(image_file, cv2.IMREAD_UNCHANGED)[:, :, ::-1]
 
-        intrinsic = self.dataset.get_intrinsic(image_name)
+        # intrinsic are all used by Camera 5
+        intrinsic = self.dataset.get_intrinsic(image_name, 'Camera_5')
         image, self.intrinsic = self.rescale(image, intrinsic)
 
         self.depth = self.MAX_DEPTH * np.ones(self.image_size)
@@ -240,7 +241,8 @@ class LabelResaver(object):
         car_num = len(car_poses)
         MAX_DEPTH = self.visualizer.MAX_DEPTH
         image_size = self.visualizer.image_size
-        intrinsic = self.visualizer.dataset.get_intrinsic(pose_file_in)
+        intrinsic = self.visualizer.dataset.get_intrinsic(
+                pose_file_in, 'Camera_5')
         self.visualizer.intrinsic = uts.intrinsic_vec_to_mat(intrinsic,
                 image_size)
         self.depth = MAX_DEPTH * np.ones(image_size)
