@@ -112,27 +112,27 @@ def rotation_matrix_to_euler_angles(R, check=True):
         euler angle [x/roll, y/pitch, z/yaw]
     """
 
-    def isRotationMatrix(R) :
+    def isRotationMatrix(R):
         Rt = np.transpose(R)
         shouldBeIdentity = np.dot(Rt, R)
-        I = np.identity(3, dtype = R.dtype)
+        I = np.identity(3, dtype=R.dtype)
         n = np.linalg.norm(I - shouldBeIdentity)
         return n < 1e-6
 
     if check:
         assert(isRotationMatrix(R))
 
-    sy = math.sqrt(R[0,0] * R[0,0] +  R[1,0] * R[1,0])
+    sy = math.sqrt(R[0, 0] * R[0, 0] + R[1, 0] * R[1, 0])
     singular = sy < 1e-6
 
-    if  not singular:
-        x = math.atan2(R[2,1] , R[2,2])
-        y = math.atan2(-R[2,0], sy)
-        z = math.atan2(R[1,0], R[0,0])
+    if not singular:
+        x = math.atan2(R[2, 1], R[2, 2])
+        y = math.atan2(-R[2, 0], sy)
+        z = math.atan2(R[1, 0], R[0, 0])
 
     else:
-        x = math.atan2(-R[1,2], R[1,1])
-        y = math.atan2(-R[2,0], sy)
+        x = math.atan2(-R[1, 2], R[1, 1])
+        y = math.atan2(-R[2, 0], sy)
         z = 0
 
     return np.array([x, y, z])
@@ -159,8 +159,9 @@ def convert_pose_mat_to_6dof(pose_file_in, pose_file_out):
         rpy = rotation_matrix_to_euler_angles(mat[:3, :3])
         output_motion = np.hstack((xyz, rpy)).flatten()
         out_str = '%s %s\n' % (image_name, np.array2string(output_motion,
-            separator=',',
-            formatter={'float_kind':lambda x: "%.7f" % x})[1:-1])
+                  separator=',',
+                  formatter={'float_kind': lambda x: "%.7f" % x})[1:-1])
+
         f.write(out_str)
     f.close()
 
@@ -199,7 +200,6 @@ def project(pose, scale, vertices):
     points = np.matmul(points, mat.transpose())
 
     return points[:, :3]
-
 
 
 def crop_image(image, crop_in):

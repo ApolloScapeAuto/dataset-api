@@ -37,10 +37,9 @@ class PoseEval(object):
             for line in tree:
                 if 'Record' in line:
                     for Camera in self._eval_cameras:
-                        seq_list.append('%s/%s/%s/%s.txt' % (root_folder, scene_name, \
-                                line, Camera))
+                        seq_list.append('%s/%s/%s/%s.txt' % (root_folder, scene_name,
+                                                             line, Camera))
             return seq_list
-
 
         res_seq_list = OrderedDict({})
         gt_seq_list = OrderedDict({})
@@ -92,12 +91,11 @@ class PoseEval(object):
         gt = np.concatenate(gt)
         return gt, res
 
-
     def eval(self):
         """ evaluate the results folder
         """
-        res_files, gt_files = self._checker(self.args.test_dir, \
-                self.args.gt_dir)
+        res_files, gt_files = self._checker(self.args.test_dir,
+                                            self.args.gt_dir)
         res_all = OrderedDict({})
         for scene in res_files.keys():
             self.reset()
@@ -122,8 +120,6 @@ class PoseEval(object):
             f.write('%s %.4f,%.4f\n' % (scene, values[0], values[1]))
         f.close()
 
-
-
     def update(self, label, pred):
         """Update metrics.
         """
@@ -138,7 +134,6 @@ class PoseEval(object):
         diff = abs(np.ravel(1 - np.sum(np.square((q1 - q2)) / 2, axis=1)))
         self._theta.append(2 * np.arccos(diff) * 180 / np.pi)
         self._offset.append(np.ravel(np.linalg.norm(pose_x - pred_x, axis=1)))
-
 
     def get(self):
         """Get current state of metrics.
@@ -167,4 +162,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     pose_metric = PoseEval(args)
     pose_metric.eval()
-

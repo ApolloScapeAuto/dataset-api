@@ -18,7 +18,6 @@ class ApolloScape(object):
         if use_stereo:
             self._get_stereo_rectify_params()
 
-
     def _get_data_parameters(self):
         """get the data configuration of the dataset.
            These parameters are shared across different tasks
@@ -48,21 +47,21 @@ class ApolloScape(object):
 
         # relative pose of camera 6 wrt camera 5
         self._data_config['extrinsic'] = {
-                'R': np.array([
-                    [ 9.96978057e-01,  3.91718762e-02, -6.70849865e-02],
-                    [-3.93257593e-02,  9.99225970e-01, -9.74686202e-04],
-                    [ 6.69948100e-02,  3.60985263e-03,  9.97746748e-01]]),
-                'T': np.array([-0.6213358,   0.02198739,  -0.01986043])
-                }
+            'R': np.array([
+                [9.96978057e-01, 3.91718762e-02, -6.70849865e-02],
+                [-3.93257593e-02, 9.99225970e-01, -9.74686202e-04],
+                [6.69948100e-02, 3.60985263e-03, 9.97746748e-01]]),
+            'T': np.array([-0.6213358, 0.02198739, -0.01986043])
+        }
 
         # crop margin after stereo rectify for getting the region
         # with stereo matching, however it can remove some valid region
-        self._data_config['stereo_crop'] = np.array([1232., 668., 2500., 2716.])
+        self._data_config['stereo_crop'] = np.array(
+            [1232., 668., 2500., 2716.])
         self._data_config['stereo_crop'][[0, 2]] /= \
-                self._data_config['image_size_raw'][0]
+            self._data_config['image_size_raw'][0]
         self._data_config['stereo_crop'][[1, 3]] /= \
-                self._data_config['image_size_raw'][1]
-
+            self._data_config['image_size_raw'][1]
 
     def _get_stereo_rectify_params(self):
         """ if using stereo, we need to findout the stereo parameters,
@@ -70,11 +69,11 @@ class ApolloScape(object):
         """
         camera_names = self._data_config['intrinsic'].keys()
         camera5_mat = uts.intrinsic_vec_to_mat(
-                self._data_config['intrinsic']['Camera_5'],
-                self._data_config['image_size'])
+            self._data_config['intrinsic']['Camera_5'],
+            self._data_config['image_size'])
         camera6_mat = uts.intrinsic_vec_to_mat(
-                self._data_config['intrinsic']['Camera_6'],
-                self._data_config['image_size'])
+            self._data_config['intrinsic']['Camera_6'],
+            self._data_config['image_size'])
 
         distCoeff = np.zeros(4)
         image_size = (self._data_config['image_size'][1],
@@ -130,8 +129,8 @@ class ApolloScape(object):
 
         self._data_config.update(res)
 
-
-    def stereo_rectify(self, image, camera_name, interpolation=cv2.INTER_LINEAR):
+    def stereo_rectify(self, image, camera_name,
+                       interpolation=cv2.INTER_LINEAR):
         """ Given an image we rectify this image for stereo matching
         Input:
             image: the inputs image
@@ -142,18 +141,18 @@ class ApolloScape(object):
             the rectified image
         """
         image_rect = cv2.remap(image,
-                        self._data_config[camera_name + '_mapx'],
-                        self._data_config[camera_name + '_mapy'],
-                        interpolation)
+                               self._data_config[camera_name + '_mapx'],
+                               self._data_config[camera_name + '_mapy'],
+                               interpolation)
         return image_rect
-
 
     def get_3d_car_config(self):
         """get configuration of the dataset for 3d car understanding
         """
         ROOT = self._data_dir + '3d_car_instance/' if self._args is None else \
             self._args.data_dir
-        split = self._args.split if hasattr(self._args, 'split') else 'sample_data'
+        split = self._args.split if hasattr(
+            self._args, 'split') else 'sample_data'
 
         self._data_config['image_dir'] = ROOT + '%s/images/' % split
         self._data_config['pose_dir'] = ROOT + '%s/car_poses/' % split
@@ -170,6 +169,3 @@ class ApolloScape(object):
             if name in image_name:
                 return self._data_config['intrinsic'][name]
         raise ValueError('%s has no provided intrinsic' % image_name)
-
-
-
