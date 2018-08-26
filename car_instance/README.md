@@ -27,7 +27,7 @@ The folder structure of the 3d car detection challenge is as follows:
 
 The meaning of the individual elements of `folder` is:
  - `camera`   camera intrinsic parameters.
- - `car_models`   the set of car models, re-saved to python friendly pkl.
+ - `car_models`   the set of car models, re-saved to python friendly pkl. *Notice the car models in our format (vertices & meshes ) start with index 1 rather than other format like .off starting with 0.*
  - `{split}` the split of car 3d pose dataset, it could be `sample_data`, `Train`, `Test`
  
 Elements of `content` under a `{split}` folder includes:
