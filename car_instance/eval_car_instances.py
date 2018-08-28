@@ -224,9 +224,9 @@ class Detect3DEval(object):
         # finding matches between detections & ground truth
         if not len(sims) == 0:
             for tind, cri in enumerate(p.criteria):
-                cur_cri = cri
                 for dind, d in enumerate(dt):
                     # information about best match so far (m=-1 -> unmatched)
+                    cur_cri = cri
                     m   = -1
                     for gind, g in enumerate(gt):
                         # if this gt already matched, continue
