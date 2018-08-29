@@ -157,8 +157,9 @@ class Detect3DEval(object):
         gt = self._gts[image_name]
         dt = self._dts[image_name]
 
-        if len(gt) == 0 and len(dt) == 0:
+        if len(gt) == 0 or len(dt) == 0:
             return []
+
         inds = np.argsort([-d['score'] for d in dt], kind = 'mergesort')
         dt = [dt[i] for i in inds]
         if len(dt) > p.maxDets[-1]:
