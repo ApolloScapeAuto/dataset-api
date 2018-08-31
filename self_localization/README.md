@@ -72,7 +72,7 @@ You may download the dataset from [self-localization](http://apolloscape.auto/EC
 ```
 
 ## Background Pointcloud
-At [Details and download](http://apolloscape.auto/self_localization.html), we also provide backgroud point cloud for supporting the localization task for each road. 
+At [download page](http://apolloscape.auto/self_localization.html), we also provide backgroud point cloud for supporting the localization task for each road. 
 
 You may download the point cloud to ```point_cloud``` under each road directory ```{scene_names}``` as described in above data structure.  
 Since the point cloud for each road could be very large, we partition it to several parts, and they are saved following the dir structure: 
