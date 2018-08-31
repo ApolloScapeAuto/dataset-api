@@ -1,0 +1,12 @@
+#version 330 core
+
+// input color 
+in vec4 vFragColor;
+
+out vec4 FragColor;
+
+void main(){
+		 
+	FragColor = vFragColor;   //global color 
+
+}

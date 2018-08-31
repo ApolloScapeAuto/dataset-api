@@ -3,4 +3,5 @@
 *.jpg
 apolloscape
 *.so
+*.o
 

@@ -1,0 +1,51 @@
+#version 330 core
+
+layout (points) in;
+layout (triangle_strip, max_vertices = 4) out;
+
+in vec4 VertexColor[];
+out vec4 vFragColor;
+
+// Values that stay constant for the whole mesh.
+uniform mat4 MVP;
+uniform mat4 V;
+uniform mat4 M;
+uniform mat4 P;
+uniform float Quadsize;
+
+void main() {   
+	
+	mat4 m_MV = V * M ;
+	
+	vec3 v_right = vec3(m_MV[0][0], m_MV[1][0], m_MV[2][0]); //row 0
+	vec3 v_up =    vec3(m_MV[0][1], m_MV[1][1], m_MV[2][1]); //row 1
+	
+	vec3 up      = v_up * Quadsize;
+    vec3 right   = v_right * Quadsize;
+	
+	int i;
+	for ( i=0; i < gl_in.length(); i++) {
+	
+		vec4 origPos  = gl_in[i].gl_Position;
+		
+		vFragColor = VertexColor[i];
+		gl_Position = origPos + MVP * vec4(-up-right, 0.0f);    // 1:bottom-left
+		EmitVertex();
+		
+		vFragColor = VertexColor[i];	
+		gl_Position = origPos + MVP * vec4(-up+right, 0.0f);    // 2:bottom-right
+		EmitVertex();
+		
+		vFragColor = VertexColor[i];
+		gl_Position = origPos + MVP * vec4(up-right, 0.0f);    // 3:top-left
+		EmitVertex();
+		
+		vFragColor = VertexColor[i];
+		gl_Position = origPos + MVP * vec4(up+right, 0.0f);    // 4:top-right
+		EmitVertex();
+		
+	}
+
+
+    EndPrimitive();
+}  

@@ -6,8 +6,6 @@
 #include "GL/gl.h"
 #include "GL/glu.h"
 #include <cassert>
-/* #include "GL/glut.h" */
-
 #include <EGL/egl.h>
 
 #define CHECK_GL_ERROR \

@@ -1,0 +1,117 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+// Get the color of each class for rendering a label map
+
+layout(location = 0) in vec3 vertexPosition_modelspace;
+layout(location = 1) in int vertices_labels;
+
+out vec4 VertexColor;
+
+uniform mat4 MVP;
+
+void main(){
+
+	// Output position of the vertex, in clip space : MVP * 3D point 
+	gl_Position =  MVP * vec4(vertexPosition_modelspace , 1.0);
+
+	int input1;
+	input1 = vertices_labels;
+	
+	switch (input1){ 
+        case 0 :
+			VertexColor = vec4(0., 0., 128/255.0, 1.0);	  	//class 17 Sky	 "0x808080" 
+			break; 
+		case 17 : 
+			VertexColor = vec4(128/255.0, 128/255.0, 128/255.0, 1.0);	  	//class 17 Sky	 "0x808080" 
+			break; 
+		case 33 : 
+			VertexColor = vec4(64/255.0, 0.0, 128/255.0, 1.0);	    		//class 33  vehicle on road	 "0x400080"
+			break; 
+		case 34 : 
+			VertexColor = vec4(64/255.0, 128/255.0, 192/255.0, 1.0);	  	//class 34  vehicle on the others road 	  "0x4080c0"
+			break; 
+		case 35 : 
+			VertexColor = vec4(64/255.0, 64/255.0, 0.0, 1.0);	  			//class 35  person	"0x404000"
+			break; 
+		case 36 : 
+			VertexColor = vec4(0.0, 128/255.0, 192/255.0, 1.0);			  //class 36 person with bicycle	 0x0080c0
+			break;
+		case 49:
+			VertexColor = vec4(128/255.0, 0.0, 192/255.0, 1.0);	 		 	//class 49  vehicle road 0x8000c0
+			break;
+		case 50:
+			VertexColor = vec4(192/255.0, 0.0, 64/255.0, 1.0);	  			//class 50 non-vehicle road	 0xc00040
+			break;
+		case 51:
+			VertexColor = vec4(128/255.0, 128/255.0, 192/255.0, 1.0);	  //class 51 lane 0x8080c0
+			break;
+		case 48:
+			VertexColor = vec4(128/255.0, 64/255.0, 128/255.0, 1.0);	  //class 48 other road  0x804080	
+			break;		
+		case 65:
+			VertexColor = vec4(192/255.0,  128/255.0, 192/255.0,1.0);	  //class 65  boundary	 0xc080c0
+			break;
+		case 64:
+			VertexColor = vec4(128/255.0, 64/255.0, 64/255.0, 1.0);	 		 //class 64  other boundary	 0x804040
+			break;	
+		case 81:
+			VertexColor = vec4(0.0, 0.0,  64/255.0, 1.0);	  				//class 81    0x000040
+			break;	
+		case 82:
+			VertexColor = vec4(0.0/255.0, 0.0/255.0, 192/255.0, 1.0);	 	 //class 82   	 0x0000c0
+			break;	
+		case 83:
+			VertexColor = vec4(64/255.0, 64/255.0, 128/255.0, 1.0);	  		//class 83  	 0x404080
+			break;	
+		case 80:
+			VertexColor = vec4(192/255.0, 128/255.0, 64/255.0, 1.0);	 	 //class 80  	 0xc08040
+			break;	
+		case 97:
+			VertexColor = vec4(192/255.0, 128/255.0 , 128/255.0, 1.0);	  	//class 97      0xc08080
+			break;	
+		case 98:
+			VertexColor = vec4(0.0, 64/255.0,  64/255.0, 1.0);			  	//class 98    0x004040
+			break;	
+		case 99:
+			VertexColor = vec4(192/255.0, 192/255.0 , 128/255.0, 1.0);	  	//class 99   	 0xc0c080
+			break;	
+		case 100:
+			VertexColor = vec4(64/255.0,  0.0 , 192/255.0, 1.0);	  	//class 100   	 0x4000c0
+			break;	
+		case 101:
+			VertexColor = vec4(192/255.0, 0.0 , 192/255.0, 1.0);	  	//class 101   	 0xc000c0
+			break;	
+		case 102:
+			VertexColor = vec4(192/255.0, 0.0 , 128/255.0, 1.0);	  	//class 102   	 0xc00080
+			break;	
+		case 96:
+			VertexColor = vec4(192/255.0, 64/255.0 , 128/255.0, 1.0);	  	//class 96   	 0xc04080
+			break;	
+		case 113:
+			VertexColor = vec4(128/255.0, 0.0 , 0.0, 1.0);	  				//class 113   	 0x800000
+			break;	
+		case 114:
+			VertexColor = vec4(64/255.0, 128/255.0, 64/255.0, 1.0);	  	//class 114   	 0x408040
+			break;
+		case 115:
+			VertexColor = vec4(128/255.0, 128/255.0, 64/255.0, 1.0);	  	//class 115   	 0x808040
+			break;	
+		case 116:
+			VertexColor = vec4(0.0 , 128/255.0, 64/255.0, 1.0);	  	//class 116   	 0x008040
+			break;
+		case 112:
+			VertexColor = vec4(128/255.0, 128/255.0, 0.0, 1.0);	  	//class 112   	 0x808000
+			break;
+		case 128:
+			VertexColor = vec4(192/255.0, 192/255.0, 0.0, 1.0);	  	//class 128   	 0xc0c000
+			break;			
+		case 129:
+			VertexColor = vec4(64/255.0, 192/255.0, 0.0, 1.0);	  	//class 129   	 0x40c000
+			break;
+		default : 			
+			VertexColor = vec4(0.0,0.0,0.0,1.0);	  // missing points
+			break; 
+		} 
+}
+

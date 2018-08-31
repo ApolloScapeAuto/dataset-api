@@ -133,7 +133,7 @@ class ApolloScape(object):
                        interpolation=cv2.INTER_LINEAR):
         """ Given an image we rectify this image for stereo matching
         Input:
-            image: the inputs image
+            image: the input image
             camera_name: 'Camera_5' or 'Camera_6' the name of camera where the
                     image is
             interpolation: the method of warping
@@ -162,6 +162,20 @@ class ApolloScape(object):
         self._data_config['car_model_dir'] = ROOT + 'car_models/'
 
         return self._data_config
+
+    def get_self_local_config(self, Road, split):
+        """get configuration of the dataset for 3d car understanding
+        """
+        ROOT = self._data_dir + 'self_localization/' if self._args is None else \
+            self._args.data_dir
+        split = self._args.split if hasattr(self._args, 'split') else 'sample_data'
+
+        self._data_config['image_dir'] = ROOT + '%s/%s/image/' % (split, Road)
+        self._data_config['pose_dir'] = ROOT + '%s/%s/pose/' % (split, Road)
+        self._data_config['cloud_dir'] = ROOT + '%s/%s/point_cloud/' % (split, Road)
+
+        return self._data_config
+
 
     def get_intrinsic(self, image_name, camera_name=None):
         assert self._data_config
