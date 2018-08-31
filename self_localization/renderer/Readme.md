@@ -16,8 +16,9 @@ Dependency: `python-tk libeigen3-dev libglfw-dev libgles2-mesa-dev libglew-dev l
 
 Tested with Ubuntu 14.04 and Python 2.7, nvidia diver 375.26. We use `pcl-1.8` For other versions, we haven't tested it. 
 
-
+To test it, 
 ```bash
 #!/bin/bash
-python test_projector.py'
+cd ../
+python proj_point_cloud.py'
 ```
