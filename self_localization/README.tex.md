@@ -81,8 +81,9 @@ Train/{scene_names}/point_cloud/{record time}/Part{id}.pcd
 ```
 `id` here is the index of partition for each set of point cloud. One may perform projection from point cloud to a depth map  based on the given pose for corresponding camera and road. 
 
-We provide an example opengl rendering program that is wrapped by cython ```proj_point_cloud.py``` to demonstrate the projection/rendering process.  
-For rendering a depth map for each image, if your memory is large enough, you may load all the point cloud parts of each road to be a whole set of point cloud for rendering. Otherwise, you may render depth map from each part of point cloud and merge all the rendered depth maps by taking care of the zbuffer, i.e. select the minimum value at each corresponding pixel. 
+ - ```proj_point_cloud.py``` is an example opengl rendering program that is wrapped by cython to demonstrate the projection/rendering process.  
+ 
+For rendering a depth map for each image, if your computer memory is large enough > 20G, you may load all the parts of each road to be a whole set of point cloud for rendering. Otherwise, you may render depth map from each part of point cloud and merge all the rendered depth maps by taking care of the zbuffer, i.e. select the minimum depth value at each corresponding pixel. 
 
 
 ## Evaluation
