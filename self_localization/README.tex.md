@@ -71,6 +71,19 @@ You may download the dataset from [self-localization](http://apolloscape.auto/EC
  }
 ```
 
+## Background Pointcloud
+At [Details and download](http://apolloscape.auto/self_localization.html), we also provide backgroud point cloud for supporting the localization task for each road. 
+
+You may download the point cloud to ```point_cloud``` under each road directory ```{scene_names}``` as described in above data structure.  
+Since the point cloud for each road could be very large, we partition it to several parts, and they are saved following the dir structure: 
+```
+Train/{scene_names}/point_cloud/{record time}/Part{id}.pcd
+```
+`id` here is the index of partition for each set of point cloud. One may perform projection from point cloud to a depth map  based on the given pose for corresponding camera and road. 
+
+We provide an example opengl rendering program that is wrapped by cython ```proj_point_cloud.py``` to demonstrate the projection/rendering process.  
+For rendering a depth map for each image, if your memory is large enough, you may load all the point cloud parts of each road to be a whole set of point cloud for rendering. Otherwise, you may render depth map from each part of point cloud and merge all the rendered depth maps by taking care of the zbuffer, i.e. select the minimum value at each corresponding pixel. 
+
 
 ## Evaluation
 There are several scripts included with the dataset in a folder named `scripts`
