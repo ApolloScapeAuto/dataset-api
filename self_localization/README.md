@@ -40,10 +40,12 @@ Due to large amount of images, you need to download train and test image sets fo
 - `pose`: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the 4x4 pose matrix from Apolloscape dataset)
 - `split`: train val split
 
-`record time`: the time stamp for recorded videos, i.e. BJxxxB is one set of collections at site BJ
+`record time`: the time stamp for recorded videos, i.e. BJxxxB is one set of collections at site BJ 
+- **Important message: due to different starting points when recording at different day times, so the relative offset of pose at same road under different time stamps are different, yielding non comparable poses. 
+Thus we release the relative offset between different recording times at [LoopDirection](https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/LoopDirection.md).**
+- **For example, for Road14, one may transfer the pose in time stamp BJxx1B to the pose in time stamp BJxx1D by: trans(BJxx1B) + trans_off(BJxx1B -> BJxx1D) = trans(BJxx1D)**
+
 `record id`: each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically. 
-
-
 
 `camera_id`: each scene we provide images recorede by two camera facing front side, e.g. `Camera_5` and `Camera_6`
 There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger dataset later.
