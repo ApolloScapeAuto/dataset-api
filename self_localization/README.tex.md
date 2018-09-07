@@ -11,7 +11,7 @@ This repository contains the evaluation scripts for the online self-localization
 Where we extended the dataset with more scenes and 100x large data including recorded videos under different lighting conditions, i.e. morning, noon and night, with stereo pair of images. 
 A test dataset for each new scene will be withheld for benchmark. (Notice we will not have point cloud for the very large data due to size of dataset)
 
-[Details and download](http://apolloscape.auto/self_localization.html) of data from different roads are available. Here are some interesting facts: 
+[Details and download](http://apolloscape.auto/self_localization.html) of data from different roads are available, please follow the most updated content in this page rather than apolloscape.auto homepage which is outdated. Here are some interesting facts: 
 
 _For each road, we record it by driving from start-to-end and then end-to-start at different day times, which means at each site along the road, a scene will be looked at from two opposit directions. 
 We provide the set of record id recorded from start-to-end and the set of record id from end-to-start in training set for each road at [LoopDirection](https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/LoopDirection.md). One may discover the corresponding images from the camera pose we provided._
