@@ -32,7 +32,7 @@ For each image, given the predicted disparity $d_i$ and  the ground truth $d^*_i
 
 
 
-$d1_{mask} = \sum_{j\in\{1, N\}}\frac{\sum_{i \in {mask}_j}(\|d_{ij} - d^*_{ij}\|)}{|{mask}_j|} / N $
+$d1_{mask} = \frac{1}{N}\sum_{j\in\{1, N\}}\frac{\sum_{i \in {mask}_j}(\|d_{ij} - d^*_{ij}\|)}{|{mask}_j|} $
 
 Here the $mask$ can be either foreground (fg), background (bg) or the whole region (merge of fg and bg). $N$ is the number of image
 
@@ -48,7 +48,13 @@ Result benchmark will be:
 
 
 ### Submission of data format
-To be updated
+```
+{split}/{data_type}/{image_name}
+```
+data_type:
+- disparity: the estimated disparity
+
+
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
