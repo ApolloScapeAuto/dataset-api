@@ -32,7 +32,9 @@ For each image, given the predicted disparity <img src="/stereo/tex/672a7aeac925
 
 
 
-<img src="/stereo/tex/4fb59312ad744563ba1f3fc462c9834f.svg?invert_in_darkmode&sanitize=true" align=middle width=275.2149576pt height=43.9399455pt/>mask<img src="/stereo/tex/31e0973e8530a19e20590d436fbcefa7.svg?invert_in_darkmode&sanitize=true" align=middle width=591.61192365pt height=24.65753399999998pt/>N$ is the number of image
+<img src="/stereo/tex/8c596229026f8693ff0f9f2ede2c4c04.svg?invert_in_darkmode&sanitize=true" align=middle width=299.4934305pt height=43.64887559999999pt/>
+
+Here the <img src="/stereo/tex/e8a05164f5403e1a2b31404dc04cf1d5.svg?invert_in_darkmode&sanitize=true" align=middle width=39.90310334999999pt height=22.831056599999986pt/> can be either foreground (fg), background (bg) or the whole region (merge of fg and bg). <img src="/stereo/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> is the number of image
 
 
 ### Rules of ranking
