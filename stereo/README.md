@@ -32,7 +32,7 @@ For each image, given the predicted disparity <img src="/stereo/tex/672a7aeac925
 
 
 
-<img src="/stereo/tex/8c596229026f8693ff0f9f2ede2c4c04.svg?invert_in_darkmode&sanitize=true" align=middle width=299.4934305pt height=43.64887559999999pt/>
+<img src="/stereo/tex/33c80dceffc6d9989c32674479e736c9.svg?invert_in_darkmode&sanitize=true" align=middle width=293.54594775pt height=43.64887559999999pt/>
 
 Here the <img src="/stereo/tex/e8a05164f5403e1a2b31404dc04cf1d5.svg?invert_in_darkmode&sanitize=true" align=middle width=39.90310334999999pt height=22.831056599999986pt/> can be either foreground (fg), background (bg) or the whole region (merge of fg and bg). <img src="/stereo/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> is the number of image
 
@@ -48,7 +48,13 @@ Result benchmark will be:
 
 
 ### Submission of data format
-To be updated
+```
+{split}/{data_type}/{image_name}
+```
+data_type:
+- disparity: the estimated disparity
+
+
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
