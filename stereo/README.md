@@ -30,7 +30,9 @@ python eval_stereo.py
 
 For each image, given the predicted disparity <img src="/stereo/tex/672a7aeac9254219b9609330a12e55e5.svg?invert_in_darkmode&sanitize=true" align=middle width=13.206862349999989pt height=22.831056599999986pt/> and  the ground truth <img src="/stereo/tex/97f89923e9f24bff9cc59b4e881bc32e.svg?invert_in_darkmode&sanitize=true" align=middle width=15.291158849999992pt height=22.831056599999986pt/>, the metric for evaluation is defined as: 
 
-<img src="/stereo/tex/912953b98701003217cd39cf528f60ac.svg?invert_in_darkmode&sanitize=true" align=middle width=299.36026559999993pt height=43.9399455pt/>mask<img src="/stereo/tex/31e0973e8530a19e20590d436fbcefa7.svg?invert_in_darkmode&sanitize=true" align=middle width=591.61192365pt height=24.65753399999998pt/>N$ is the number of image
+
+
+<img src="/stereo/tex/9b2079407f3f1b0ccbf3fcee9c9e5b33.svg?invert_in_darkmode&sanitize=true" align=middle width=203.63248455pt height=43.9399455pt/>mask<img src="/stereo/tex/31e0973e8530a19e20590d436fbcefa7.svg?invert_in_darkmode&sanitize=true" align=middle width=591.61192365pt height=24.65753399999998pt/>N$ is the number of image
 
 
 ### Rules of ranking
