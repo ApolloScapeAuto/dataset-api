@@ -30,7 +30,9 @@ python eval_stereo.py
 
 For each image, given the predicted disparity $d_i$ and  the ground truth $d^*_i$, the metric for evaluation is defined as: 
 
-$d1_{mask} = \sum_{j \in \{1, N\}}\frac{\sum_{i \in mask_j}(\|d_{ij} - d^*_{ij}\|)}{|mask_j}/N
+
+
+$d1_{mask} = \frac{\sum_{i \in mask_j}(\|d_{ij} - d^*_{ij}\|)}{|mask_j}
 
 Here the $mask$ can be either foreground (fg), background (bg) or the whole region (merge of fg and bg). $N$ is the number of image
 
