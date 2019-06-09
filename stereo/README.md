@@ -32,7 +32,7 @@ For each image, given the predicted disparity <img src="/stereo/tex/672a7aeac925
 
 
 
-<img src="/stereo/tex/9b2079407f3f1b0ccbf3fcee9c9e5b33.svg?invert_in_darkmode&sanitize=true" align=middle width=203.63248455pt height=43.9399455pt/>mask<img src="/stereo/tex/31e0973e8530a19e20590d436fbcefa7.svg?invert_in_darkmode&sanitize=true" align=middle width=591.61192365pt height=24.65753399999998pt/>N$ is the number of image
+<img src="/stereo/tex/4fb59312ad744563ba1f3fc462c9834f.svg?invert_in_darkmode&sanitize=true" align=middle width=275.2149576pt height=43.9399455pt/>mask<img src="/stereo/tex/31e0973e8530a19e20590d436fbcefa7.svg?invert_in_darkmode&sanitize=true" align=middle width=591.61192365pt height=24.65753399999998pt/>N$ is the number of image
 
 
 ### Rules of ranking
