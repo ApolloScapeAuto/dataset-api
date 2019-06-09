@@ -12,6 +12,9 @@ This is a repo of toolkit for dataset of [ApolloScape ECCV challenge](apolloscap
 ### 3D car instance understanding:
 ![](./examples/3d-car-instance.png)
 
+### Stereo estimation:
+![](./examples/stereo_depth.png)
+
 Run 
 ```bash
 pip install -r requirements.txt
