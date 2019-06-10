@@ -1,15 +1,10 @@
-* [The Trajectory Prediction Challenge of Apolloscape](#the-trajectory-prediction-challenge-of-apolloscape)
-   * [Evaluation](#evaluation)
-   * [Contact](#contact)
-   
 # The Trajectory Prediction Challenge of Apolloscapes Dataset
 
 ## Introduction
 This repository contains the evaluation scripts for the trajectory prediction challenge of the ApolloScapes dataset. Our trajectory dataset consists of camera-based images, LiDAR scanned point clouds, and manually annotated trajectories. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, riders, and pedestrians.
 
 ## Dataset download
-[trajectory dataset download](http://apolloscape.auto/trajectory.html)
-
+You may download the dataset from [trajectory dataset download](http://apolloscape.auto/trajectory.html).
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
@@ -21,10 +16,26 @@ python evaluation.py --object_file=./test_eval_data/considered_objects.txt --gt_
 ./test_eval_data/prediction_result.txt is one example for submitted result.
 ```
 
-### Submission of data format
+## Submission of data format
 Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
-Leadertboard: [Leaderboard](http://apolloscape.auto/leader_board.html)
 
+Leaderboard: [Leaderboard](http://apolloscape.auto/leader_board.html)
+
+## Publication
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
+
+Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+
+AAAI(oral), 2019
+
+```
+@article{ma2018trafficpredict,
+  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
+  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
+  journal={arXiv preprint arXiv:1811.02146},
+  year={2018}
+}
+```
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
 * apollo-scape@baidu.com
