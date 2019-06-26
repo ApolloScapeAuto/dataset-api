@@ -5,7 +5,7 @@ This repository contains the evaluation scripts for the trajectory prediction ch
 
 ## Dataset download
 [prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip).
-[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip).
+[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_train.zip).
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
