@@ -4,7 +4,8 @@
 This repository contains the evaluation scripts for the trajectory prediction challenge of the ApolloScapes dataset. Our trajectory dataset consists of camera-based images, LiDAR scanned point clouds, and manually annotated trajectories. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, riders, and pedestrians.
 
 ## Dataset download
-You may download the dataset from [trajectory dataset download](http://apolloscape.auto/trajectory.html).
+[prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip).
+[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip).
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
@@ -36,6 +37,8 @@ AAAI(oral), 2019
   year={2018}
 }
 ```
+For detail: [Website](http://apolloscape.auto/trajectory.html).
+
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
 * apollo-scape@baidu.com
