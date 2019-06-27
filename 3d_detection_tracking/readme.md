@@ -1,12 +1,12 @@
 # The 3D Lidar Object Detection and Tracking Challenge of Apolloscape Dataset
+[For detail and download](http://apolloscape.auto/tracking.html)
 
 ## Introduction
 Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned point clouds with high quality annotation. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, cyclists, and pedestrians.
 
 ![](../examples/3d-tracking.gif)
 
-## Dataset download
-[For detail and download](http://apolloscape.auto/tracking.html)
+
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
