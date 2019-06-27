@@ -6,7 +6,7 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 ![](../examples/3d-tracking.gif)
 
 ## Dataset download
-[For detail and download](ttp://apolloscape.auto/tracking.html)
+[For detail and download](http://apolloscape.auto/tracking.html)
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
