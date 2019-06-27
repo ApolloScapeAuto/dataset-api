@@ -12,6 +12,15 @@ This is a repo of toolkit for dataset of [ApolloScape CVPR 2019 Workshop on Auto
 ### 3D car instance understanding:
 ![](./examples/3d-car-instance.png)
 
+### Lanemark segmentation:
+![](./examples/lanemark-segmentation.gif)
+
+### Trajectory Prediction:
+![](./examples/trajectory-prediction.gif)
+
+### 3D Lidar Object Detection and Tracking:
+![](./examples/3d-tracking.gif)
+
 ### Stereo estimation:
 ![](./examples/stereo_depth.png)
 
