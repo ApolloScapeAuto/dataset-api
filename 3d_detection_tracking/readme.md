@@ -6,7 +6,7 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 ![](../examples/3d-tracking.gif)
 
 ## Dataset download
-[detection_train_pcd_1.zip](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_pcd_1.zip)
+[For detail and download](ttp://apolloscape.auto/tracking.html)
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
@@ -15,7 +15,7 @@ evaluation.py is the evaluation code. Run the code for a sample evaluation:
 ## Submission of data format
 Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
 
-Leaderboard: [Leaderboard](http://apolloscape.auto/leader_board.html)
+[Leaderboard](http://apolloscape.auto/leader_board.html)
 
 ## Publication
 TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
@@ -33,7 +33,6 @@ AAAI(oral), 2019
   year={2018}
 }
 ```
-For detail: [Website](http://apolloscape.auto/tracking.html).
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
