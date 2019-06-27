@@ -1,26 +1,16 @@
-# The Trajectory Prediction Challenge of Apolloscapes Dataset
+# The 3D Lidar Object Detection and Tracking Challenge of Apolloscape Dataset
 
 ## Introduction
-This repository contains the evaluation scripts for the trajectory prediction challenge of the ApolloScapes dataset. Our trajectory dataset consists of camera-based images, LiDAR scanned point clouds, and manually annotated trajectories. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, riders, and pedestrians.
+Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned point clouds with high quality annotation. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, cyclists, and pedestrians.
 
-![](../examples/trajectory-prediction.gif)
+![](../examples/3d-tracking.gif)
 
 ## Dataset download
-[sample_trajectory.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_trajectory.zip")
-[sample_image.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_image.zip")
-
-[prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip)
-[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_train.zip)
+[detection_train_pcd_1.zip](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_pcd_1.zip)
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
 
-```
-python evaluation.py --object_file=./test_eval_data/considered_objects.txt --gt_dir=./test_eval_data/prediction_gt.txt --res_file=./test_eval_data/prediction_result.txt
-./test_eval_data/considered_objects.txt contains objects we consider when counting the error.
-./test_eval_data/prediction_gt.txt is just for testing the code which is not the real ground truth. Please submit your result to the leaderboard to get true error.
-./test_eval_data/prediction_result.txt is one example for submitted result.
-```
 
 ## Submission of data format
 Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
@@ -43,7 +33,7 @@ AAAI(oral), 2019
   year={2018}
 }
 ```
-For detail: [Website](http://apolloscape.auto/trajectory.html).
+For detail: [Website](http://apolloscape.auto/tracking.html).
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
