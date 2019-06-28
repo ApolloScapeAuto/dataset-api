@@ -9,7 +9,7 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 
 
 ## Evaluation
-evaluation.py is the evaluation code. Run the code for a sample evaluation:
+eval.py is the evaluation code. Run the code for a sample evaluation:
 
 ```
 source activate apolloscape
