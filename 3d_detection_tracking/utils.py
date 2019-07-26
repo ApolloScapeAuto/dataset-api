@@ -288,4 +288,3 @@ if __name__ == '__main__':
     # gtNum = np.array([1], dtype=np.uint8)
     # dtNum = np.array([1], dtype=np.uint8)
     # overlaps = cubeOverlap(gtNum, dtNum, gt, dt, 2, 0, 0)
-    # print(overlaps)
