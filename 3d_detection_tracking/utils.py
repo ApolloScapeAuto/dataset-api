@@ -1,4 +1,3 @@
-#!/home/guanchenye/thirdparty/preda/envs/apolloscape/bin/python
 """
     Brief: Utility functions of evaluation
     Date: 2019/6/1
