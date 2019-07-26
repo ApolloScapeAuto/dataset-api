@@ -12,11 +12,7 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 eval.py is the evaluation code. Run the code for a sample evaluation:
 
 ```
-source activate apolloscape
-
 # export NUMBA_ENABLE_CUDASIM=1
-# export CUDA_VISIBLE_DEVICES=4
-# export CUDA_VISIBLE_DEVICES=4,5,6,7
 
 # tracking
 python eval.py --modeType=tracking --gtPath=../track/apollo_lab --dtPath=../track/apollo_res --typeFilterFlag
