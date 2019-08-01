@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source activate apolloscape
-
 # export NUMBA_ENABLE_CUDASIM=1
 
 # tracking
