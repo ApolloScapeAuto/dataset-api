@@ -12,9 +12,6 @@ This is a repo of toolkit for dataset of [ApolloScape ECCV challenge](http://apo
 ### 3D car instance understanding:
 ![](./examples/3d-car-instance.png)
 
-### Lanemark segmentation:
-![](./examples/lanemark-segmentation.gif)
-
 ### Trajectory Prediction:
 ![](./examples/trajectory-prediction.gif)
 
