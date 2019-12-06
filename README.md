@@ -21,6 +21,15 @@ This is a repo of toolkit for dataset of [ApolloScape ECCV challenge](http://apo
 ### Stereo estimation:
 ![](./examples/stereo_depth.png)
 
+### Data Download
+```
+wget https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz 
+or
+wget https://ad-apolloscape.bj.bcebos.com/road01_ins.tar.gz
+
+wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip
+```
+
 Run 
 ```bash
 pip install -r requirements.txt
