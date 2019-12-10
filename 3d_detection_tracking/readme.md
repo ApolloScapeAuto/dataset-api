@@ -6,8 +6,6 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 
 ![](../examples/3d-tracking.gif)
 
-
-
 ## Evaluation
 eval.py is the evaluation code. Run the code for a sample evaluation:
 
@@ -26,6 +24,22 @@ Submit your result for online evaluation here: [Submit](http://apolloscape.auto/
 
 [Leaderboard](http://apolloscape.auto/leader_board.html)
 
+## Publication
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
+[BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt)
+
+Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+
+AAAI(oral), 2019
+
+```
+@article{ma2018trafficpredict,
+  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
+  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
+  journal={arXiv preprint arXiv:1811.02146},
+  year={2018}
+}
+```
 
 ## Contact
 Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
