@@ -40,7 +40,3 @@ AAAI(oral), 2019
   year={2018}
 }
 ```
-
-## Contact
-Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
-* apollo-scape@baidu.com
