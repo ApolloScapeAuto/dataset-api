@@ -40,7 +40,7 @@ to include necessary packages and current path in to PYTHONPATH to use several u
 Please goto each subfolder for detailed information about the data structure, evaluation criterias and some demo code to visualize the dataset.
 
 ## Publication
-The apolloscape open dataset for autonomous driving and its application. [PDF](http://ad-apolloscape.bj.bcebos.com/public%2FApolloScape%20Dataset.pdf)
+The apolloscape open dataset for autonomous driving and its application. [PDF](https://arxiv.org/pdf/1803.06184.pdf)
 
 Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang
 
@@ -53,9 +53,11 @@ Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichua
 }
 ```
 
-TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
-[BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt) [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146) 
+[Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+
 Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+
 AAAI(oral), 2019
 
 ```
@@ -67,7 +69,8 @@ AAAI(oral), 2019
 }
 ```
 
-AADS: Augmented autonomous driving simulation using data-driven algorithms
+AADS: Augmented autonomous driving simulation using data-driven algorithms. [PDF](https://arxiv.org/pdf/1901.07849.pdf)
+
 Wei Li, Chengwei Pan, Rong Zhang, Jiaping Ren, Yuexin Ma, Jin Fang, Feilong Yan, Qichuan Geng, Xinyu Huang, Huajun Gong, Weiwei Xu, Guoping Wang, Dinesh Manocha, Ruigang Yang
 
 ```
