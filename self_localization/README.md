@@ -158,7 +158,3 @@ image_name5 roll,pitch,yaw,x,y,z
 Here  ```roll,pitch,yaw,x,y,z``` are ```float32``` numbers
 
 
-## Contact
-Please feel free to contact us, or raise an issue with any questions, suggestions or comments:
-* apollo-scape@baidu.com
-
