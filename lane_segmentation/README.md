@@ -109,8 +109,3 @@ Our ranking will determined by the mean iou of all lane classes.
 
 2. Each pixel is encoded as ```uint8``` format.
 
-## Contact
-
-Please feel free to contact us with any questions, suggestions or comments:
-
-* apollo-scape@baidu.com
