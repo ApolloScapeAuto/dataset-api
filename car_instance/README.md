@@ -146,7 +146,3 @@ Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int num
 For the source code from the renderer and any part we borrow from cocoapi, we follow their license requirements.
 
 
-## Contact
-
-Please feel free to contact us with any questions, suggestions or comments:
-* apollo-scape@baidu.com
