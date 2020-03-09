@@ -146,3 +146,22 @@ Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int num
 For the source code from the renderer and any part we borrow from cocoapi, we follow their license requirements.
 
 
+
+## Publication
+Please cite our paper in your publications if our dataset is used in your research.
+
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
+[BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt) [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+
+Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+
+AAAI(oral), 2019
+
+```
+@article{ma2018trafficpredict,
+  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
+  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
+  journal={arXiv preprint arXiv:1811.02146},
+  year={2018}
+}
+```
