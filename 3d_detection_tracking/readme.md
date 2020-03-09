@@ -25,6 +25,8 @@ Submit your result for online evaluation here: [Submit](http://apolloscape.auto/
 [Leaderboard](http://apolloscape.auto/leader_board.html)
 
 ## Publication
+Please cite our paper in your publications if our dataset is used in your research.
+
 TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
 [BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt)
 
