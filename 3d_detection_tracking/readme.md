@@ -35,10 +35,12 @@ Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha
 AAAI(oral), 2019
 
 ```
-@article{ma2018trafficpredict,
-  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
+@inproceedings{ma2019trafficpredict,
+  title={Trafficpredict: Trajectory prediction for heterogeneous traffic-agents},
   author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
-  journal={arXiv preprint arXiv:1811.02146},
-  year={2018}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={33},
+  pages={6120--6127},
+  year={2019}
 }
 ```
