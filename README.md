@@ -45,11 +45,12 @@ The apolloscape open dataset for autonomous driving and its application. [PDF](h
 Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang
 
 ```
-@article{huang2018apolloscape,
+@article{wang2019apolloscape,
   title={The apolloscape open dataset for autonomous driving and its application},
-  author={Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang},
-  journal={arXiv preprint arXiv:1803.06184},
-  year={2018}
+  author={Wang, Peng and Huang, Xinyu and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2019},
+  publisher={IEEE}
 }
 ```
 
