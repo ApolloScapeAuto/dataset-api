@@ -1,7 +1,7 @@
 # Toolkit for [ApolloScape Dataset](http://apolloscape.auto/index.html)
 
 ## Introduction
-This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](http://wad.ai/2019/challenge.html)[PDF](https://arxiv.org/pdf/2004.05966.pdf) and [ECCV 2018 challenge](http://apolloscape.auto/ECCV/index.html). It includes lanemark segmentation, online self-localization, 3D car instance understanding, Trajectory Prediction, 3D Lidar Object Detection and 3D Lidar Object Tracking and Stereo. Some example videos and images are shown below:
+This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](http://wad.ai/2019/challenge.html) and [ECCV 2018 challenge](http://apolloscape.auto/ECCV/index.html). It includes lanemark segmentation, online self-localization, 3D car instance understanding, Trajectory Prediction, 3D Lidar Object Detection and 3D Lidar Object Tracking and Stereo. Some example videos and images are shown below:
 
 ### Stereo estimation:
 ![](./examples/stereo_depth.png)
