@@ -1,5 +1,6 @@
 # The 3D Lidar Object Detection and Tracking Challenge of Apolloscape Dataset
-[For detail and download](http://apolloscape.auto/tracking.html)
+[Dataset detail and download](http://apolloscape.auto/tracking.html)
+
 CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
 
 ## Introduction
