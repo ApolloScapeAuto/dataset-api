@@ -1,6 +1,6 @@
 # The Trajectory Prediction Challenge of Apolloscapes Dataset
 ApolloScape Trajectory dataset and 3D Lidar Object Detection and Tracking dataset including about 100K image frames, 80k lidar point cloud and 1000km trajectories for urban traffic. The dataset consisting of varying conditions and traffic densities which includes many challenging scenarios where vehicles, bicycles, and pedestrians move among one another. 
-[For detail and download](http://apolloscape.auto/trajectory.html)
+[Dataset detail and download](http://apolloscape.auto/trajectory.html)
 
 CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
 
