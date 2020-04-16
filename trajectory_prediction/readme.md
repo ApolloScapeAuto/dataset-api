@@ -2,6 +2,9 @@
 ApolloScape Trajectory dataset and 3D Lidar Object Detection and Tracking dataset including about 100K image frames, 80k lidar point cloud and 1000km trajectories for urban traffic. The dataset consisting of varying conditions and traffic densities which includes many challenging scenarios where vehicles, bicycles, and pedestrians move among one another. 
 [For detail and download](http://apolloscape.auto/trajectory.html)
 
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
+
+
 ```
 wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip
 wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_test.zip
@@ -56,3 +59,14 @@ AAAI(oral), 2019
 }
 ```
 
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
+[BibTex](https://scholar.googleusercontent.com/scholar.bib?q=info:FM7KYweYqXIJ:scholar.google.com/&output=citation&scisdr=CgXjlNWZEK_chmykD1s:AAGBfm0AAAAAXpihF1tMiyTTew20m4a1LnPyWo9u5cbl&scisig=AAGBfm0AAAAAXpihF_RACGUoa0RN86NWhguFI1Z2YqmE&scisf=4&ct=citation&cd=-1&hl=en)
+
+```
+@article{zhang2020cvpr,
+  title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
+  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang and Li, Xin and Zhu, Yanliang and Qian, Deheng and Yang, Zetong and Zhang, Wenjing and Liu, Yuanpei},
+  journal={arXiv preprint arXiv:2004.05966},
+  year={2020}
+}
+```
