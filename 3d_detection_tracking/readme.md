@@ -1,5 +1,6 @@
 # The 3D Lidar Object Detection and Tracking Challenge of Apolloscape Dataset
 [For detail and download](http://apolloscape.auto/tracking.html)
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
 
 ## Introduction
 Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned point clouds with high quality annotation. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, cyclists, and pedestrians.
@@ -44,3 +45,16 @@ AAAI(oral), 2019
   year={2019}
 }
 ```
+
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
+[BibTex](https://scholar.googleusercontent.com/scholar.bib?q=info:FM7KYweYqXIJ:scholar.google.com/&output=citation&scisdr=CgXjlNWZEK_chmykD1s:AAGBfm0AAAAAXpihF1tMiyTTew20m4a1LnPyWo9u5cbl&scisig=AAGBfm0AAAAAXpihF_RACGUoa0RN86NWhguFI1Z2YqmE&scisf=4&ct=citation&cd=-1&hl=en)
+
+```
+@article{zhang2020cvpr,
+  title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
+  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang and Li, Xin and Zhu, Yanliang and Qian, Deheng and Yang, Zetong and Zhang, Wenjing and Liu, Yuanpei},
+  journal={arXiv preprint arXiv:2004.05966},
+  year={2020}
+}
+```
+
