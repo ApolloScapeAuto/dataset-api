@@ -71,7 +71,7 @@ CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https:
 }
 ```
 
-## Q & A
+## Dataset Q & A
 
 Q1. Does the dataset include synchronized RGB data?
 
