@@ -70,3 +70,35 @@ CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https:
   year={2020}
 }
 ```
+
+Q & A
+
+Q1. Does the dataset include synchronized RGB data?
+
+We have not labeled the image data. Current challenge is just based on the trajectory data.
+
+Q2. Is the trajectory of the ego vehicle also included?
+
+No, the data does not contain the trajectory of the ego vehicle.
+
+Q3. How are these world coordinates generated?
+
+We use the relative positions from LiDAR and the GPS of the ego vehicle to compute the locations of other traffic-agents in the world coordinate system.
+
+Q4. What are the relationships among different files in the training dataset?
+
+They are captured in different period and they are independent.
+
+Q5. What is the meaning of the data in each row of sample_trajectory?
+
+Each line is the info for one traffic-agent in one frame. 
+The info for each line is in order by the following:
+timestamp, id, width, length, type, position_x, position_y,  velocity_x, velocity_y.
+
+Q6. Why is the number of frames in each file in prediction_train different, instead of 60 s * 2 fps = 120 frames? If prediction_test.txt is a 50 min sequence, why is the total number of frames not 50 min * 2 fps = 6000 frames? 
+
+The number of frames is different because we have cleaned the data for those time without any objects or very few objects.
+
+Q7. What is the specific physical meaning of the frame ID in the dataset? What does the numbers in the name of each file in prediction_train.zip represent?
+Frame_id: timestamp 
+Number in File_name: not useful, came from original data
