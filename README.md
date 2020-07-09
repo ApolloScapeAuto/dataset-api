@@ -40,19 +40,6 @@ to include necessary packages and current path in to PYTHONPATH to use several u
 Please goto each subfolder for detailed information about the data structure, evaluation criterias and some demo code to visualize the dataset.
 
 ## Citation
-The apolloscape open dataset for autonomous driving and its application. [PDF](https://arxiv.org/pdf/1803.06184.pdf)
-
-Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang
-
-```
-@article{wang2019apolloscape,
-  title={The apolloscape open dataset for autonomous driving and its application},
-  author={Wang, Peng and Huang, Xinyu and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang},
-  journal={IEEE transactions on pattern analysis and machine intelligence},
-  year={2019},
-  publisher={IEEE}
-}
-```
 
 TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146) [Trajectory Dataset](http://apolloscape.auto/trajectory.html) [3D Perception Dataset](http://apolloscape.auto/tracking.html)
 [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
@@ -69,6 +56,20 @@ AAAI(oral), 2019
   volume={33},
   pages={6120--6127},
   year={2019}
+}
+```
+
+The apolloscape open dataset for autonomous driving and its application. [PDF](https://arxiv.org/pdf/1803.06184.pdf)
+
+Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang
+
+```
+@article{wang2019apolloscape,
+  title={The apolloscape open dataset for autonomous driving and its application},
+  author={Wang, Peng and Huang, Xinyu and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichuan and Yang, Ruigang},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2019},
+  publisher={IEEE}
 }
 ```
 
