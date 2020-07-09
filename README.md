@@ -72,7 +72,7 @@ AAAI(oral), 2019
 }
 ```
 
-CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf) [Website](http://wad.ai/2019/challenge.html)
 ```
 @article{zhang2020cvpr,
   title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
