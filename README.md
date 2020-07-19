@@ -41,12 +41,14 @@ Please goto each subfolder for detailed information about the data structure, ev
 
 ## Citation
 
-TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146) [Trajectory Dataset](http://apolloscape.auto/trajectory.html) [3D Perception Dataset](http://apolloscape.auto/tracking.html)
-[Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+DVI: Depth Guided Video Inpainting for Autonomous Driving.
 
-Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020.
 
-AAAI(oral), 2019
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146), [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html), [Trajectory Dataset](http://apolloscape.auto/trajectory.html), [3D Perception Dataset](http://apolloscape.auto/tracking.html)
+
+
+Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha. AAAI(oral), 2019
 
 ```
 @inproceedings{ma2019trafficpredict,
@@ -73,7 +75,7 @@ Huang, Xinyu and Wang, Peng and Cheng, Xinjing and Zhou, Dingfu and Geng, Qichua
 }
 ```
 
-CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf) [Website](http://wad.ai/2019/challenge.html)
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf), [Website](http://wad.ai/2019/challenge.html)
 ```
 @article{zhang2020cvpr,
   title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
