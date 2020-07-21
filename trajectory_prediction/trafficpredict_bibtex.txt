@@ -1,0 +1,8 @@
+@inproceedings{ma2019trafficpredict,
+  title={Trafficpredict: Trajectory prediction for heterogeneous traffic-agents},
+  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={33},
+  pages={6120--6127},
+  year={2019}
+}

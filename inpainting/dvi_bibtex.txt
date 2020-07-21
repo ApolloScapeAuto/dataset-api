@@ -1,0 +1,8 @@
+@misc{liao2020dvi,
+    title={DVI: Depth Guided Video Inpainting for Autonomous Driving},
+    author={Miao Liao and Feixiang Lu and Dingfu Zhou and Sibo Zhang and Wei Li and Ruigang Yang},
+    year={2020},
+    eprint={2007.08854},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
