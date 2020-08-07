@@ -32,28 +32,23 @@ The trajectory dataset consists of 53min training sequences and 50min testing se
 ## Data Structure
 The folder structure of the trajectory prediction is as follows:
 
-1) prediction_train.zip: training data for trajectory prediction.
+1. prediction_train.zip: training data for trajectory prediction.
+   * Each file is a 1min sequence with 2fps.
+   * Each line in a file contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
+   * There are five different object types as shown in following table. During the evaluation in this challenge, we treat the first two types, small vehicle and big vehicle, as one type (vehicle).
+   
+| object_type 	| small vehicles 	| big vehicles 	| pedestrian 	| motorcyclist and bicyclist 	| others 	|
+|-------------	|----------------	|--------------	|------------	|----------------------------	|--------	|
+| ID          	| 1              	| 2            	| 3          	| 4                          	| 5      	|
 
-∙ Each file is a 1min sequence with 2fps.
+   * Position is given in the world coordinate system. The unit for the position and bounding box is meter.
+   * The heading value is the steering radian with respect to the direction of the object.
+   * In this challenge, we mainly evaluate predicted position_x and position_y in the next 3 seconds.
+   
+2. prediction_test.zip: testing data for trajectory prediction.
+   * Each line contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
 
-∙ Each line in a file contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
-
-∙ There are five different object types as shown in following table. During the evaluation in this challenge, we treat the first two types, small vehicle and big vehicle, as one type (vehicle).
-
-object_type	small vehicles	big vehicles	pedestrian	motorcyclist and bicyclist	others
-ID	1	2	3	4	5
-
-∙ Position is given in the world coordinate system. The unit for the position and bounding box is meter.
-
-∙ The heading value is the steering radian with respect to the direction of the object.
-
-∙ In this challenge, we mainly evaluate predicted position_x and position_y in the next 3 seconds.
-
-2) prediction_test.zip: testing data for trajectory prediction.
-
-∙ Each line contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
-
-∙ A testing sequence contains every six frames in the prediction_test.txt. Each sequence is evaluated independently.
+   * A testing sequence contains every six frames in the prediction_test.txt. Each sequence is evaluated independently.
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
