@@ -10,6 +10,16 @@ Our 3D Lidar object detection and tracking dataset consists of LiDAR scanned poi
 
 ![](../examples/3d-tracking.gif)
 
+
+## Dataset download
+The trajectory dataset consists of 53min training sequences and 50min testing sequences captured at 2 frames per second.
+
+object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.org/pdf/1811.02146.pdf): 
+16.2k, 5.5k, 60.1k
+
+[Apolloscape 3D Dataset download](http://apolloscape.auto/tracking.html)
+
+
 ## Evaluation
 eval.py is the evaluation code. Run the code for a sample evaluation:
 
