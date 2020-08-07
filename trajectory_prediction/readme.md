@@ -19,9 +19,8 @@ This repository contains the evaluation scripts for the trajectory prediction ch
 ## Dataset download
 The trajectory dataset consists of 53min training sequences and 50min testing sequences captured at 2 frames per second.
 
-3d tracks object counts for cars, bicycles, and pedestrians are as follows:
-248504, 70751, 82176
-
+object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.org/pdf/1811.02146.pdf): 
+16.2k, 5.5k, 60.1k
 
 [sample_trajectory.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_trajectory.zip")
 [sample_image.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_image.zip")
