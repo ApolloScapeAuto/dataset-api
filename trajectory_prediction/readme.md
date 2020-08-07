@@ -17,11 +17,43 @@ This repository contains the evaluation scripts for the trajectory prediction ch
 ![](../examples/trajectory-prediction.gif)
 
 ## Dataset download
+The trajectory dataset consists of 53min training sequences and 50min testing sequences captured at 2 frames per second.
+
+3d tracks object counts for cars, bicycles, and pedestrians are as follows:
+248504, 70751, 82176
+
+
 [sample_trajectory.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_trajectory.zip")
 [sample_image.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_image.zip")
 
 [prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip)
 [prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_train.zip)
+
+## Data Structure
+The folder structure of the trajectory prediction is as follows:
+
+1) prediction_train.zip: training data for trajectory prediction.
+
+∙ Each file is a 1min sequence with 2fps.
+
+∙ Each line in a file contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
+
+∙ There are five different object types as shown in following table. During the evaluation in this challenge, we treat the first two types, small vehicle and big vehicle, as one type (vehicle).
+
+object_type	small vehicles	big vehicles	pedestrian	motorcyclist and bicyclist	others
+ID	1	2	3	4	5
+
+∙ Position is given in the world coordinate system. The unit for the position and bounding box is meter.
+
+∙ The heading value is the steering radian with respect to the direction of the object.
+
+∙ In this challenge, we mainly evaluate predicted position_x and position_y in the next 3 seconds.
+
+2) prediction_test.zip: testing data for trajectory prediction.
+
+∙ Each line contains frame_id, object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading.
+
+∙ A testing sequence contains every six frames in the prediction_test.txt. Each sequence is evaluated independently.
 
 ## Evaluation
 evaluation.py is the evaluation code. Run the code for a sample evaluation:
@@ -32,6 +64,8 @@ python evaluation.py --object_file=./test_eval_data/considered_objects.txt --gt_
 ./test_eval_data/prediction_gt.txt is just for testing the code which is not the real ground truth. Please submit your result to the leaderboard to get true error.
 ./test_eval_data/prediction_result.txt is one example for submitted result.
 ```
+
+During the evaluation in this challenge, we treat the first two types, small vehicle and big vehicle, as one type (vehicle). However, please keep the original type IDs during the training and prediction, we will merge the first two types in our evaluation scripts. In this challenge, the data from the first three seconds in each sequence is given as input data, the task is to predict trajectories of objects for the next three seconds. The objects used in evaluation are the objects that appear in the last frame of the first three seconds. The errors between predicted locations and the ground truth of these objects are then computed.
 
 ## Submission of data format
 Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
