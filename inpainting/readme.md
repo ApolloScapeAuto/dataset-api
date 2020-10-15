@@ -8,6 +8,23 @@ Inpainting dataset consists of synchronized Labeled image and LiDAR scanned poin
 ## Dataset download
 Please download data at [Apolloscape](http://apolloscape.auto/inpainting.html). The first video inpainting dataset with depth. 
 
+[mask_and_image_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579_mask.zip)
+[data_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579.zip)
+[lidar_bg_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579_lidar_bg.zip)
+
+[mask_and_image_1.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313592-1534313595_mask.zip)
+[data_1.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313592-1534313595.zip)
+[lidar_bg_1.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313592-1534313595_lidar_bg.zip)
+
+[mask_and_image_2.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313648-1534313656_mask.zip)
+[data_2.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313648-1534313656.zip)
+[lidar_bg_2.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313648-1534313656_lidar_bg.zip)
+
+[mask_and_image_3.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313856-1534313869_mask.zip)
+[data_3.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313856-1534313869.zip)
+[lidar_bg_3.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313856-1534313869_lidar_bg.zip)
+
+
 ## Data Structure
 The folder structure of the inpainting is as follows:
 
