@@ -5,12 +5,6 @@ ApolloScape Trajectory dataset and 3D Lidar Object Detection and Tracking datase
 CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf) [Website](http://wad.ai/2019/challenge.html)
 
 
-```
-wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip
-wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_test.zip
-
-```
-
 ## Introduction
 This repository contains the evaluation scripts for the trajectory prediction challenge of the ApolloScapes dataset. Our trajectory dataset consists of camera-based images, LiDAR scanned point clouds, and manually annotated trajectories. It is collected under various lighting conditions and traffic densities in Beijing, China. More specifically, it contains highly complicated traffic flows mixed with vehicles, riders, and pedestrians.
 
@@ -22,11 +16,19 @@ The trajectory dataset consists of 53min training sequences and 50min testing se
 object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.org/pdf/1811.02146.pdf): 
 16.2k, 5.5k, 60.1k
 
-[sample_trajectory.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_trajectory.zip")
-[sample_image.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_image.zip")
+Sample Data:
+[sample_trajectory.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_trajectory.zip)
+[sample_image.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/sample_image.zip)
 
-[prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_test.zip)
-[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/prediction_data%2Fprediction_train.zip)
+Full data:
+[prediction_train.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip)
+[prediction_test.zip](https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_test.zip)
+or
+```
+wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip
+wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_test.zip
+
+```
 
 ## Data Structure
 The folder structure of the trajectory prediction is as follows:
