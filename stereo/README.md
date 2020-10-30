@@ -56,21 +56,18 @@ data_type:
 
 
 ## Publication
-Please cite our paper in your publications if our dataset is used in your research.
+Please cite our paper in your publications.
 
-TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
-[BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt) [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+DVI: Depth Guided Video Inpainting for Autonomous Driving. Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Code](https://github.com/sibozhang/Depth-Guided-Inpainting), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://www.youtube.com/watch?v=_pcqH1illCU&t=3s&ab_channel=SiboZhang)
 
-Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
-
-AAAI(oral), 2019
+ECCV 2020.
 
 ```
-@article{ma2018trafficpredict,
-  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
-  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
-  journal={arXiv preprint arXiv:1811.02146},
-  year={2018}
+@article{liao2020dvi,
+  title={DVI: Depth Guided Video Inpainting for Autonomous Driving},
+  author={Liao, Miao and Lu, Feixiang and Zhou, Dingfu and Zhang, Sibo and Li, Wei and Yang, Ruigang},
+  journal={arXiv preprint arXiv:2007.08854},
+  year={2020}
 }
 ```
 
