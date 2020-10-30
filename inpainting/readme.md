@@ -35,7 +35,7 @@ The folder structure of the inpainting is as follows:
 3) lidar_bg.zip: lidar background point cloud in ply format.
 
 ## Publication
-Please cite our paper in your publications if our dataset is used in your research.
+Please cite our paper in your publications.
 
 DVI: Depth Guided Video Inpainting for Autonomous Driving.
 
