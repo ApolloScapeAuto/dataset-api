@@ -39,7 +39,19 @@ Submit your result for online evaluation here: [Submit](http://apolloscape.auto/
 [Leaderboard](http://apolloscape.auto/leader_board.html)
 
 ## Publication
-Please cite our paper in your publications if our dataset is used in your research.
+Please cite our paper in your publications.
+
+CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
+[BibTex](https://scholar.googleusercontent.com/scholar.bib?q=info:FM7KYweYqXIJ:scholar.google.com/&output=citation&scisdr=CgXjlNWZEK_chmykD1s:AAGBfm0AAAAAXpihF1tMiyTTew20m4a1LnPyWo9u5cbl&scisig=AAGBfm0AAAAAXpihF_RACGUoa0RN86NWhguFI1Z2YqmE&scisf=4&ct=citation&cd=-1&hl=en)
+
+```
+@article{zhang2020cvpr,
+  title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
+  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang and Li, Xin and Zhu, Yanliang and Qian, Deheng and Yang, Zetong and Zhang, Wenjing and Liu, Yuanpei},
+  journal={arXiv preprint arXiv:2004.05966},
+  year={2020}
+}
+```
 
 TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
 [BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt)
@@ -56,18 +68,6 @@ AAAI(oral), 2019
   volume={33},
   pages={6120--6127},
   year={2019}
-}
-```
-
-CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https://arxiv.org/pdf/2004.05966.pdf)
-[BibTex](https://scholar.googleusercontent.com/scholar.bib?q=info:FM7KYweYqXIJ:scholar.google.com/&output=citation&scisdr=CgXjlNWZEK_chmykD1s:AAGBfm0AAAAAXpihF1tMiyTTew20m4a1LnPyWo9u5cbl&scisig=AAGBfm0AAAAAXpihF_RACGUoa0RN86NWhguFI1Z2YqmE&scisf=4&ct=citation&cd=-1&hl=en)
-
-```
-@article{zhang2020cvpr,
-  title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
-  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang and Li, Xin and Zhu, Yanliang and Qian, Deheng and Yang, Zetong and Zhang, Wenjing and Liu, Yuanpei},
-  journal={arXiv preprint arXiv:2004.05966},
-  year={2020}
 }
 ```
 
