@@ -150,18 +150,19 @@ For the source code from the renderer and any part we borrow from cocoapi, we fo
 ## Publication
 Please cite our paper in your publications if our dataset is used in your research.
 
-TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146)
-[BibTex](https://ad-apolloscape.cdn.bcebos.com/TrafficPredict/trafficpredict_bibtex.txt) [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html)
+ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving
 
-Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha.
+Xibin Song, Peng Wang, Dingfu Zhou, Rui Zhu, Chenye Guan, Yuchao Dai, Hao Su, Hongdong Li, Ruigang Yang     
 
-AAAI(oral), 2019
+CVPR, 2019
 
 ```
-@article{ma2018trafficpredict,
-  title={TrafficPredict: Trajectory prediction for heterogeneous traffic-agents},
-  author={Ma, Yuexin and Zhu, Xinge and Zhang, Sibo and Yang, Ruigang and Wang, Wenping and Manocha, Dinesh},
-  journal={arXiv preprint arXiv:1811.02146},
-  year={2018}
-}
+@InProceedings{Song_2019_CVPR,
+author = {Song, Xibin and Wang, Peng and Zhou, Dingfu and Zhu, Rui and Guan, Chenye and Dai, Yuchao and Su, Hao and Li, Hongdong and Yang, Ruigang},
+title = {ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2019}
+} 
 ```
+
