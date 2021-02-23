@@ -21,22 +21,58 @@ object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.
 
 
 ## Evaluation
-eval.py is the evaluation code. Run the code for a sample evaluation:
+eval.py is the evaluation code. Here gtPath is (label) and dtPath is (Your detection/tracking result)
 
 ```
 # export NUMBA_ENABLE_CUDASIM=1
 
 # detection
-python eval.py --gtPath=apollo_lab_test --dtPath=apollo_res_test --apSampleNum=10 #--typeFilterFlag #2>&1 | tee run.log
+python eval.py --gtPath= xx --dtPath= xx  
 
 # tracking
-# python eval.py --modeType=tracking --gtPath=../track/apollo_lab --dtPath=../track/apollo_res --typeFilterFlag
+# python eval.py --modeType=tracking --gtPath= xx --dtPath= xx
 ```
 
-## Submission of data format
+## Format of submission file
 Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
 
 [Leaderboard](http://apolloscape.auto/leader_board.html)
+
+1) 3D detection
+
+Please submit one detection_result.zip file. In this zip file, you have one folder named detection_result, under this folder, you have multiple subfolders follow the same name in test_pcd, under each subfolder are result txt files of that sequence:
+
+detection_result
+
+├── 9048_2
+
+├── ├── 2.txt
+
+├── ├── 7.txt
+
+...
+
+├── ├── 462.txt
+
+...
+
+├── 9049_1
+
+...
+
+├── 9063_10
+
+...
+
+- Each line in every file contains object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading, score. score indicates confidence in detection results.
+- Each file name is frame_id name, which should be same as pcd frame id we provide in test_pcd. Each pcd file should have a corresponding result file. Total test result should be 5400 txt files.
+- Please only keep type 1/2/3/4 in your result file. We do evaluation just for Car (type 1 and 2), Pedestrian (type 3) and Cyclist (type 4).
+
+2) 3D tracking
+
+Please submit one tracking_result.zip file. Folder and subfolders structure and file name are same to detection_result, but we need object_id in file.
+- Each line in every file contains object_id, object_type, position_x, position_y, position_z, object_length, object_width, object_height, heading, score
+
 
 ## Publication
 Please cite our paper in your publications.
