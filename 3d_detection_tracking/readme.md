@@ -34,9 +34,7 @@ python eval.py --gtPath= xx --dtPath= xx
 ```
 
 ## Format of submission file
-Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)
-
-[Leaderboard](http://apolloscape.auto/leader_board.html)
+Submit your result for online evaluation here: [Submit](http://apolloscape.auto/submit.html)   [Leaderboard](http://apolloscape.auto/leader_board.html)
 
 1) 3D detection
 
