@@ -21,7 +21,7 @@ object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.
 
 
 ## Evaluation
-eval.py is the evaluation code. Here gtPath is (label) and dtPath is (Your detection/tracking result)
+eval.py is the evaluation code. gtPath is (label) and dtPath is (Your detection/tracking result). Here we have not provide sample label data. You may use traing label and data, but we encourage user to submit result directly to apolloscape website to get a score.
 
 ```
 # export NUMBA_ENABLE_CUDASIM=1
