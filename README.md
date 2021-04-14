@@ -58,18 +58,20 @@ Please goto each subfolder for detailed information about the data structure, ev
 
 DVI: Depth Guided Video Inpainting for Autonomous Driving.
 
-Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://www.youtube.com/watch?v=_pcqH1illCU&t=3s&ab_channel=SiboZhang), [Inpainting Dataset](http://apolloscape.auto/inpainting.html) 
+Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Webpage](https://sites.google.com/view/sibozhang/dvi), [Inpainting Dataset](http://apolloscape.auto/inpainting.html), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://youtu.be/_pcqH1illCU)
 
 ```
-@article{liao2020dvi,
+@inproceedings{liao2020dvi,
   title={DVI: Depth Guided Video Inpainting for Autonomous Driving},
   author={Liao, Miao and Lu, Feixiang and Zhou, Dingfu and Zhang, Sibo and Li, Wei and Yang, Ruigang},
-  journal={arXiv preprint arXiv:2007.08854},
-  year={2020}
+  booktitle={European Conference on Computer Vision},
+  pages={1--17},
+  year={2020},
+  organization={Springer}
 }
 ```
 
-TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146), [Website](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html), [Trajectory Dataset](http://apolloscape.auto/trajectory.html), [3D Perception Dataset](http://apolloscape.auto/tracking.html), [Video](https://www.youtube.com/watch?v=dST6NDxEMU8)
+TrafficPredict: Trajectory Prediction for Heterogeneous Traffic-Agents. [PDF](https://arxiv.org/abs/1811.02146), [Webpage](http://gamma.cs.unc.edu/TPredict/TrafficPredict.html), [Trajectory Dataset](http://apolloscape.auto/trajectory.html), [3D Perception Dataset](http://apolloscape.auto/tracking.html), [Video](https://www.youtube.com/watch?v=dST6NDxEMU8)
 
 Yuexin Ma, Xinge Zhu, Sibo Zhang, Ruigang Yang, Wenping Wang, and Dinesh Manocha. AAAI(oral), 2019
 
