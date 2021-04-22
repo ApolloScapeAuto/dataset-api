@@ -34,6 +34,13 @@ The folder structure of the inpainting is as follows:
 
 3) lidar_bg.zip: lidar background point cloud in ply format.
 
+## Submission of data format
+Baseline result:
+
+| Method | MAE   | RMSE  | PSNR   | SSIM  |
+|--------|-------|-------|--------|-------|
+| DVI    | 6.135 | 9.633 | 21.631 | 0.895 |
+
 ## Publication
 Please cite our paper in your publications.
 
