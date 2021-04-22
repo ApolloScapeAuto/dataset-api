@@ -68,6 +68,12 @@ Submit your result for online evaluation here: [Submit](http://apolloscape.auto/
 
 Leaderboard: [Leaderboard](http://apolloscape.auto/leader_board.html)
 
+Baseline result:
+
+| Rank     | Method         | WSADE  | ADEv   | ADEp   | ADEb    | WSFDE   | FDEv    | FDEp    | FDEb    |
+|----------|----------------|--------|--------|--------|---------|---------|---------|---------|---------|
+| Baseline | Trafficpredict | 8.5881 | 7.9467 | 7.1811 | 12.8805 | 24.2262 | 12.7757 | 11.1210 | 22.7912 |
+
 ## Publication
 [![Depth Guided Video Inpainting for Autonomous Driving](https://res.cloudinary.com/marcomontalbano/image/upload/v1595308447/video_to_markdown/images/youtube--dST6NDxEMU8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=dST6NDxEMU8 "Depth Guided Video Inpainting for Autonomous Driving")
 
