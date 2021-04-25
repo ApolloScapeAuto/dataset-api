@@ -138,5 +138,10 @@ Q6. Why is the number of frames in each file in prediction_train different, inst
 The number of frames is different because we have cleaned the data for those time without any objects or very few objects.
 
 Q7. What is the specific physical meaning of the frame ID in the dataset? What does the numbers in the name of each file in prediction_train.zip represent?
+
 Frame_id: timestamp 
 Number in File_name: not useful, came from original data
+
+Q8. Why I submitted text file on apolloscape website and follow the format but it still failed?
+
+You need to compress it to zip file and submit. 
