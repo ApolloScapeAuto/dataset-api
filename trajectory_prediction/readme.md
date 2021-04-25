@@ -145,4 +145,4 @@ Number in File_name: not useful, came from original data
 Q8. Why I submitted trajectory result file on apolloscape website and failed?
 
 1. Follow format of https://github.com/ApolloScapeAuto/dataset-api/tree/master/trajectory_prediction/test_eval_data. 
-2. compress it to zip file and submit. 
+2. Compress it to zip file and submit. 
