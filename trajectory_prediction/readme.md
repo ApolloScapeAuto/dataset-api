@@ -142,6 +142,7 @@ Q7. What is the specific physical meaning of the frame ID in the dataset? What d
 Frame_id: timestamp 
 Number in File_name: not useful, came from original data
 
-Q8. Why I submitted text file on apolloscape website and follow the format but it still failed?
+Q8. Why I submitted trajectory result file on apolloscape website and failed?
 
-You need to compress it to zip file and submit. 
+1. Follow format of https://github.com/ApolloScapeAuto/dataset-api/tree/master/trajectory_prediction/test_eval_data. 
+2. compress it to zip file and submit. 
