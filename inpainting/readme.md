@@ -46,7 +46,7 @@ Please cite our paper in your publications.
 
 DVI: Depth Guided Video Inpainting for Autonomous Driving.
 
-Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Webpage](https://sites.google.com/view/sibozhang/dvi), [Inpainting Dataset](http://apolloscape.auto/inpainting.html), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://youtu.be/_pcqH1illCU)
+Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Webpage](https://sites.google.com/view/sibozhang/dvi), [Github Code](https://github.com/sibozhang/Depth-Guided-Inpainting), [Inpainting Dataset](http://apolloscape.auto/inpainting.html), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://youtu.be/_pcqH1illCU)
 
 ```
 @inproceedings{liao2020dvi,
