@@ -18,6 +18,20 @@ data_type:
 - bg_mask: background mask
 - disparity: the ground truth disparity
 
+## Dataset download
+Training data
+
+[stereo_train_1](https://ad-apolloscape.cdn.bcebos.com/stereo/stereo_train_1.zip)
+[stereo_train_2](https://ad-apolloscape.cdn.bcebos.com/stereo/stereo_train_2.zip)
+[stereo_train_3](https://ad-apolloscape.cdn.bcebos.com/stereo/stereo_train_3.zip)
+
+
+Testing data
+
+[stereo_test](https://ad-apolloscape.cdn.bcebos.com/stereo/stereo_test.zip)
+
+
+
 ## Evaluation
 
 Code for test evaluation: 
