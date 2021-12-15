@@ -12,7 +12,7 @@ ApolloScape, part of the Apollo project for autonomous driving, is a research-or
 3. [Citation](#citation)
 
 ## Introduction
-This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](http://wad.ai/2019/challenge.html) and [ECCV 2018 challenge](http://apolloscape.auto/ECCV/index.html). It includes Trajectory Prediction, 3D Lidar Object Detection and 3D Lidar Object Tracking, lanemark segmentation, online self-localization, 3D car instance understanding, Stereo, and Inpainting Dataset. Some example videos and images are shown below:
+This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](http://wad.ai/2019/challenge.html) and [ECCV 2018 challenge](http://apolloscape.auto/ECCV/index.html). It includes Trajectory Prediction, 3D Lidar Object Detection and Tracking, Scene Parsing, Lane Segmentation, Self Localization, 3D Car Instance, Stereo, and Inpainting Dataset. Some example videos and images are shown below:
 
 ### Video Inpainting:
 ![](./examples/inpainting.gif)
@@ -23,6 +23,9 @@ This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autono
 
 ### 3D Lidar Object Detection and Tracking:
 ![](./examples/3d-tracking.gif)
+
+### Scene Parsing
+![](./examples/video_video_demo.webm)
 
 ### Stereo estimation:
 ![](./examples/stereo_depth.png)
