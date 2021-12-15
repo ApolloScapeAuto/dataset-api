@@ -37,6 +37,7 @@ This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autono
 ![](./examples/3d-car-instance.png)
 
 ## Data Download
+Full download links are in each folder.
 ```
 wget https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz 
 or
