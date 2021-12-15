@@ -17,7 +17,32 @@ The trajectory dataset consists of 53min training sequences and 50min testing se
 object counts for cars, bicycles, and pedestrians are as follows (https://arxiv.org/pdf/1811.02146.pdf): 
 16.2k, 5.5k, 60.1k
 
-[Apolloscape 3D Dataset download](http://apolloscape.auto/tracking.html)
+Training data
+
+[detection_train_pcd_1](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_pcd_1.zip)
+[detection_train_pcd_2](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_pcd_2.zip)
+[detection_train_pcd_3](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_pcd_3.zip)
+
+[detection_train_bin_1](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_bin_1.zip)
+[detection_train_bin_2](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_bin_2.zip)
+[detection_train_bin_3](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_bin_3.zip)
+
+[detection_train_label](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_train_label.zip)
+[tracking_train_label](https://ad-apolloscape.cdn.bcebos.com/tracking_data/tracking_train_label.zip)
+[tracking_train_pose](https://ad-apolloscape.cdn.bcebos.com/tracking_data/tracking_train_pose.zip)
+
+
+Testing data
+
+[detection_test_pcd_1](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_pcd_1.zip)
+[detection_test_pcd_2](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_pcd_2.zip)
+[detection_test_pcd_3](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_pcd_3.zip)
+
+[detection_test_bin_1](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_bin_1.zip)
+[detection_test_bin_2](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_bin_2.zip)
+[detection_test_bin_3](https://ad-apolloscape.cdn.bcebos.com/tracking_data/detection_test_bin_3.zip)
+
+[tracking_test_pose](https://ad-apolloscape.cdn.bcebos.com/tracking_data/tracking_test_pose.zip)
 
 
 ## Evaluation
