@@ -105,7 +105,7 @@ CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception. [PDF](https:
 ```
 @article{zhang2020cvpr,
   title={CVPR 2019 WAD Challenge on Trajectory Prediction and 3D Perception},
-  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang and Li, Xin and Zhu, Yanliang and Qian, Deheng and Yang, Zetong and Zhang, Wenjing and Liu, Yuanpei},
+  author={Zhang, Sibo and Ma, Yuexin and Yang, Ruigang},
   journal={arXiv preprint arXiv:2004.05966},
   year={2020}
 }
