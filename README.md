@@ -24,9 +24,6 @@ This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autono
 ### 3D Lidar Object Detection and Tracking:
 ![](./examples/3d-tracking.gif)
 
-### Scene Parsing
-![](./examples/video_video_demo.webm)
-
 ### Stereo estimation:
 ![](./examples/stereo_depth.png)
 
@@ -38,6 +35,10 @@ This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autono
 
 ### 3D car instance understanding:
 ![](./examples/3d-car-instance.png)
+
+### Scene Parsing
+![](./examples/video_video_demo.webm)
+[demo](https://ad-apolloscape.bj.bcebos.com/video%2Fvideo_demo.webm)
 
 ## Data Download
 Full download links are in each folder.
