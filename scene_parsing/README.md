@@ -1,13 +1,6 @@
 
  * [The Scene Parsing of Apolloscapes Dataset](#scene-parsing-dataset)
-   * [Dataset Structure](#dataset-structure)
-   * [Scripts](#scripts)
-   * [Evaluation](#evaluation)
-      * [Metric formula](#metric-formula)
-      * [Rules of ranking](#rules-of-ranking)
-      * [Submission of data format](#submission-of-data-format)
-   * [License](#license)
-   * [Contact](#contact)
+   * [Dataset Download](#dataset-download)
 
 
 # Scene Parsing Dataset
@@ -73,9 +66,11 @@ tunnel	99	255
 overpass	100	255	
 Natural	vegatation	113	21	
 Unlabeled	unlabeled	255	255	other unlabeled objects
+
 4 · Data Example
 
 Color Label
+
 ![image](https://user-images.githubusercontent.com/13900043/190005406-ba1551ac-6566-4fd9-9893-d640608b7524.png)
 
 
@@ -84,6 +79,7 @@ Depth Image
 ![image](https://user-images.githubusercontent.com/13900043/190005421-c525e1fd-56f1-46d0-8dd2-52fe30b5eda8.png)
 
 
+# Dataset Download
 5 · Dataset Download
 
 You may download the dataset from [apolloscape scene]([http://apolloscape.auto/ECCV/challenge.html](http://apolloscape.auto/scene.html))
