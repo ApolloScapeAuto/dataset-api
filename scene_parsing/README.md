@@ -34,10 +34,45 @@ The dataset is divided into three subsets for training, validation and testing r
 
 3 · Class Definitions
 
-We annotate 25 different labels covered by five groups. The following table gives the details of these labels. There are two IDs, class ID and train ID, assigned to each pixel. The train ID is the one used for training and can be modified as needed. The value 255 indicates the ignoring labels that currently are not evaluated during the testing phase. The class ID is used to represent the label in ground truth labels. More details including color assignment can be found in label_apollo.py in utilities.tar.gz. During the submission, however, please make sure to use the class IDs.
+We annotate 25 different labels covered by five groups. The following table gives the details of these labels. There are two IDs, class ID and train ID, assigned to each pixel. The train ID is the one used for training and can be modified as needed. The value 255 indicates the ignoring labels that currently are not evaluated during the testing phase. The class ID is used to represent the label in ground truth labels. More details including color assignment can be found in label_apollo.py in [utilities.tar.gz](http://ad-apolloscape.bj.bcebos.com/public%2Futilities.tar.gz). During the submission, however, please make sure to use the class IDs.
 
-https://www.notion.so/siboeth/ApolloScape-Scene-Parsing-8b3b18edca11470583593589bafe4556#6d62387117894d69b0c80117cb0834f7
-
+category	Class	Class ID	train ID	Description
+Others	others	0	255	
+rover	1	255	
+Sky	sky	17	0	
+movable object	car	33	1	
+car_groups	161	1	
+motorbicycle	34	2	
+motorbicycle_group	162	2	
+bicycle	35	3	
+bicycle_group	163	3	
+person	36	4	
+person_group	164	4	
+rider	37	5	person on motorcycle,bicycle or tricycle
+rider_group	165	5	person on motorcycle,bicycle or tricycle
+truck	38	6	
+truck_group	166	6	
+bus	39	7	
+bus_group	167	7	
+tricycle	40	8	three-wheeled vehicles,motorized, or human-powered
+tricycle_group	168	8	three-wheeled vehicles,motorized, or human-powered
+flat	road	49	9	
+siderwalk	50	10	
+Road obstacles	traffic_cone	65	11	movable and cone-shaped markers
+road_pile	66	12	fixed with many different shapes
+fence	67	13	
+Roadside objects	traffic_light	81	14	
+void	pole	82	15	
+traffic_sign	83	16	
+wall	84	17	
+dustbin	85	18	
+billboard	86	19	
+Building	building	97	20	
+bridge	98	255	
+tunnel	99	255	
+overpass	100	255	
+Natural	vegatation	113	21	
+Unlabeled	unlabeled	255	255	other unlabeled objects
 4 · Data Example
 
 Color Label
@@ -49,153 +84,106 @@ Depth Image
 ![image](https://user-images.githubusercontent.com/13900043/190005421-c525e1fd-56f1-46d0-8dd2-52fe30b5eda8.png)
 
 
+5 · Dataset Download
 
-## Dataset Structure
-You may download the dataset from [apollo 3d car challenges](http://apolloscape.auto/ECCV/challenge.html)
+You may download the dataset from [apolloscape scene]([http://apolloscape.auto/ECCV/challenge.html](http://apolloscape.auto/scene.html))
 
-The folder structure of the 3d car detection challenge is as follows:
-```
-{root}/{folder}/{content}/{image_name}{ext}
-```
+Instance-level & Pixel-level labels
 
-The meaning of the individual elements of `folder` is:
- - `camera`   camera intrinsic parameters.
- - `car_models`   the set of car models, re-saved to python friendly pkl. *Notice the car models in our format (vertices & meshes ) start with index 1 rather than other format like .off starting with 0.*
- - `{split}` the split of car 3d pose dataset, it could be `sample_data`, `Train`, `Test`
- 
-Elements of `content` under a `{split}` folder includes:
- - `car_poses`   labelled car pose in the image.
- - `images` image set. 
- - `split` training and vlaidation image list. 
-
-Our released official data will have a new folder
- - `ignore_mask` the mask of unlabeled car regions in order to avoid error false positive, *For testing, please prune the detected car inside the ignore mask using our render tool. Otherwise, it will be counted as false positive*. 
-
-
-## Scripts
-There are several scripts included with the dataset in a folder named `scripts`
- - `demo.ipynb`    Demo function for visualization of an labelled image
-
- - `car_models.py`  central file defining the IDs of all semantic classes and providing mapping between various class properties.
- - `render_car_instances.py`  script for loading image and render image file
- - 'renderer/'      containing scripts of python wrapper for opengl render a car model from a 3d car mesh. We borrow portion of opengl rendering from [Displets](http://www.cvlibs.net/projects/displets/) and change to egl offscreen render context and python api.
- - `install.sh`     installation script of this library. Only tested for Ubuntu.
-
-The scripts can be installed by running install.sh in the bash:
-`sudo bash install.sh`
-
-Please download the sample data from 
-[apollo 3d car challenges](http://apolloscape.auto/ECCV/challenge.html) with sample data button, and put it under ```../apolloscape/``` 
-
-
-Then run the following code to show a rendered results:
-```bash
-python render_car_instances.py --split='sample_data' --image_name='180116_053947113_Camera_5' --data_dir='../apolloscape/3d_car_instance_sample'
-```
-
-## Evaluation
-
-We follow similar instance mean AP evalution with the [coco dataset evaluation](https://github.com/cocodataset/cocoapi), while consider thresholds using 3D car simlarity metrics (distance, orientation, shape), for distance and orientation, we use similar metrics of evaluating self-localization, i.e. the Euclidean distance for translation and arccos distance with quaternions representation.
-
-For shape similarity, we consider the reprojection mask similarity by projecting the 3D model to 10 angles and compute the IoU between each pair of models. The similarity we have is ```sim_mat.txt```
-
-For submitting the results, we require paticipants to also contain a estimated car_id which is defined under ```car_models.py``` and also the 6DoF estimated car pose relative to camera. As demonstrated in the ```test_eval_data``` folder.
-
-If you want to have your results evaluated w.r.t car size, please also include an 'area' field for the submitted results by rendering the car on image.
-Our final results will based on AP over all the cars same as the coco dataset.
-
-You may run the following code to have a evaluation sample.
-```bash
-python eval_car_instances.py --test_dir='./test_eval_data/det3d_res' --gt_dir='./test_eval_data/det3d_gt' --res_file='./test_eval_data/res.txt'
-```
-
-### Metric formula
-
-We adopt the popularly used mean Avergae Precision for object instance evaluation in 3D similar to [coco detection](http://cocodataset.org/#detection-eval). However instead of using 2D mask IoU for similarity criteria between predicted instances and ground truth to judge a true positive, we propose to used following 3D metrics containing the perspective of *shape* (<img src="/car_instance/tex/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width=7.7054801999999905pt height=14.15524440000002pt/>), *3d translation*(<img src="/car_instance/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/>) and *3d rotation*(<img src="/car_instance/tex/89f2e0d2d24bcf44db73aab8fc03252c.svg?invert_in_darkmode&sanitize=true" align=middle width=7.87295519999999pt height=14.15524440000002pt/>) to judge a true positive.
-
-Specifically, given an estimated 3d car model in an image <img src="/car_instance/tex/36b2583e4d8685215773a8f4cc991656.svg?invert_in_darkmode&sanitize=true" align=middle width=107.66574884999997pt height=24.65753399999998pt/> and ground truth model <img src="/car_instance/tex/282ebdd2ff53dca1412d731c08bec6dc.svg?invert_in_darkmode&sanitize=true" align=middle width=117.63534089999999pt height=24.65753399999998pt/>, we evaluate the three estimates repectively as follows:
-
-For 3d shape, we consider reprojection similarity, by putting the model at a fix location and rendering 10 views by rotating the object. We compute the mean IoU between the two masks rendered from each view. Formally, the metric is defined as,
-
-<img src="/car_instance/tex/e3216a2d9236918d9b114a51a53fc95a.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6026000499999pt height=27.77565449999998pt/>
-
-where <img src="/car_instance/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> is a set of camera views.
-
-For 3d translation and rotation, we follow the same evaluation metric of self-localization [README.md](../self_localization/README.md).
-
-<img src="/car_instance/tex/1a16bf6722735f0218334842c3833b50.svg?invert_in_darkmode&sanitize=true" align=middle width=130.72152555pt height=24.65753399999998pt/>
-
-<img src="/car_instance/tex/3b42802dd2e4ed40ae0918b39904ca2d.svg?invert_in_darkmode&sanitize=true" align=middle width=195.27382379999997pt height=24.65753399999998pt/>
-
-Then, we define a set of 10 thresholds for a true positive prediction from loose criterion to strict criterion:
+_ins means labels contains both pixel-level and instance-level labels, _seg means labels contains pixel-level labels only.
 
 ```
-    shapeThrs  - [.5:.05:.95] shape thresholds for $s$
-    rotThrs    - [50:  5:  5] rotation thresholds for $r$
-    transThrs  - [2.8:.3:0.1] trans thresholds for $t$
-```
-where the most loose metric ```.5, 50, 2.8``` means shape similarity must <img src="/car_instance/tex/82933ae1b048283d7d52c25038a205e8.svg?invert_in_darkmode&sanitize=true" align=middle width=38.35617554999999pt height=21.18721440000001pt/>, rotation distance must <img src="/car_instance/tex/9dbc26e62bdd6a9004a4e2eac91577e3.svg?invert_in_darkmode&sanitize=true" align=middle width=42.00916004999999pt height=21.18721440000001pt/> and tranlation distance must <img src="/car_instance/tex/ca1c10083b32a6b27b4f70128b09b697.svg?invert_in_darkmode&sanitize=true" align=middle width=52.789274999999996pt height=21.18721440000001pt/>, and the strict metric can be interprated correspondingly.
-
-We use <img src="/car_instance/tex/079669763179631abe6c6725d030fb96.svg?invert_in_darkmode&sanitize=true" align=middle width=78.25920134999998pt height=14.15524440000002pt/> to represent those criteria from loose to strict.
-
-
-### Rules of ranking
-
-Result benchmark will be:
-
-| Method | AP | AP<img src="/car_instance/tex/f5606b459052f4b8daf6643aa31f3f2a.svg?invert_in_darkmode&sanitize=true" align=middle width=11.46835139999999pt height=14.15524440000002pt/> |  AP<img src="/car_instance/tex/a208b77cb1de63a4427210b05991d250.svg?invert_in_darkmode&sanitize=true" align=middle width=11.46835139999999pt height=14.15524440000002pt/> |  AP<img src="/car_instance/tex/5c71b8d8389a7db46d6f7ca3fe55d85c.svg?invert_in_darkmode&sanitize=true" align=middle width=33.447178049999984pt height=14.15524440000002pt/> | AP<img src="/car_instance/tex/f61e0ba78ad249b2db8b97e556065558.svg?invert_in_darkmode&sanitize=true" align=middle width=44.652151499999995pt height=14.15524440000002pt/> | AP<img src="/car_instance/tex/dd49cdc20271fef88b013ce6bb79b762.svg?invert_in_darkmode&sanitize=true" align=middle width=30.874481549999988pt height=14.15524440000002pt/> | 
-| ------ |:------:|:------:|:------:|:------:|:------:|:------:|
-| Deepxxx |xx  | xx  | xx | xx |  xx | xx |
-
-Our ranking will determined by the mean AP as usual.
-
-
-### Submission of data format
-
-```bash
-├── test
-│   ├── image1.json
-│   ├── image2.json
-...
-```
-Here ```image1``` is string  of image name
-
- - Example format of image1.json
-
-``` bash
-[{
-"car_id" : int, 
-"area": int,
-"pose" : [roll,pitch,yaw,x,y,z], 
-"score" : float,
-}]
-...
+wget https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road02_ins.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road03_ins.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road04_ins.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road02_seg.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road03_seg.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road04_seg.tar.gz 
 ```
 
-Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
+Pixel-level LaneLine labels
 
+We annotate 28 different lane markings that currentlyare not available in existing open datasets. The ApolloScape Dataset for Autonomous Driving give detailed information of these lane markings
 
-## License
-For the source code from the renderer and any part we borrow from cocoapi, we follow their license requirements.
+```
+wget https://ad-apolloscape.cdn.bcebos.com/road02_ins_lane.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road03_ins_lane.tar.gz 
+```
 
+Depth images
 
+```
+wget https://ad-apolloscape.cdn.bcebos.com/road01_ins_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road02_ins_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road03_ins_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road04_ins_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road02_seg_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road03_seg_depth.tar.gz 
+wget https://ad-apolloscape.cdn.bcebos.com/road04_seg_depth.tar.gz 
+```
 
-## Publication
+Note: All photos can only be used for educational purpose by individuals or organizations. Commercial use or other violations of copyright law are not permitted.
+
+Image lists
+
+Uploaded the [Image lists](http://ad-apolloscape.bj.bcebos.com/public%2Fimage_lists.tar.gz) for training, validation, and testing for road01_ins, road02_ins, and road03_ins.
+
+6 · Dataset Structure
+
+Folder structure of the dataset
+
+{root} / {type} / {road id} _ {level} / {record id} / {camera id} / {timestamp} _ {camera id} {ext}
+
+root: the root folder defined by users.
+
+type: there are three data types in current release, i.e., ColorImage, Label, and Pose.
+
+road id: the road id, e.g., road001, road002.
+
+level: two different levels, seg means labels contains pixel-level labels only, ins means labels contains both pixel-level and instance-level labels.
+
+record id: the record is, e.g., Record001, Record002. Each record contains up to few thousands images.
+
+camera id: two front cameras are used in our acquisition system, i.e., Camera 5 and Camera 6.
+
+timestamp: the first part of the image name.
+
+camera id: the second part of the image name.
+
+ext: the extension of the file. .jpg for color image, _bin.png for label image, .json for the polygon list of instance-level labels, and _instanceIds.png for instance-level labels.
+
+There is only one pose file (i.e., pose.txt) for each camera and each record. This pose file contains all the extrinsic parameters for all the images of the corresponding camera and record. The format of each line in the pose file is as follows:
+
+r00 r01 r02 t0 r10 r11 r12 t1 r20 r21 r22 t2 0 0 0 1 image_name
+
+The cameras have been well calibrated and undistorted. The intrinsic parameters of cameras can found in camera_intrinsics.txt in the [utilities.tar.gz](http://ad-apolloscape.bj.bcebos.com/public%2Futilities.tar.gz).
+
+Depth image format:
+
+In the depth image, the depth value is save as unsigned short int format. It can be easily read in OpenCV as:
+
+cv::Mat depth_u16 = cv::imread ( depth_path, CV_LOAD_IMAGE_ANYDEPTH);
+
+The absolute depth value in meter can be obtained as
+
+double depth_value = depth_u16.at(row, col) / 200.00;
+
+7 · Evaluation Tasks
+
+Given 3D annotations, 2D pixel and instance-level annotations, background depth maps, camera pose information, a number of tasks could be defined. In current release, we mainly focus on the 2D image parsing task. We would like to add more tasks in near future.
+
+We have provided three evaluation metrics for single image parsing and video parsing. More details about the evaluation metrics can be found in our paper.We are organizing 2018 CVPR Workshop on Autonomous Driving Challenge, more details to be announced soon.
+
+8 · Submission
+
+Participate  LeaderBoard
+
+9 · Publication
+
 Please cite our paper in your publications if our dataset is used in your research.
+Xinyu Huang, Xinjing Cheng, Qichuan Geng, Binbin Cao, Dingfu Zhou, Peng Wang, Yuanqing Lin, and Ruigang Yang, The ApolloScape Dataset for Autonomous Driving, arXiv: 1803.06184, 2018
+[PDF]   [BibTex]
 
-ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving
 
-Xibin Song, Peng Wang, Dingfu Zhou, Rui Zhu, Chenye Guan, Yuchao Dai, Hao Su, Hongdong Li, Ruigang Yang     
-
-CVPR, 2019
-
-```
-@InProceedings{Song_2019_CVPR,
-author = {Song, Xibin and Wang, Peng and Zhou, Dingfu and Zhu, Rui and Guan, Chenye and Dai, Yuchao and Su, Hao and Li, Hongdong and Yang, Ruigang},
-title = {ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving},
-booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2019}
-} 
-```
 
