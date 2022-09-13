@@ -1,5 +1,5 @@
 
- * [The 3D Car Instance Understanding Challenge of Apolloscapes Dataset](#the-3d-car-instance-understanding-challenge-of-apolloscapes-dataset)
+ * [The Scene Parsing of Apolloscapes Dataset](#scene-parsing-dataset)
    * [Dataset Structure](#dataset-structure)
    * [Scripts](#scripts)
    * [Evaluation](#evaluation)
@@ -10,11 +10,44 @@
    * [Contact](#contact)
 
 
-# The 3D Car Instance Understanding Challenge of Apolloscapes Dataset
+# Scene Parsing Dataset
 
-This repository contains the evaluation scripts for the 3d car instance understanding challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality annotations of 5000+ frames.
+This repository contains the evaluation scripts for the Scene Parsing of the ApolloScapes dataset. The whole dataset will include RGB videos with high resolution image sequences and per pixel annotation, survey-grade dense 3D points with semantic segmentation.
 
-Details and download are available at: https://Apolloscape.auto/ECCV/index.html
+Details and download are available at: http://apolloscape.auto/scene.html
+
+1 · Introduction
+
+Scene parsing aims to assign a class (semantic) label for each pixel in an image, or each point in a point cloud. It is one of the most comprehensive analyses of a 2D/3D scene. Given the rise of autonomous driving, environmental perception is expected to be a key enabling technical piece. The ApolloScape dataset provided by Baidu, Inc. will include RGB videos with high resolution images and per pixel annotation, survey- grade dense 3D points with semantic segmentation, stereoscopic video, and panoramic images.
+
+We equipped a mid-size SUV with high resolution cameras and a Riegl acquisition system. Our dataset is collected in different cities under various traffic conditions. The number of moving objects, such as vehicles and pedestrians, averages from tens to over one hundred. Moreover, each image is tagged with high-accuracy pose information at cm accuracy and the static background point cloud has mm relative accuracy. We expect our new dataset can deeply benefit various autonomous driving related applications that include but not limited to 2D/3D scene understanding, localization, transfer learning, and driving simulation.
+
+http://ad-apolloscape.bj.bcebos.com/video%2Fvideo_demo.webm
+
+2 · Summary of Scence Parsing Dataset
+
+Image frames in our dataset are collected every one meter by our acquisition system with resolution 3384 x 2710. It is expected that the released dataset will include 200K image frames with corresponding pixel-level annotations and pose information. Instance-level annotations are available for a subset of the dataset. Depth maps for static background will also be provided.
+
+As of March 8, 2018, we have released the first part of the dataset that contains 74555 video frames and their pixel-level and instance-level annotations.On March 21, 2018, we added the second part of the data set, including 43592 depth images for static background of road01_ins and road02_ins.On April 03, 2018，the Scene Parsing data set cumulatively provides 146,997 frames with corresponding pixel-level annotations and pose information，depth maps for static background.
+
+The dataset is divided into three subsets for training, validation and testing respectively. The semantic annotations for testing images are not provided. All the pixels in the ground truth annotations for testing images are labeled as 255. The files that contain image lists of training, validation, and testing subsets will be provided soon.
+
+3 · Class Definitions
+
+We annotate 25 different labels covered by five groups. The following table gives the details of these labels. There are two IDs, class ID and train ID, assigned to each pixel. The train ID is the one used for training and can be modified as needed. The value 255 indicates the ignoring labels that currently are not evaluated during the testing phase. The class ID is used to represent the label in ground truth labels. More details including color assignment can be found in label_apollo.py in utilities.tar.gz. During the submission, however, please make sure to use the class IDs.
+
+https://www.notion.so/siboeth/ApolloScape-Scene-Parsing-8b3b18edca11470583593589bafe4556#6d62387117894d69b0c80117cb0834f7
+
+4 · Data Example
+
+Color Label
+![image](https://user-images.githubusercontent.com/13900043/190005406-ba1551ac-6566-4fd9-9893-d640608b7524.png)
+
+
+Depth Image
+
+![image](https://user-images.githubusercontent.com/13900043/190005421-c525e1fd-56f1-46d0-8dd2-52fe30b5eda8.png)
+
 
 
 ## Dataset Structure
