@@ -9,13 +9,18 @@
 
 # The 3D Car Instance Understanding Challenge of Apolloscapes Dataset
 
+## 1. Introduction
+
+For self-driving cars, it is important to detect the other vehicles, pedestrians, riders, etc. The system must understand the 3D relationship of each object in each image frame, especially those surrounding or near the self-driving vehicle.
+
 This repository contains the evaluation scripts for the 3d car instance understanding challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality annotations of 5000+ frames.
 
-2 · Data Example
+
+## 2. Data Example
 
 http://apolloscape.auto/public/img/scene/datasets-car-instance_1e0382e.png
 
-## Dataset Download
+## 3. Dataset Download
 
 Sample data
 
@@ -30,7 +35,7 @@ Testing data
 [3d-car-understanding-test.tar.gz](https://ad-apolloscape.cdn.bcebos.com/3d-car-understanding-test.tar.gz)
 
 
-## Dataset Structure
+## 4. Dataset Structure
 
 The folder structure of the 3d car detection challenge is as follows:
 ```
@@ -51,7 +56,7 @@ Our released official data will have a new folder
  - `ignore_mask` the mask of unlabeled car regions in order to avoid error false positive, *For testing, please prune the detected car inside the ignore mask using our render tool. Otherwise, it will be counted as false positive*. 
 
 
-## Scripts
+## 5. Scripts
 There are several scripts included with the dataset in a folder named `scripts`
  - `demo.ipynb`    Demo function for visualization of an labelled image
 
@@ -72,7 +77,7 @@ Then run the following code to show a rendered results:
 python render_car_instances.py --split='sample_data' --image_name='180116_053947113_Camera_5' --data_dir='../apolloscape/3d_car_instance_sample'
 ```
 
-## Evaluation
+## 6. Evaluation
 
 We follow similar instance mean AP evalution with the [coco dataset evaluation](https://github.com/cocodataset/cocoapi), while consider thresholds using 3D car simlarity metrics (distance, orientation, shape), for distance and orientation, we use similar metrics of evaluating self-localization, i.e. the Euclidean distance for translation and arccos distance with quaternions representation.
 
@@ -88,7 +93,7 @@ You may run the following code to have a evaluation sample.
 python eval_car_instances.py --test_dir='./test_eval_data/det3d_res' --gt_dir='./test_eval_data/det3d_gt' --res_file='./test_eval_data/res.txt'
 ```
 
-### Metric formula
+### 7. Metric formula
 
 We adopt the popularly used mean Avergae Precision for object instance evaluation in 3D similar to [coco detection](http://cocodataset.org/#detection-eval). However instead of using 2D mask IoU for similarity criteria between predicted instances and ground truth to judge a true positive, we propose to used following 3D metrics containing the perspective of *shape* (<img src="/car_instance/tex/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width=7.7054801999999905pt height=14.15524440000002pt/>), *3d translation*(<img src="/car_instance/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/>) and *3d rotation*(<img src="/car_instance/tex/89f2e0d2d24bcf44db73aab8fc03252c.svg?invert_in_darkmode&sanitize=true" align=middle width=7.87295519999999pt height=14.15524440000002pt/>) to judge a true positive.
 
@@ -118,7 +123,7 @@ where the most loose metric ```.5, 50, 2.8``` means shape similarity must <img s
 We use <img src="/car_instance/tex/079669763179631abe6c6725d030fb96.svg?invert_in_darkmode&sanitize=true" align=middle width=78.25920134999998pt height=14.15524440000002pt/> to represent those criteria from loose to strict.
 
 
-### Rules of ranking
+### 8. Rules of ranking
 
 Result benchmark will be:
 
@@ -129,7 +134,7 @@ Result benchmark will be:
 Our ranking will determined by the mean AP as usual.
 
 
-### Submission of data format
+### 9. Submission of data format
 
 ```bash
 ├── test
@@ -155,7 +160,7 @@ Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int num
 
 
 
-## Publication
+## 10. Publication
 Please cite our paper in your publications if our dataset is used in your research.
 
 ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving
