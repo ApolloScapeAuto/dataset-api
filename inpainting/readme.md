@@ -1,11 +1,12 @@
 # The Video Inpainting Dataset for Autonomous Driving
+The large-scale dataset consists of synchronized Labeled image and LiDAR scanned point clouds. It captured by HESAI Pandora All-in-One Sensing Kit. It can be used for inpainting and other tasks.
 [![Depth Guided Video Inpainting for Autonomous Driving](https://res.cloudinary.com/marcomontalbano/image/upload/v1595308220/video_to_markdown/images/youtube--iOIxdQIzjQs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=iOIxdQIzjQs "Depth Guided Video Inpainting for Autonomous Driving")
 
-## Introduction
+## 1. Introduction
 Inpainting dataset consists of synchronized Labeled image and LiDAR scanned point clouds. It captured by HESAI Pandora All-in-One Sensing Kit. It is collected under various lighting conditions and traffic densities in Beijing, China.
-[Dataset detail and download](http://apolloscape.auto/inpainting.html)
+[Dataset detail and download](https://apolloscape.notion.site/Inpainting-71bb9794ebd647399c4a54897d440c63)
 
-## Dataset download
+## 2. Dataset download
 The first video inpainting dataset with depth. 
 
 [mask_and_image_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579_mask.zip)
@@ -25,7 +26,7 @@ The first video inpainting dataset with depth.
 [lidar_bg_3.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313856-1534313869_lidar_bg.zip)
 
 
-## Data Structure
+## 3. Data Structure
 The folder structure of the inpainting is as follows:
 
 1) xxx-yyy_mask.zip: xxx.aaa.jpg is original image. xxx.aaa.png is labelled mask of cars. 
@@ -34,19 +35,13 @@ The folder structure of the inpainting is as follows:
 
 3) lidar_bg.zip: lidar background point cloud in ply format.
 
-## Submission of data format
-Baseline result:
 
-| Method | MAE   | RMSE  | PSNR   | SSIM  |
-|--------|-------|-------|--------|-------|
-| DVI    | 6.135 | 9.633 | 21.631 | 0.895 |
-
-## Publication
+## 4. Publication
 Please cite our paper in your publications.
 
 DVI: Depth Guided Video Inpainting for Autonomous Driving.
 
-Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Webpage](https://sites.google.com/view/sibozhang/dvi), [Github Code](https://github.com/sibozhang/Depth-Guided-Inpainting), [Inpainting Dataset](http://apolloscape.auto/inpainting.html), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://youtu.be/_pcqH1illCU)
+Miao Liao, Feixiang Lu, Dingfu Zhou, Sibo Zhang, Wei Li, Ruigang Yang.  ECCV 2020. [PDF](https://arxiv.org/pdf/2007.08854.pdf), [Webpage](https://sites.google.com/view/sibozhang/dvi), [Github Code](https://github.com/sibozhang/Depth-Guided-Inpainting), [Video](https://www.youtube.com/watch?v=iOIxdQIzjQs), [Presentation](https://youtu.be/_pcqH1illCU)
 
 ```
 @inproceedings{liao2020dvi,
