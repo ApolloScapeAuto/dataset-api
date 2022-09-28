@@ -1,10 +1,6 @@
 * [The Online Self-localization Challenge of Apolloscape](#the-online-self-localization-challenge-of-apolloscape)
+   * [Dataset Download](#dataset-download)
    * [Dataset Structure](#dataset-structure)
-   * [Evaluation](#evaluation)
-      * [Metric formula](#metric-formula)
-      * [Rules of ranking](#rules-of-ranking)
-      * [Submission of data format](#submission-of-data-format)
-   * [Contact](#contact)
 
 # The Online Self-localization Challenge of Apolloscape
 This repository contains the evaluation scripts for the online self-localization challenge of the ApolloScapes dataset,
