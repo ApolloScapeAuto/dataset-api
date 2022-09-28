@@ -1,6 +1,6 @@
-# Toolkit for ApolloScape Dataset
+# Toolkit for [ApolloScape Dataset](https://apolloscape.notion.site/)
 
-[New] Apolloscape website: [ApolloScape](https://apolloscape.notion.site/)
+[New] Apolloscape website: [ApolloScape.notion.site](https://apolloscape.notion.site/)
 
 Welcome to Apolloscape's GitHub page!
 
