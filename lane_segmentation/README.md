@@ -35,7 +35,25 @@ The meaning of the individual elements is:
 
 
 ## Download
-We have three set of data release for training and validation of your algorithm. Please check our website for download [link](http://apolloscape.auto/lane_segmentation.html).
+
+Sample data
+
+[lane_marking_examples.tar.gz](https://ad-apolloscape.cdn.bcebos.com/lane_marking_examples.tar.gz)
+
+Training data:
+
+[ColorImage_road02.tar.gz](https://ad-apolloscape.cdn.bcebos.com/ColorImage_road02.tar.gz)
+[ColorImage_road03.tar.gz](https://ad-apolloscape.cdn.bcebos.com/ColorImage_road03.tar.gz)
+[ColorImage_road04.tar.gz](https://ad-apolloscape.cdn.bcebos.com/ColorImage_road04.tar.gz)
+
+[Labels_road02.tar.gz](https://ad-apolloscape.cdn.bcebos.com/Labels_road02.tar.gz)
+[Labels_road03.tar.gz](https://ad-apolloscape.cdn.bcebos.com/Labels_road03.tar.gz)
+[Labels_road04.tar.gz](https://ad-apolloscape.cdn.bcebos.com/Labels_road04.tar.gz)
+
+Testing data
+
+[ColorImage_road05.tar.gz](https://ad-apolloscape.cdn.bcebos.com/ColorImage_road05.tar.gz)
+
 
 ## Scripts
 
