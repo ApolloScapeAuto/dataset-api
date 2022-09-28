@@ -1,24 +1,36 @@
 
  * [The 3D Car Instance Understanding Challenge of Apolloscapes Dataset](#the-3d-car-instance-understanding-challenge-of-apolloscapes-dataset)
+   * [Dataset Download](#dataset-download)
+   
    * [Dataset Structure](#dataset-structure)
-   * [Scripts](#scripts)
-   * [Evaluation](#evaluation)
-      * [Metric formula](#metric-formula)
-      * [Rules of ranking](#rules-of-ranking)
-      * [Submission of data format](#submission-of-data-format)
-   * [License](#license)
-   * [Contact](#contact)
+
+
 
 
 # The 3D Car Instance Understanding Challenge of Apolloscapes Dataset
 
 This repository contains the evaluation scripts for the 3d car instance understanding challenge of the ApolloScapes dataset. This large-scale dataset contains a diverse set of stereo video sequences recorded in street scenes from different cities, with high quality annotations of 5000+ frames.
 
-Details and download are available at: https://Apolloscape.auto/ECCV/index.html
+2 · Data Example
+
+http://apolloscape.auto/public/img/scene/datasets-car-instance_1e0382e.png
+
+## Dataset Download
+
+Sample data
+
+[3d_car_instance_sample.tar.gz](https://ad-apolloscape.cdn.bcebos.com/3d_car_instance_sample.tar.gz)
+
+Training data
+
+[3d-car-understanding-train.tar.gz](https://ad-apolloscape.cdn.bcebos.com/3d-car-understanding-train.tar.gz)
+
+Testing data
+
+[3d-car-understanding-test.tar.gz](https://ad-apolloscape.cdn.bcebos.com/3d-car-understanding-test.tar.gz)
 
 
 ## Dataset Structure
-You may download the dataset from [apollo 3d car challenges](http://apolloscape.auto/ECCV/challenge.html)
 
 The folder structure of the 3d car detection challenge is as follows:
 ```
@@ -140,10 +152,6 @@ Here ```image1``` is string  of image name
 ```
 
 Here``` roll,pitch,yaw,x,y,z``` are ```float32``` numbers, and car_id is int number, which indicates the type of car. "area" can be computed from the rendering code provided by ```render_car_instances.py``` by first rendering an image from the estimated set models and then calculate the area of each instance.
-
-
-## License
-For the source code from the renderer and any part we borrow from cocoapi, we follow their license requirements.
 
 
 
