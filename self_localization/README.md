@@ -19,6 +19,30 @@ We provide the set of record id recorded from start-to-end and the set of record
 _In this challenge, we recard records from forward (start-to-end) and inverse (end-to-start) driving as records from two different roads, which means we will not have forward videos as training while have inverse driving as testing videos. 
 However, it could be interesting to do that in your research as showed in the work of [Semantic Visual Localization](https://arxiv.org/abs/1712.05773)._
 
+## Dataset Download
+
+Sample Data
+[self-localization-sample.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization-sample.tar.gz)
+
+Training Data
+[Road11.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road11.tar.gz)
+[Road12.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road12.tar.gz)
+[Road13.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road13.tar.gz)
+[Road14.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road14.tar.gz)
+[Road15.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road15.tar.gz)
+[Road16.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road16.tar.gz)
+[Road17.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Train/Road17.tar.gz)
+
+Testing Data
+[Road11.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road11.tar.gz)
+[Road12.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road12.tar.gz)
+[Road13.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road13.tar.gz)
+[Road14.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road14.tar.gz)
+[Road15.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road15.tar.gz)
+[Road16.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road16.tar.gz)
+[Road17.tar.gz](https://ad-apolloscape.cdn.bcebos.com/self-localization/Test/Road17.tar.gz)
+
+
 
 ## Dataset Structure
 
