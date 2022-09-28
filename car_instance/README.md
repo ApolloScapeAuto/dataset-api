@@ -18,7 +18,7 @@ This repository contains the evaluation scripts for the 3d car instance understa
 
 ## 2. Data Example
 
-http://apolloscape.auto/public/img/scene/datasets-car-instance_1e0382e.png
+![](../examples/3d-car-instance.png)
 
 ## 3. Dataset Download
 
