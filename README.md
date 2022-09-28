@@ -1,4 +1,6 @@
-# Toolkit for [ApolloScape Dataset](http://apolloscape.auto/index.html)
+# Toolkit for ApolloScape Dataset
+
+[New] Apolloscape website: [ApolloScape](https://apolloscape.notion.site/)
 
 Welcome to Apolloscape's GitHub page!
 
@@ -12,7 +14,7 @@ ApolloScape, part of the Apollo project for autonomous driving, is a research-or
 3. [Citation](#citation)
 
 ## Introduction
-This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](http://wad.ai/2019/challenge.html) and [ECCV 2018 challenge](http://apolloscape.auto/ECCV/index.html). It includes Trajectory Prediction, 3D Lidar Object Detection and Tracking, Scene Parsing, Lane Segmentation, Self Localization, 3D Car Instance, Stereo, and Inpainting Dataset. Some example videos and images are shown below:
+This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autonomous Driving Challenge](https://apolloscape.notion.site/CVPR-2019-Workshop-on-Autonomous-Driving-66b6c365ced94a2d9e38edb159136ded) and [ECCV 2018 challenge](https://apolloscape.notion.site/ECCV-2018-Vision-based-Navigation-for-Autonomous-Driving-a7f79146f10b4285b6053934a51ae404). It includes Trajectory Prediction, 3D Lidar Object Detection and Tracking, Scene Parsing, Lane Segmentation, Self Localization, 3D Car Instance, Stereo, and Inpainting Dataset. Some example videos and images are shown below:
 
 ### Video Inpainting:
 ![](./examples/inpainting.gif)
