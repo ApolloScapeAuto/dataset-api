@@ -1,13 +1,11 @@
 
  * [The Scene Parsing of Apolloscapes Dataset](#scene-parsing-dataset)
    * [Dataset Download](#dataset-download)
-
+   
 
 # Scene Parsing Dataset
 
 This repository contains the evaluation scripts for the Scene Parsing of the ApolloScapes dataset. The whole dataset will include RGB videos with high resolution image sequences and per pixel annotation, survey-grade dense 3D points with semantic segmentation.
-
-Details and download are available at: http://apolloscape.auto/scene.html
 
 1 · Introduction
 
@@ -82,42 +80,37 @@ Depth Image
 # Dataset Download
 5 · Dataset Download
 
-You may download the dataset from [apolloscape scene]([http://apolloscape.auto/ECCV/challenge.html](http://apolloscape.auto/scene.html))
-
 Instance-level & Pixel-level labels
 
 _ins means labels contains both pixel-level and instance-level labels, _seg means labels contains pixel-level labels only.
 
-```
-wget https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road02_ins.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road03_ins.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road04_ins.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road02_seg.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road03_seg.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road04_seg.tar.gz 
-```
+[road01_ins](https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz)
+[road02_ins](https://ad-apolloscape.cdn.bcebos.com/road02_ins.tar.gz)
+[road03_ins](https://ad-apolloscape.cdn.bcebos.com/road03_ins.tar.gz)
+[road04_ins](https://ad-apolloscape.cdn.bcebos.com/road04_ins.tar.gz)
+
+[road02_seg](https://ad-apolloscape.cdn.bcebos.com/road02_seg.tar.gz)
+[road03_seg](https://ad-apolloscape.cdn.bcebos.com/road03_seg.tar.gz)
+[road04_seg](https://ad-apolloscape.cdn.bcebos.com/road04_seg.tar.gz)
 
 Pixel-level LaneLine labels
 
 We annotate 28 different lane markings that currentlyare not available in existing open datasets. The ApolloScape Dataset for Autonomous Driving give detailed information of these lane markings
 
-```
-wget https://ad-apolloscape.cdn.bcebos.com/road02_ins_lane.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road03_ins_lane.tar.gz 
-```
+[road02_ins_lane](https://ad-apolloscape.cdn.bcebos.com/road02_ins_lane.tar.gz)
+[road03_ins_lane](https://ad-apolloscape.cdn.bcebos.com/road03_ins_lane.tar.gz)
+
 
 Depth images
 
-```
-wget https://ad-apolloscape.cdn.bcebos.com/road01_ins_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road02_ins_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road03_ins_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road04_ins_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road02_seg_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road03_seg_depth.tar.gz 
-wget https://ad-apolloscape.cdn.bcebos.com/road04_seg_depth.tar.gz 
-```
+[road01_ins_depth](https://ad-apolloscape.cdn.bcebos.com/road01_ins_depth.tar.gz)
+[road02_ins_depth](https://ad-apolloscape.cdn.bcebos.com/road02_ins_depth.tar.gz)
+[road03_ins_depth](https://ad-apolloscape.cdn.bcebos.com/road03_ins_depth.tar.gz)
+[road04_ins_depth](https://ad-apolloscape.cdn.bcebos.com/road04_ins_depth.tar.gz)
+
+[road02_seg_depth](https://ad-apolloscape.cdn.bcebos.com/road02_seg_depth.tar.gz)
+[road03_seg_depth](https://ad-apolloscape.cdn.bcebos.com/road03_seg_depth.tar.gz)
+[road04_seg_depth](https://ad-apolloscape.cdn.bcebos.com/road04_seg_depth.tar.gz)
 
 Note: All photos can only be used for educational purpose by individuals or organizations. Commercial use or other violations of copyright law are not permitted.
 
@@ -179,7 +172,7 @@ Participate  LeaderBoard
 
 Please cite our paper in your publications if our dataset is used in your research.
 Xinyu Huang, Xinjing Cheng, Qichuan Geng, Binbin Cao, Dingfu Zhou, Peng Wang, Yuanqing Lin, and Ruigang Yang, The ApolloScape Dataset for Autonomous Driving, arXiv: 1803.06184, 2018
-[PDF]   [BibTex]
+[PDF](http://ad-apolloscape.bj.bcebos.com/public%2FApolloScape%20Dataset.pdf) [BibTex](http://ad-apolloscape.bj.bcebos.com/public%2FBibTex.txt)
 
 
 
