@@ -13,7 +13,7 @@ Scene parsing aims to assign a class (semantic) label for each pixel in an image
 
 We equipped a mid-size SUV with high resolution cameras and a Riegl acquisition system. Our dataset is collected in different cities under various traffic conditions. The number of moving objects, such as vehicles and pedestrians, averages from tens to over one hundred. Moreover, each image is tagged with high-accuracy pose information at cm accuracy and the static background point cloud has mm relative accuracy. We expect our new dataset can deeply benefit various autonomous driving related applications that include but not limited to 2D/3D scene understanding, localization, transfer learning, and driving simulation.
 
-http://ad-apolloscape.bj.bcebos.com/video%2Fvideo_demo.webm
+[Demo](http://ad-apolloscape.bj.bcebos.com/video%2Fvideo_demo.webm)
 
 2 · Summary of Scence Parsing Dataset
 
@@ -164,11 +164,7 @@ Given 3D annotations, 2D pixel and instance-level annotations, background depth 
 
 We have provided three evaluation metrics for single image parsing and video parsing. More details about the evaluation metrics can be found in our paper.We are organizing 2018 CVPR Workshop on Autonomous Driving Challenge, more details to be announced soon.
 
-8 · Submission
-
-Participate  LeaderBoard
-
-9 · Publication
+8 · Publication
 
 Please cite our paper in your publications if our dataset is used in your research.
 Xinyu Huang, Xinjing Cheng, Qichuan Geng, Binbin Cao, Dingfu Zhou, Peng Wang, Yuanqing Lin, and Ruigang Yang, The ApolloScape Dataset for Autonomous Driving, arXiv: 1803.06184, 2018
