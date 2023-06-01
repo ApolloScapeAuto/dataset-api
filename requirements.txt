@@ -1,4 +1,4 @@
-setuptools==38.2.3
+setuptools==65.5.1
 opencv_python==3.4.0.12
 Cython==0.28.3
 matplotlib==2.2.2
