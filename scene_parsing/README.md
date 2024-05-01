@@ -146,7 +146,7 @@ There is only one pose file (i.e., pose.txt) for each camera and each record. Th
 
 r00 r01 r02 t0 r10 r11 r12 t1 r20 r21 r22 t2 0 0 0 1 image_name
 
-The cameras have been well calibrated and undistorted. The intrinsic parameters of cameras can found in camera_intrinsics.txt in the [utilities.tar.gz](http://ad-apolloscape.bj.bcebos.com/public%2Futilities.tar.gz).
+The cameras have been well calibrated and undistorted. The intrinsic parameters of cameras can found in camera_intrinsics.txt in the [utilities.tar.gz](https://ad-apolloscape.cdn.bcebos.com/public/utilities.tar.gz).
 
 Depth image format:
 
