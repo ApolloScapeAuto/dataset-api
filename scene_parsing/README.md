@@ -25,7 +25,7 @@ The dataset is divided into three subsets for training, validation and testing r
 
 3 · Class Definitions
 
-We annotate 25 different labels covered by five groups. The following table gives the details of these labels. There are two IDs, class ID and train ID, assigned to each pixel. The train ID is the one used for training and can be modified as needed. The value 255 indicates the ignoring labels that currently are not evaluated during the testing phase. The class ID is used to represent the label in ground truth labels. More details including color assignment can be found in label_apollo.py in [utilities.tar.gz](http://ad-apolloscape.bj.bcebos.com/public%2Futilities.tar.gz). During the submission, however, please make sure to use the class IDs.
+We annotate 25 different labels covered by five groups. The following table gives the details of these labels. There are two IDs, class ID and train ID, assigned to each pixel. The train ID is the one used for training and can be modified as needed. The value 255 indicates the ignoring labels that currently are not evaluated during the testing phase. The class ID is used to represent the label in ground truth labels. More details including color assignment can be found in label_apollo.py in [utilities.tar.gz](https://ad-apolloscape.cdn.bcebos.com/public/utilities.tar.gz). During the submission, however, please make sure to use the class IDs.
 
 category	Class	Class ID	train ID	Description
 Others	others	0	255	
