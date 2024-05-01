@@ -8,6 +8,9 @@ Inpainting dataset consists of synchronized Labeled image and LiDAR scanned poin
 
 ## 2. Dataset download
 The first video inpainting dataset with depth. 
+[sample_data.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting/sample_data.zip)
+[sample_mask_and_images.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting/sample_mask_and_image.zip)
+[sample_lidar_bg.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting/sample_lidar_bg.zip)
 
 [mask_and_image_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579_mask.zip)
 [data_0.zip](https://ad-apolloscape.cdn.bcebos.com/inpainting%2F1534313570-1534313579.zip)
