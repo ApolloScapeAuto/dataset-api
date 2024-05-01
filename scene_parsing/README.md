@@ -116,7 +116,7 @@ Note: All photos can only be used for educational purpose by individuals or orga
 
 Image lists
 
-Uploaded the [Image lists](http://ad-apolloscape.bj.bcebos.com/public%2Fimage_lists.tar.gz) for training, validation, and testing for road01_ins, road02_ins, and road03_ins.
+Uploaded the [Image lists](https://ad-apolloscape.cdn.bcebos.com/public/image_lists.tar.gz) for training, validation, and testing for road01_ins, road02_ins, and road03_ins.
 
 6 · Dataset Structure
 
