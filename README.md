@@ -48,7 +48,9 @@ or
 wget https://ad-apolloscape.bj.bcebos.com/road01_ins.tar.gz
 
 wget https://ad-apolloscape.cdn.bcebos.com/trajectory/prediction_train.zip
+
 ```
+Alternatively, you can sign up and download the dataset from this [link](https://opendatalab.com/OpenDataLab/ApolloScape/tree/main ) 
 
 Run 
 ```bash
