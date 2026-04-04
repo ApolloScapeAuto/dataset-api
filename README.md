@@ -1,4 +1,4 @@
-# Toolkit for [ApolloScape Dataset](https://apolloscape.auto/)
+# Toolkit for ApolloScape Dataset
 
 Welcome to Apolloscape's GitHub page!
 
