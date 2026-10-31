@@ -41,6 +41,11 @@ This is a repo of toolkit for ApolloScape Dataset, [CVPR 2019 Workshop on Autono
 [demo](https://ad-apolloscape.bj.bcebos.com/video%2Fvideo_demo.webm)
 
 ## Data Download
+
+> **Download status:** since early 2025 the `ad-apolloscape.*.bcebos.com` links below and in each subfolder have been returning `AccessDenied` for many users ([#154](https://github.com/ApolloScapeAuto/dataset-api/issues/154)). The `apolloscape.auto` pages referenced in the subfolder READMEs may also be unavailable.
+>
+> A community-provided copy is available on OpenDataLab: <https://opendatalab.com/OpenDataLab/ApolloScape/tree/main/raw> ([#162](https://github.com/ApolloScapeAuto/dataset-api/issues/162)). It is not maintained by this repo, and its file sizes have been reported to differ from the original archives, so check the contents before relying on it.
+
 Full download links are in each folder.
 ```
 wget https://ad-apolloscape.cdn.bcebos.com/road01_ins.tar.gz 
